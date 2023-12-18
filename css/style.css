@@ -1,0 +1,200 @@
+*,*::before,*::after{box-sizing:border-box}html{-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role='list'],ol[role='list']{list-style:none}body{min-height:100vh;line-height:1.5}h1,h2,h3,h4,button,input,label{line-height:1.1}h1,h2,h3,h4{text-wrap:balance}a:not([class]){text-decoration-skip-ink:auto;color:currentColor}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}textarea:not([rows]){min-height:10em}:target{scroll-margin-block:5ex}ul,ol{margin:0;padding:0;}
+:root {
+  --font-family-serif: 'Noto Serif JP', serif;
+  --font-family-sans: 'Noto Sans JP', Helvetica, Arial, sans-serif;
+  --theme-color: #334;
+  --accent-color: #36c;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+html, body {
+  font-family: var(--font-family-sans);
+  color: var(--theme-color);
+}
+a {
+  text-decoration: none;
+  color: var(--theme-color);
+}
+a:hover {
+  color: var(--accent-color);
+}
+div.app {
+  position: relative;
+  width: min(100vw, 1280px);
+  min-height: 100vh;
+  margin: 0 auto;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: clamp(280px, calc(28vw + 100px), 460px);
+}
+header div.logomark {
+  position: relative;
+  z-index: 15;
+  top: 70px;
+  left: 30px;
+  width: clamp(90px, 14.1%, 180px);
+  aspect-ratio: 1;
+}
+header div.logomark:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent url('../img/logomark.png') center center no-repeat;
+  background-size: 100% auto;
+}
+header div.logotype-fixed {
+  content: "";
+  position: fixed;
+  z-index: 15;
+  left: max(86px, calc(50vw - 554px));
+  top: -68px;
+  width: 156px;
+  height: 50px;
+  background: transparent url('../img/logotype-fixed.png') center center no-repeat;
+  background-size: 100% auto;
+  opacity: 0;
+  transition: top 0.5s, opacity 0.3s;
+}
+header.scaled div.logomark,
+header.fixed div.logomark {
+  position: fixed;
+  top: 12px;
+  left: max(30px, calc(50vw - 610px));
+}
+header.fixed div.logomark {
+  width: 50px;
+}
+header.scaled div.logomark:before,
+header.fixed div.logomark:before {
+  width: clamp(50px, 100%, 180px);
+}
+header.fixed div.logotype-fixed {
+  top: 12px;
+  opacity: 1;
+}
+@media screen and (max-width: 800px) {
+  header div.logotype-fixed {
+    display: none;
+  }
+}
+header div.logotype {
+  position: absolute;
+  z-index: 0;
+  bottom: 30px;
+  left: 30px;
+  width: clamp(450px, 70.3%, 900px);
+  aspect-ratio: 5;
+  background: transparent url('../img/logotype.png') center center no-repeat;
+  background-size: 100% auto;
+}
+header div.logotype h1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+header div.logotype h1 span {
+  display: none;
+}
+header .nav-header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: white;
+}
+header .nav-header .container {
+  width: min(100vw, 1280px);
+  margin: 0 auto;
+}
+header .nav-header ul {
+  float: right;
+  padding: 0 30px 0 0;
+}
+header .nav-header ul li {
+  list-style: none;
+  float: left;
+}
+header .nav-header ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 20px 15px;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+@media screen and (max-width: 920px) {
+  header .nav-header ul {
+    padding: 0 20px 0 0;
+  }
+  header .nav-header ul li a {
+    padding: 20px 8px;
+    font-size: 0.9rem;
+  }
+}
+header .nav-header ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: transparent;
+}
+header .nav-header ul li a:hover:before {
+  background: var(--accent-color);
+}
+section.main {
+  padding: 0 16px;
+}
+section.main div.slider ul li {
+  list-style: none;
+  width: 100%;
+  aspect-ratio: 3;
+  border-radius: 20px;
+  overflow: hidden;
+}
+section.main div.slider ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.main div.content {
+  float: right;
+  width: 70%;
+  padding: 20px;
+}
+footer {
+  margin: 0 16px;
+}
+footer div.container {
+  height: 500px;
+  background: var(--theme-color) url('../img/logo-footer.png') right 20px bottom 20px no-repeat;
+  background-size: 320px 130px;
+  border-radius: 20px;
+  padding: 30px;
+}
+footer div.container ul li {
+  list-style: none;
+  color: white;
+}
+footer div.container ul li a {
+  font-weight: bold;
+  color: #ccc;
+  padding: 5px;
+}
+footer div.container ul li a:hover {
+  color: white;
+}
+footer p.copyright {
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.8rem;
+}
