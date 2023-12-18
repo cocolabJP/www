@@ -35,11 +35,15 @@ const app = createApp({
       } else if(window.scrollY > 60) {
         $("header-top").classList.add("scaled");
         $("header-top").classList.remove("fixed");
+        $("header-top").classList.remove("drawer-opened");
         $("logomark").style.width = Math.max(50, (this.logoWidth + 60 - window.scrollY)) + "px";
       } else {
         $("header-top").classList.remove("scaled");
         $("logomark").style.width = "";
       }
+    },
+    openDrawerMenu() {
+      $("header-top").classList.toggle("drawer-opened");
     }
   },
 });
