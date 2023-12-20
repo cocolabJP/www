@@ -84,7 +84,7 @@ header {
     z-index: 15;
     left: max(70px, calc(56px + 3.125vw), calc(50vw - 544px));
     top: -68px;
-    width: 156px;
+    width: 160px;
     height: 50px;
     background: transparent url('../img/logotype-fixed.png') center center no-repeat;
     background-size: 100% auto;
@@ -163,9 +163,9 @@ header {
       display: block;
       position: absolute;
       right: -70px;
-      top: 10px;
+      top: 0;
       width: 70px;
-      height: 50px;
+      height: 70px;
       background: url("../img/ic-drawer-open.png") right center no-repeat;
       background-size: auto 100%;
       opacity: 0;
@@ -175,7 +175,7 @@ header {
   @media screen and (max-width: 640px) {
     &.fixed .header-fixed {
       div.ic-drawer {
-        right: -20px;
+        right: -10px;
         opacity: 1;
         &:hover {
           right: 0;
@@ -185,12 +185,8 @@ header {
     }
     &.drawer-opened .header-fixed {
       div.ic-drawer {
-        right: 0px;
         background: url("../img/ic-drawer-close.png") right center no-repeat;
         background-size: auto 100%;
-        &:hover {
-          right: -10px;
-        }
       }
     }
   }
@@ -297,6 +293,11 @@ header {
         height: calc(100vh - 70px);
         opacity: 1;
         right: 0;
+        li a {
+          height: 40px;
+          line-height: 40px;
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -339,7 +340,7 @@ footer {
   div.container {
     height: 500px;
     background: var(--theme-color) url('../img/logo-footer.png') right 20px bottom 20px no-repeat;
-    background-size: 320px 130px;
+    background-size: min(320px, 60%) auto;
     border-radius: 20px;
     padding: 30px;
     ul {
@@ -347,9 +348,10 @@ footer {
         list-style: none;
         color: white;
         a {
+          display: block;
           font-weight: bold;
           color: #ccc;
-          padding: 5px;
+          padding: 5px 10px;
           &:hover {
             color: white;
           }
