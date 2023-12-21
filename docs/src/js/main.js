@@ -8,19 +8,27 @@ const app = createApp({
   delimiters: ['${', '}'],
   data() {
     return {
+      pageType: 'page',
       logoWidth: 180
     };
   },
   created: function() {
-    window.addEventListener('scroll', this.onScroll);
-    window.addEventListener('resize', this.onResizeWindow);
+    this.pageType = $('app').dataset.type;
+    if(this.pageType == 'top') {
+      window.addEventListener('scroll', this.onScroll);
+      window.addEventListener('resize', this.onResizeWindow);
+    }
   },
   mounted: function() {
-    this.onResizeWindow();
-    this.onScroll();
+    if(this.pageType == 'top') {
+      this.onResizeWindow();
+      this.onScroll();
+    }
   },
   destroyed: function () {
-    window.removeEventListener('scroll', this.onScroll);
+    if(this.pageType == 'top') {
+      window.removeEventListener('scroll', this.onScroll);
+    }
   },
   methods: {
     onResizeWindow() {
@@ -31,19 +39,19 @@ const app = createApp({
     },
     onScroll() {
       if(window.scrollY > this.logoWidth * 2) {
-        $("header-top").classList.add("fixed");
+        $("header").classList.add("fixed");
       } else if(window.scrollY > 60) {
-        $("header-top").classList.add("scaled");
-        $("header-top").classList.remove("fixed");
-        $("header-top").classList.remove("drawer-opened");
+        $("header").classList.add("scaled");
+        $("header").classList.remove("fixed");
+        $("header").classList.remove("drawer-opened");
         $("logomark").style.width = Math.max(50, (this.logoWidth + 60 - window.scrollY)) + "px";
       } else {
-        $("header-top").classList.remove("scaled");
+        $("header").classList.remove("scaled");
         $("logomark").style.width = "";
       }
     },
     openDrawerMenu() {
-      $("header-top").classList.toggle("drawer-opened");
+      $("header").classList.toggle("drawer-opened");
     }
   },
 });

@@ -5,15 +5,18 @@
   --theme-color: #334;
   --accent-color: #36c;
   --side-margin: 20px;
+  --base-font-size: 16px;
 }
 @media screen and (max-width: 920px) {
   :root {
     --side-margin: 15px;
+    --base-font-size: 15px;
   }
 }
 @media screen and (max-width: 640px) {
   :root {
     --side-margin: 10px;
+    --base-font-size: 14px;
   }
 }
 .clearfix::after {
@@ -24,6 +27,7 @@
 html, body {
   font-family: var(--font-family-sans);
   color: var(--theme-color);
+  font-size: var(--base-font-size);
 }
 a {
   text-decoration: none;
@@ -38,111 +42,152 @@ div.app {
   min-height: 100vh;
   margin: 0 auto;
 }
-header {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: clamp(280px, calc(28vw + 100px), 460px);
-  @media screen and (max-width: 920px) {
-    height: clamp(275px, calc(28vw + 95px), 455px);
-  }
-  @media screen and (max-width: 640px) {
-    height: clamp(265px, calc(28vw + 85px), 445px);
-  }
-  div.logomark {
+#header {
+  .top & {
     position: relative;
-    z-index: 15;
-    top: 70px;
-    left: clamp(15px, 3.125vw, 40px);
-    width: clamp(90px, 14.1%, 180px);
-    aspect-ratio: 1;
-    &:before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: transparent url('../img/logomark.png') center center no-repeat;
-      background-size: 100% auto;
-    }
-  }
-  &.scaled div.logomark,
-  &.fixed div.logomark {
-    position: fixed;
-    top: 12px;
-    left: max(15px, 3.125vw, calc(50vw - 600px));
-  }
-  &.fixed div.logomark {
-    width: 50px;
-  }
-  &.scaled div.logomark:before,
-  &.fixed div.logomark:before {
-    width: clamp(50px, 100%, 180px);
-  }
-  div.logotype-fixed {
-    content: "";
-    position: fixed;
-    z-index: 15;
-    left: max(70px, calc(56px + 3.125vw), calc(50vw - 544px));
-    top: -68px;
-    width: 160px;
-    height: 50px;
-    background: transparent url('../img/logotype-fixed.png') center center no-repeat;
-    background-size: 100% auto;
-    opacity: 0;
-    transition: top 0.5s, opacity 0.3s;
-  }
-  @media screen and ((max-width: 640px) or (min-width: 780px)) {
-    &.fixed div.logotype-fixed {
-      top: 12px;
-      opacity: 1;
-    }
-  }
-  div.logotype {
-    position: absolute;
-    z-index: 0;
-    bottom: 30px;
+    overflow: hidden;
+    width: 100%;
+    height: clamp(280px, 28vw + 100px, 460px);
     @media screen and (max-width: 920px) {
-      bottom: 25px;
+      height: clamp(275px, 28vw + 95px, 455px);
     }
     @media screen and (max-width: 640px) {
-      bottom: 15px;
+      height: clamp(265px, 28vw + 85px, 445px);
     }
-    left: clamp(15px, 3.125%, 40px);
-    width: clamp(450px, 70.3%, 900px);
-    aspect-ratio: 5;
-    @media screen and (max-width: 640px) {
-      width: 70.3%;
-      max-width: 155px;
-      aspect-ratio: 31/18;
-    }
-    h1 {
-      position: absolute;
-      height: 100%;
-      &.en {
-        left: 0;
-        width: clamp(155px, 34.4%, 310px);
-        @media screen and (max-width: 640px) {
-          width: 100%;
-        }
-        background: transparent url('../img/logotype.png') center bottom no-repeat;
+    div.logomark {
+      position: relative;
+      z-index: 15;
+      top: 70px;
+      left: clamp(15px, 3.125vw, 40px);
+      width: clamp(90px, 14.1%, 180px);
+      aspect-ratio: 1;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent url('../img/logo/logomark.png') center center no-repeat;
         background-size: 100% auto;
       }
-      &.ja {
-        right: 0;
-        width: clamp(280px, 62.2%, 560px);
-        background: transparent url('../img/logotype-ja.png') center bottom no-repeat;
-        background-size: 100% auto;
+    }
+    &.scaled div.logomark,
+    &.fixed div.logomark {
+      position: fixed;
+      top: 12px;
+      left: max(15px, 3.125vw, 50vw - 600px);
+    }
+    &.fixed div.logomark {
+      width: 50px;
+    }
+    &.scaled div.logomark:before,
+    &.fixed div.logomark:before {
+      width: clamp(50px, 100%, 180px);
+    }
+    div.logotype {
+      position: absolute;
+      z-index: 0;
+      bottom: 30px;
+      @media screen and (max-width: 920px) {
+        bottom: 25px;
       }
       @media screen and (max-width: 640px) {
+        bottom: 15px;
+      }
+      left: clamp(15px, 3.125%, 40px);
+      width: clamp(450px, 70.3%, 900px);
+      aspect-ratio: 5;
+      @media screen and (max-width: 640px) {
+        width: 70.3%;
+        max-width: 155px;
+        aspect-ratio: 31/18;
+      }
+      & > div {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        &.en {
+          left: 0;
+          width: clamp(155px, 34.4%, 310px);
+          @media screen and (max-width: 640px) {
+            width: 100%;
+          }
+          background: transparent url('../img/logo/logotype-en.png') center bottom no-repeat;
+          background-size: 100% auto;
+        }
         &.ja {
+          right: 0;
+          width: clamp(280px, 62.2%, 560px);
+          background: transparent url('../img/logo/logotype-ja.png') center bottom no-repeat;
+          background-size: 100% auto;
+        }
+        @media screen and (max-width: 640px) {
+          &.ja {
+            display: none;
+          }
+        }
+        span {
           display: none;
         }
       }
-      display: block;
-      width: 100%;
-      height: 100%;
-      span {
-        display: none;
+    }
+    div.logotype-fixed {
+      content: "";
+      position: fixed;
+      z-index: 15;
+      top: -68px;
+      width: 160px;
+      height: 50px;
+      margin: 0 0 0 calc(clamp(15px, 3.125vw, 40px) + 56px);
+      background: transparent url('../img/logo/logotype-fixed.png') center center no-repeat;
+      background-size: 100% auto;
+      opacity: 0;
+      transition: top 0.5s, opacity 0.3s;
+    }
+    @media screen and ((max-width: 640px) or (min-width: 780px)) {
+      &.fixed div.logotype-fixed {
+        top: 12px;
+        opacity: 1;
+      }
+    }
+  }
+  .page & {
+    height: 70px;
+    h1.logo {
+      position: fixed;
+      z-index: 12;
+      top: 0;
+      a {
+        position: relative;
+        display: block;
+        height: 70px;
+        width: calc(216px + clamp(30px, 6.25vw, 80px));
+        &:before {
+          content: "";
+          position: absolute;
+          left: clamp(15px, 3.125vw, 40px);
+          top: 12px;
+          width: 50px;
+          height: 50px;
+          background: transparent url('../img/logo/logomark.png') center center no-repeat;
+          background-size: 100%;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          right: clamp(15px, 3.125vw, 40px);
+          top: 12px;
+          @media screen and ((min-width: 641px) and (max-width: 779px)) {
+            display: none;
+          }
+          width: 160px;
+          height: 50px;
+          background: transparent url('../img/logo/logotype-fixed.png') right center no-repeat;
+          background-size: 100%;
+        }
+        span {
+          display: none;
+        }
       }
     }
   }
@@ -166,7 +211,7 @@ header {
       top: 0;
       width: 70px;
       height: 70px;
-      background: url("../img/ic-drawer-open.png") right center no-repeat;
+      background: url("../img/parts/ic-drawer-open.png") right center no-repeat;
       background-size: auto 100%;
       opacity: 0;
       transition: right 0.5s, opacity 0.3s;
@@ -185,7 +230,7 @@ header {
     }
     &.drawer-opened .header-fixed {
       div.ic-drawer {
-        background: url("../img/ic-drawer-close.png") right center no-repeat;
+        background: url("../img/parts/ic-drawer-close.png") right center no-repeat;
         background-size: auto 100%;
       }
     }
@@ -194,13 +239,8 @@ header {
     position: fixed;
     z-index: 11;
     top: 0;
-    left: 0;
-    width: 100vw;
+    width: min(100vw, 1280px);
     height: 70px;
-    .container {
-      width: min(100vw, 1280px);
-      margin: 0 auto;
-    }
     ul {
       float: right;
       padding: 0 30px 0 0;
@@ -243,7 +283,7 @@ header {
   @media screen and (max-width: 640px) {
     .header-nav {
       position: absolute;
-      width: auto;
+      width: 100vw;
       height: auto;
       ul {
         position: absolute;
@@ -310,8 +350,8 @@ header {
     }
   }
 }
-
-section.main {
+main {
+  display: block;
   padding: 0 var(--side-margin);
   div.slider {
     ul {
@@ -319,7 +359,7 @@ section.main {
         list-style: none;
         width: 100%;
         aspect-ratio: 3;
-        border-radius: 20px;
+        border-radius: 15px;
         overflow: hidden;
         img {
           width: 100%;
@@ -329,19 +369,116 @@ section.main {
       }
     }
   }
+  header {
+    display: flex;
+    width: 100%;
+    height: auto!important;
+    min-height: 70px;
+    aspect-ratio: 10;
+    border-radius: 15px;
+    padding: 0 0 5px;
+    .people & {
+      background: url('../img/background/bg-people.png') left center no-repeat;
+      background-size: cover;
+    }
+    h2 {
+      align-self: center;
+      flex-grow: 1;
+      font-size: 1.6rem;
+      padding: 0 30px;
+      color: white;
+      text-shadow: 1px 1px 3px black;
+      span {
+        font-size: 1rem;
+        display: block;
+      }
+    }
+  }
   div.content {
-    float: right;
-    width: 70%;
-    padding: 20px;
+    display: block;
+    padding: 20px 0 30px;
+    nav {
+      @media screen and (min-width: 640px) {
+        position: sticky;
+        top: 70px;
+        float: left;
+        width: 25%;
+        padding: 20px;
+        ul {
+          li {
+            list-style: none;
+            width: 100%;
+            height: 40px;
+            line-height: 30px;
+            padding: 5px 10px;
+          }
+        }
+      }
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        padding: 20px;
+        ul {
+          li {
+            list-style: none;
+            float: left;
+            margin: 0 15px 0 0;
+          }
+        }
+      }
+    }
+    article {
+      width: 100%;
+      padding: 20px;
+      @media screen and (min-width: 640px) {
+        float: right;
+        width: 75%;
+      }
+      h3 {
+        padding: 10px 0 20px;
+        font-size: 1.4rem;
+      }
+      ul.people {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        li {
+          flex-basis: 31%;
+          @media screen and (min-width: 640px) {
+            flex-basis: 23%;
+          }
+          margin: 0 2% 20px 0;
+          list-style: none;
+          text-align: center;
+          img {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 15px;
+          }
+          h4 {
+            padding: 5px 0;
+            font-size: 1.2rem;
+          }
+          span {
+            display: block;
+            font-size: 0.9rem;
+          }
+          small {
+            display: block;
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
   }
 }
 footer {
   margin: 0 var(--side-margin) 30px;
   div.container {
     height: 500px;
-    background: var(--theme-color) url('../img/logo-footer.png') right 20px bottom 20px no-repeat;
+    background: var(--theme-color) url('../img/logo/logo-footer.png') right 20px bottom 20px no-repeat;
     background-size: min(320px, 60%) auto;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 30px;
     ul {
       li {

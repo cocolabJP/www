@@ -8,7 +8,8 @@ const gulp     = require("gulp"),
       plumber  = require("gulp-plumber"),
       mmq      = require("gulp-merge-media-queries"),
       rename   = require('gulp-rename'),
-      strip    = require('gulp-strip-comments');
+      strip    = require('gulp-strip-comments'),
+      browser  = require('browser-sync');
  
 const cleanCSS_1stSettings = 
   { // ref: https://outcloud.blogspot.com/2018/09/Minify-CSS-by-CleanCSS-MergeMediaQuery.html
@@ -38,7 +39,6 @@ const cleanCSS_2ndSettings =
   };
 
 gulp.task("sass", function() {
-  console.log("sass");
   return gulp.src("../docs/src/css/*.scss")
     .pipe(plumber())
     .pipe(sass())
@@ -49,7 +49,6 @@ gulp.task("sass", function() {
 });
 
 gulp.task("js", function() {
-  console.log("js");
   return gulp.src("../docs/src/js/*.js")
     .pipe(plumber())
     .pipe(strip())
@@ -64,6 +63,18 @@ gulp.task("watch", (done) => {
   done();
 });
 
+gulp.task("serve", (done) => {
+  browser({
+    server: {
+      baseDir: '../docs/',
+    },
+    ghostMode: false,
+    open: 'external',
+    notify: false,
+  });
+  done();
+});
+
 // scripts tasks
-gulp.task('default', gulp.task('watch'));
+gulp.task('default', gulp.parallel('watch', 'serve'));
 
