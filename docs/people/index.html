@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 <title>コンヴィヴィアルコンピューティング研究室 | 岡山大学</title>
-<link rel="icon" href="/img/favicon/favicon.ico" sizes="48x48">
-<link rel="icon" href="/img/favicon/favicon.svg" sizes="any" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png"/>
-<link rel="manifest" href="/img/favicon/site.webmanifest" />
+<link rel="icon" href="/static/img/favicon/favicon.ico" sizes="48x48">
+<link rel="icon" href="/static/img/favicon/favicon.svg" sizes="any" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/static/img/favicon/apple-touch-icon.png"/>
+<link rel="manifest" href="/static/img/favicon/site.webmanifest" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/css/style.css?v=0.12">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=0.13">
 </head>
 <body>
 <div class="app page people" id="app" data-type="page">
@@ -31,7 +31,7 @@
           <li><a href="/people/">メンバー</a></li>
           <li><a href="/project/">プロジェクト</a></li>
           <li><a href="/publication/">研究業績</a></li>
-          <li><a href="/contact/">アクセス</a></li>
+          <li><a href="/access/">アクセス</a></li>
         </ul>
       </nav>
     </div>
@@ -44,15 +44,16 @@
   <div class="content clearfix">
     <nav>
       <ul>
-        <li>メンバー</li>
-        <li>卒業生</li>
+        <li>教員</li>
+        <li>学生</li>
+        <li>連携研究者</li>
       </ul>
     </nav>
     <article>
       <h3>教員</h3>
       <ul class="people">
         <li>
-          <img src="/img/people/yukimat.jpg" alt="松田裕貴（Yuki Matsuda）">
+          <img src="/static/img/people/yukimat.jpg" alt="松田裕貴（Yuki Matsuda）">
           <h4>松田 裕貴</h4>
           <span>講師</span>
           <small>yukimat@is.naist.jp</small>
@@ -61,36 +62,56 @@
       <h3>学生</h3>
       <ul class="people">
         <li>
-          <img src="/img/people/_default.png">
+          <img src="/static/img/people/_default.png">
           <span>Coming Soon</span>
         </li>
       </ul>
-      <h3>共同研究者</h3>
+      <h3>連携研究者</h3>
       <ul class="people">
         <li>
-          <img src="/img/people/collaborator/yasumoto.png">
+          <img src="/static/img/people/collaborator/yasumoto.png">
           <h4>安本 慶一</h4>
-          <span>教授／NAIST</span>
+          <span>教授 / NAIST</span>
         </li>
         <li>
-          <img src="/img/people/collaborator/suwa.jpg">
+          <img src="/static/img/people/collaborator/suwa.jpg">
           <h4>諏訪 博彦</h4>
-          <span>准教授／NAIST</span>
+          <span>准教授 / NAIST</span>
         </li>
         <li>
-          <img src="/img/people/collaborator/arakawa.jpg">
+          <img src="/static/img/people/collaborator/arakawa.jpg">
           <h4>荒川 豊</h4>
-          <span>教授／九州大学</span>
+          <span>教授 / 九州大学</span>
         </li>
         <li>
-          <img src="/img/people/collaborator/nakamura.png">
+          <img src="/static/img/people/collaborator/nakamura.png">
           <h4>中村 優吾</h4>
-          <span>助教／九州大学</span>
+          <span>助教 / 九州大学</span>
         </li>
         <li>
-          <img src="/img/people/collaborator/ishimaru.jpg">
+          <img src="/static/img/people/collaborator/ishimaru.jpg">
           <h4>石丸 翔也</h4>
-          <span>特任教授／大阪公立大学</span>
+          <span>特任教授 / 大阪公立大学</span>
+        </li>
+        <li>
+          <img src="/static/img/people/collaborator/ouchi.jpg">
+          <h4>大内 啓樹</h4>
+          <span>助教 / NAIST</span>
+        </li>
+        <li>
+          <img src="/static/img/people/collaborator/mizumoto.jpg">
+          <h4>水本 旭洋</h4>
+          <span>准教授 / 千葉工業大学</span>
+        </li>
+        <li>
+          <img src="/static/img/people/collaborator/minker.jpg">
+          <h4>Wolfgang Minker</h4>
+          <span>Prof. Dr. Dr.-Ing. / Ulm University</span>
+        </li>
+        <li>
+          <img src="/static/img/people/collaborator/watanabe.jpg">
+          <h4>渡邉 洸</h4>
+          <span>Ph.D. Student / RPTU・DFKI</span>
         </li>
       </ul>
     </article>
@@ -104,13 +125,13 @@
       <li><a href="/people/">メンバー</a></li>
       <li><a href="/project/">プロジェクト</a></li>
       <li><a href="/publication/">研究業績</a></li>
-      <li><a href="/contact/">アクセス</a></li>
+      <li><a href="/access/">アクセス</a></li>
     </ul>
   </div>
   <p class="copyright">&copy; Convivial Computing Laboratory, Okayama University</p>
 </footer>
 </div>
 <script type="importmap">{"imports": {"vue": "https://unpkg.com/vue@3.3.12/dist/vue.esm-browser.prod.js"}}</script>
-<script src="/js/main.js" type="module"></script>
+<script src="/static/js/main.js?v=0.13" type="module"></script>
 </body>
 </html>

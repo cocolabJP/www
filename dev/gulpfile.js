@@ -45,7 +45,7 @@ gulp.task("sass", function() {
     .pipe(cleanCSS(cleanCSS_1stSettings))
     .pipe(mmq())
     .pipe(cleanCSS(cleanCSS_2ndSettings))
-    .pipe(gulp.dest("../docs/css/"));
+    .pipe(gulp.dest("../docs/static/css/"));
 });
 
 gulp.task("js", function() {
@@ -53,7 +53,7 @@ gulp.task("js", function() {
     .pipe(plumber())
     .pipe(strip())
     .pipe(uglify())
-    .pipe(gulp.dest("../docs/js/"));
+    .pipe(gulp.dest("../docs/static/js/"));
 });
 
 // watch

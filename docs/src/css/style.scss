@@ -372,13 +372,28 @@ main {
   header {
     display: flex;
     width: 100%;
-    height: auto!important;
-    min-height: 70px;
-    aspect-ratio: 10;
+    height: 128px;
     border-radius: 15px;
     padding: 0 0 5px;
+    margin: 10px 0 0;
+    .about & {
+      background: url('../img/background/bg-about.png') center center no-repeat;
+      background-size: cover;
+    }
     .people & {
-      background: url('../img/background/bg-people.png') left center no-repeat;
+      background: url('../img/background/bg-people.png') center center no-repeat;
+      background-size: cover;
+    }
+    .project & {
+      background: url('../img/background/bg-project.png') center center no-repeat;
+      background-size: cover;
+    }
+    .publication & {
+      background: url('../img/background/bg-publication.png') center center no-repeat;
+      background-size: cover;
+    }
+    .access & {
+      background: url('../img/background/bg-access.png') center center no-repeat;
       background-size: cover;
     }
     h2 {
@@ -394,6 +409,10 @@ main {
       }
     }
   }
+  div.content-2col {
+    display: block;
+    padding: 20px 0 30px;
+  }
   div.content {
     display: block;
     padding: 20px 0 30px;
@@ -404,6 +423,7 @@ main {
         float: left;
         width: 25%;
         padding: 20px;
+        margin: 5px 0;
         ul {
           li {
             list-style: none;
@@ -414,7 +434,7 @@ main {
           }
         }
       }
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 639px) {
         width: 100%;
         padding: 20px;
         ul {
@@ -442,10 +462,14 @@ main {
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
+        margin: 0 0 20px;
         li {
-          flex-basis: 31%;
-          @media screen and (min-width: 640px) {
+          flex-basis: 48%;
+          @media screen and (min-width: 920px) {
             flex-basis: 23%;
+          }
+          @media screen and (min-width: 480px) {
+            flex-basis: 31%;
           }
           margin: 0 2% 20px 0;
           list-style: none;
@@ -465,7 +489,7 @@ main {
           }
           small {
             display: block;
-            font-size: 0.7rem;
+            font-size: 0.9rem;
           }
         }
       }

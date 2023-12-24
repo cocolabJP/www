@@ -40,11 +40,11 @@ const app = createApp({
     onScroll() {
       if(window.scrollY > this.logoWidth * 2) {
         $("header").classList.add("fixed");
-      } else if(window.scrollY > 60) {
+      } else if(window.scrollY > 58) {
         $("header").classList.add("scaled");
         $("header").classList.remove("fixed");
         $("header").classList.remove("drawer-opened");
-        $("logomark").style.width = Math.max(50, (this.logoWidth + 60 - window.scrollY)) + "px";
+        $("logomark").style.width = Math.max(50, (this.logoWidth + 58 - window.scrollY)) + "px";
       } else {
         $("header").classList.remove("scaled");
         $("logomark").style.width = "";

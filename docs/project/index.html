@@ -14,16 +14,9 @@
 <link rel="stylesheet" type="text/css" href="/static/css/style.css?v=0.13">
 </head>
 <body>
-<div class="app top" id="app" data-type="top">
-<header id="header">
-  <h1 class="logo">
-    <div class="logomark" id="logomark"></div>
-    <div class="logotype-fixed"></div>
-    <div class="logotype clearfix">
-      <div class="en"><span>Convivial Computing Laboratory, Okayama Unviersity</span></div>
-      <div class="ja"><span>岡山大学大学院 自然科学研究科 コンヴィヴィアルコンピューティング研究室</span></div>
-    </div>
-  </h1>
+<div class="app page project" id="app" data-type="page">
+<header id="header" class="fixed">
+  <h1 class="logo clearfix"><a href="/"><span>Convivial Computing Laboratory, Okayama Unviersity（岡山大学大学院 自然科学研究科 コンヴィヴィアルコンピューティング研究室）</span></a></h1>
   <div class="header-fixed">
     <div class="container">
       <div class="ic-drawer" @click="openDrawerMenu"></div>
@@ -44,33 +37,25 @@
     </div>
   </div>
 </header>
-<main class="clearfix">
-  <section>
-    <div class="slider">
+<main>
+  <header>
+    <h2>研究プロジェクト</h2>
+  </header>
+  <div class="content clearfix">
+    <nav>
       <ul>
-        <li><img src="/static/img/_sample/sample.jpg"></li>
+        <li>2024年度</li>
+        <li>〜2023年度</li>
       </ul>
-    </div>
-    <div class="content-2col">
-      <div>
-        <h2>ようこそ</h2>
-        <p>
-          
-        </p>
-      </div>
-    </div>
-    <div class="content">
-      <h2>お知らせ</h2>
-    </div>
-    <div class="content">
-      <h2>その他</h2>
-      a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>
-      a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>
-    </div>
-  </section>
-  <aside>
-
-  </aside>
+    </nav>
+    <article>
+      <h3>2024年度</h3>
+      <ul class="project">
+        <li></li>
+      </ul>
+      <h3>〜2023年度</h3>
+    </article>
+  </div>
 </main>
 <footer>
   <div class="container">
