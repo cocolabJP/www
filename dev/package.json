@@ -21,6 +21,7 @@
     "sass": "^1.53.0"
   },
   "dependencies": {
-    "browser-sync": "^2.29.3"
+    "browser-sync": "^2.29.3",
+    "gulp-ejs": "^5.1.0"
   }
 }

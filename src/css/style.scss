@@ -1,9 +1,9 @@
-*,*::before,*::after{box-sizing:border-box}html{-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role='list'],ol[role='list']{list-style:none}body{min-height:100vh;line-height:1.5}h1,h2,h3,h4,button,input,label{line-height:1.1}h1,h2,h3,h4{text-wrap:balance}a:not([class]){text-decoration-skip-ink:auto;color:currentColor}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}textarea:not([rows]){min-height:10em}:target{scroll-margin-block:5ex}ul,ol{margin:0;padding:0;}
+*,*::before,*::after{box-sizing:border-box}html{-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role='list'],ol[role='list']{list-style:none}body{min-height:100vh;line-height:1.5}h1,h2,h3,h4,button,input,label{line-height:1.1}a:not([class]){text-decoration-skip-ink:auto;color:currentColor}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}textarea:not([rows]){min-height:10em}:target{scroll-margin-block:5ex}ul,ol{margin:0;padding:0;}
 :root {
   --font-family-serif: 'Noto Serif JP', serif;
   --font-family-sans: 'Noto Sans JP', Helvetica, Arial, sans-serif;
   --theme-color: #334;
-  --accent-color: #36c;
+  --accent-color: #007dc5;
   --side-margin: 20px;
   --base-font-size: 16px;
 }
@@ -23,6 +23,20 @@
   content: "";
   display: block;
   clear: both;
+}
+* {
+  font-feature-settings: "palt";
+  letter-spacing: 0.1rem;
+  text-wrap: pretty;
+}
+h1, h2, h3 {
+  background: linear-gradient(45deg, #303a91, #007dc5 25%);
+  background: -webkit-linear-gradient(45deg, #303a91, #007dc5 25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+p {
+  text-align: justify;
 }
 html, body {
   font-family: var(--font-family-sans);
@@ -359,6 +373,12 @@ main {
         list-style: none;
         width: 100%;
         aspect-ratio: 3;
+        @media screen and (max-width: 920px) {
+          aspect-ratio: 2.5;
+        }
+        @media screen and (max-width: 640px) {
+          aspect-ratio: 2;
+        }
         border-radius: 15px;
         overflow: hidden;
         img {
@@ -376,26 +396,8 @@ main {
     border-radius: 15px;
     padding: 0 0 5px;
     margin: 10px 0 0;
-    .about & {
-      background: url('../img/background/bg-about.png') center center no-repeat;
-      background-size: cover;
-    }
-    .people & {
-      background: url('../img/background/bg-people.png') center center no-repeat;
-      background-size: cover;
-    }
-    .project & {
-      background: url('../img/background/bg-project.png') center center no-repeat;
-      background-size: cover;
-    }
-    .publication & {
-      background: url('../img/background/bg-publication.png') center center no-repeat;
-      background-size: cover;
-    }
-    .access & {
-      background: url('../img/background/bg-access.png') center center no-repeat;
-      background-size: cover;
-    }
+    background: url('../img/parts/bg-subtitle.png') center center no-repeat;
+    background-size: cover;
     h2 {
       align-self: center;
       flex-grow: 1;
@@ -403,6 +405,9 @@ main {
       padding: 0 30px;
       color: white;
       text-shadow: 1px 1px 3px black;
+      background: transparent;
+      -webkit-background-clip: initial;
+      -webkit-text-fill-color: initial;
       span {
         font-size: 1rem;
         display: block;
@@ -412,6 +417,45 @@ main {
   div.content-2col {
     display: block;
     padding: 20px 0 30px;
+    section {
+      float: left;
+      width: 50%;
+      padding: 20px;
+      h2 {
+        margin: 0 0 10px;
+      }
+      p {
+        padding: 0 0 10px;
+      }
+      footer {
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 0.8rem;
+        border: 1px dotted #ddd;
+        border-width: 1px 0 0;
+      }
+      ul.news {
+        border: 1px dotted #ddd;
+        border-width: 1px 0 0;
+        li {
+          list-style: none;
+          padding: 10px 15px;
+          border: 1px dotted #ddd;
+          border-width: 0 0 1px;
+          time {
+            display: block;
+            color: #666;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 640px) {
+      section {
+        float: none;
+        width: 100%;
+      }
+    }
   }
   div.content {
     display: block;
@@ -428,9 +472,16 @@ main {
           li {
             list-style: none;
             width: 100%;
-            height: 40px;
-            line-height: 30px;
-            padding: 5px 10px;
+            line-height: 20px;
+            padding: 10px;
+            ul {
+              padding: 10px 0;
+              li {
+                list-style: circle;
+                margin: 0 0 0 25px;
+                padding: 5px 10px;
+              }
+            }
           }
         }
       }
@@ -442,6 +493,9 @@ main {
             list-style: none;
             float: left;
             margin: 0 15px 0 0;
+            ul {
+              display: none;
+            }
           }
         }
       }
@@ -453,16 +507,82 @@ main {
         float: right;
         width: 75%;
       }
+      section {
+        padding: 0 0 20px;
+      }
       h3 {
         padding: 10px 0 20px;
         font-size: 1.4rem;
+      }
+      h4 {
+        padding: 10px 0 20px;
+        font-size: 1.2rem;
+      }
+      p {
+        padding: 0 0 10px;
+      }
+      img.img-center {
+        margin: 20px auto;
+        width: 70%;
+        max-width: 600px;
+        min-width: min(95%, 400px);
+      }
+      div.container-flex-right-img {
+        margin: 0 0 20px;
+        img {
+          float: right;
+          margin: 10px 20px;
+          width: 50%;
+          min-width: 400px;
+        }
+        @media screen and (max-width: 1080px) {
+          display: flex;
+          flex-direction: column;
+          img {
+            order: 3;
+            float: none;
+            margin: 10px auto 20px;
+            width: 100%;
+            max-width: 600px;
+            min-width: auto;
+          }
+        }
+      }
+      aside {
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 0.8rem;
+        border: 1px dotted #ddd;
+        border-width: 1px 0;
+      }
+      div.project-card {
+        margin: 10px 0;
+        padding: 10px 20px;
+        border: 1px solid #eee;        
+        border-radius: 5px;
+      }
+      ul {
+        padding: 0 0 0 30px;
+        margin: 0 0 30px;
+      }
+      ul.keyword {
+        padding: 0;
+        li {
+          list-style: none;
+          display: inline-block;
+          font-size: 0.8rem;
+          padding: 5px 15px;
+          margin: 8px 8px 0 0;
+          border-radius: 20px;
+          background: #eee;
+        }
       }
       ul.people {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        padding: 0;
         width: 100%;
-        margin: 0 0 20px;
         li {
           flex-basis: 48%;
           @media screen and (min-width: 920px) {
@@ -491,6 +611,12 @@ main {
             display: block;
             font-size: 0.9rem;
           }
+        }
+      }
+      ol.publication {
+        margin: 0 0 40px;
+        li {
+          margin: 3px 5px 3px 30px;
         }
       }
     }

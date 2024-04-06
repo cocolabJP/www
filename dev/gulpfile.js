@@ -1,14 +1,24 @@
 // gulp v4.0.2
 
-const gulp     = require("gulp"),
-      fs       = require("fs"),
-      sass     = require("gulp-sass")(require('sass')),
-      uglify   = require("gulp-uglify"),
-      cleanCSS = require("gulp-clean-css"),
-      plumber  = require("gulp-plumber"),
-      mmq      = require("gulp-merge-media-queries"),
+var m = new Date();
+const version =
+    m.getUTCFullYear() +
+    ("0" + (m.getUTCMonth()+1)).slice(-2) +
+    ("0" + m.getUTCDate()).slice(-2) + "." +
+    ("0" + m.getUTCHours()).slice(-2) +
+    ("0" + m.getUTCMinutes()).slice(-2) +
+    ("0" + m.getUTCSeconds()).slice(-2);
+
+const gulp     = require('gulp'),
+      fs       = require('fs'),
+      sass     = require('gulp-sass')(require('sass')),
+      uglify   = require('gulp-uglify'),
+      cleanCSS = require('gulp-clean-css'),
+      plumber  = require('gulp-plumber'),
+      mmq      = require('gulp-merge-media-queries'),
       rename   = require('gulp-rename'),
       strip    = require('gulp-strip-comments'),
+      ejs      = require('gulp-ejs'),
       browser  = require('browser-sync');
  
 const cleanCSS_1stSettings = 
@@ -39,7 +49,7 @@ const cleanCSS_2ndSettings =
   };
 
 gulp.task("sass", function() {
-  return gulp.src("../docs/src/css/*.scss")
+  return gulp.src("../src/css/*.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(cleanCSS(cleanCSS_1stSettings))
@@ -49,17 +59,32 @@ gulp.task("sass", function() {
 });
 
 gulp.task("js", function() {
-  return gulp.src("../docs/src/js/*.js")
+  return gulp.src("../src/js/*.js")
     .pipe(plumber())
     .pipe(strip())
     .pipe(uglify())
     .pipe(gulp.dest("../docs/static/js/"));
 });
 
+gulp.task('ejs', function() {
+  return gulp.src(["../src/html/**/[^_]*.ejs"])
+    .pipe(plumber())
+    .pipe(ejs({'version': version}))
+    .pipe(rename(function(path) {
+      if(path.basename != 'index') {
+        path.dirname = path.basename;
+        path.basename = 'index';
+      }
+      path.extname = '.html';
+    }))
+    .pipe(gulp.dest("../docs/"));
+});
+
 // watch
 gulp.task("watch", (done) => {
-  gulp.watch("../docs/src/css/*.scss", gulp.task("sass"));
-  gulp.watch("../docs/src/js/*.js",    gulp.task("js"));
+  gulp.watch("../src/html/**/*.ejs", gulp.task("ejs"));
+  gulp.watch("../src/css/*.scss",    gulp.task("sass"));
+  gulp.watch("../src/js/*.js",       gulp.task("js"));
   done();
 });
 
