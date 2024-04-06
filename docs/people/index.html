@@ -46,13 +46,14 @@
   <div class="content clearfix">
     <nav>
       <ul>
-        <li>教員</li>
-        <li>学生</li>
-        <li>連携研究者</li>
+        <li @click="scrollTo('faculty')">教員</li>
+        <li @click="scrollTo('student-ou')">学生（岡山大学）</li>
+        <li @click="scrollTo('student-naist')">学生（奈良先端大）</li>
+        <li @click="scrollTo('collaborator')">連携研究者</li>
       </ul>
     </nav>
     <article>
-      <section>
+      <section id="faculty">
         <h3>教員</h3>
         <ul class="people">
           <li>
@@ -63,7 +64,7 @@
           </li>
         </ul>
       </section>
-      <section>
+      <section id="student-ou">
         <h3>学生</h3>
         <ul class="people">
           <li>
@@ -83,7 +84,7 @@
           </li>
         </ul>
       </section>
-      <section>
+      <section id="student-naist">
         <h3>学生（奈良先端科学技術大学院大学）</h3>
         <ul class="people">
           <li>
@@ -203,7 +204,7 @@
           </li>
         </ul>
       </section>
-      <section>
+      <section id="collaborator">
         <h3>連携研究者</h3>
         <ul class="people">
           <li>

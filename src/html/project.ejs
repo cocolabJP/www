@@ -7,19 +7,19 @@
     <nav>
       <ul>
         <li @click="scrollTo('overview')">概要</li>
-        <li>プロジェクト
+        <li @click="scrollTo('project')">プロジェクト
           <ul>
-            <li @click="scrollTo('emotour')">EmoTour</li>
-            <li @click="scrollTo('musa')">MusA x EmoTour</li>
-            <li @click="scrollTo('blece')">BLECE</li>
-            <li @click="scrollTo('abacaas')">AbaCaaS</li>
-            <li @click="scrollTo('discaas')">DisCaaS</li>
-            <li @click="scrollTo('tongar')">Tongar</li>
-            <li @click="scrollTo('sorashiru')">Sorashiru</li>
-            <li @click="scrollTo('tameshiba')">ためしば</li>
-            <li @click="scrollTo('minsapo')">みんサポ</li>
-            <li @click="scrollTo('repot')">レポっと</li>
-            <li @click="scrollTo('nishorobo')">にしょロボくん</li>
+            <li @click.stop="scrollTo('emotour')">EmoTour</li>
+            <li @click.stop="scrollTo('musa')">MusA x EmoTour</li>
+            <li @click.stop="scrollTo('blece')">BLECE</li>
+            <li @click.stop="scrollTo('abacaas')">AbaCaaS</li>
+            <li @click.stop="scrollTo('discaas')">DisCaaS</li>
+            <li @click.stop="scrollTo('tongar')">Tongar</li>
+            <li @click.stop="scrollTo('sorashiru')">Sorashiru</li>
+            <li @click.stop="scrollTo('tameshiba')">ためしば</li>
+            <li @click.stop="scrollTo('minsapo')">みんサポ</li>
+            <li @click.stop="scrollTo('repot')">レポっと</li>
+            <li @click.stop="scrollTo('nishorobo')">にしょロボくん</li>
           </ul>
         </li>
       </ul>
@@ -51,7 +51,7 @@
           </p>
         </div>
       </section>
-      <section>
+      <section id="project">
         <h3>研究プロジェクト</h3>
         <div class="project-card" id="emotour">
           <h4>EmoTour： 観光客のマルチモーダルな感情・満足度推定</h4>
@@ -106,7 +106,7 @@
           <p><a href="http://research.ubi-lab.com/ja/tongar/">▶ 詳細はこちら</a></p>
         </div>
         <div class="project-card" id="sorashiru">
-          <h4>DisCaaS： </h4>
+          <h4>ソラシル： みんなの手でつくる「じぶん温度」 </h4>
           <p>
           </p>
           <p><a href="https://www.iopt.jp/sorashiru/">▶ 詳細はこちら</a></p>
@@ -123,21 +123,22 @@
           <p>
             
           </p>
-          <p><a href="">▶ 詳細はこちら</a></p>
+          <p><a href="https://www.iopt.jp/tameshiba/minsapo/">▶ 詳細はこちら</a></p>
         </div>
         <div class="project-card" id="repot">
-          <h4>レポっと ブラウザで動作するユーザ参加型位置情報付き写真収集システム</h4>
+          <h4>レポっと： ブラウザで動作するユーザ参加型位置情報付き写真収集システム</h4>
           <p>
-            
-          </p>
-          <p><a href="https://app.iopt.jp/signin">▶ 詳細はこちら</a></p>
-        </div>
-        <div class="project-card" id="nishorobo">
-          <h4>にしょロボくん</h4>
-          <p>
-            
+            「レポっと」は、みんなの視点で見た街の様子を共有するためのプラットフォームです。
+            ブラウザだけで動作し、位置情報付きの写真📸・コメント💭・ハッシュタグ🔖 を投稿することができます。
           </p>
           <p><a href="https://www.iopt.jp/repot">▶ 詳細はこちら</a></p>
+        </div>
+        <div class="project-card" id="nishorobo">
+          <h4>にしょロボくん： 小学生が創る地域のデジタル図鑑</h4>
+          <p>
+            子供目線で地域の情報を収集して「世界に一つだけの地域のデジタル図鑑：にしょロボくん」を創る、全校縦割り活動プロジェクトです。ワークシートやギガスクール端末を用いて様々な形式（テキスト・写真・音声・動画・地図・絵…）でニッチな街の情報を可視化します。
+          </p>
+          <p><a href="https://www.iopt.jp/nishorobo">▶ 詳細はこちら</a></p>
         </div>
       </section>
     </article>

@@ -6,22 +6,22 @@
   <div class="content clearfix">
     <nav>
       <ul>
-        <li>所在地</li>
-        <li>問い合わせ</li>
+        <li @click="scrollTo('place')">所在地</li>
+        <li @click="scrollTo('contact')">問い合わせ</li>
       </ul>
     </nav>
     <article>
-      <section>
+      <section id="place">
         <h3>所在地</h3>
         <p>
           〒700-0082 岡山県岡山市北区津島中3丁目1-1<br>
-          岡山大学工学部 4号館
+          岡山大学工学部 4号館 602室
         </p>
       </section>
-      <section>
+      <section id="contact">
         <h3>問い合わせ</h3>
         <p>
-          yukimat[at]is.naist.jp
+          yukimat[at]okayama-u.ac.jp
         </p>
       </section>
     </article>
