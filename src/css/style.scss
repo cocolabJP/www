@@ -427,6 +427,10 @@ main {
       p {
         padding: 0 0 10px;
       }
+      img {
+        margin: 5px 0 10px;
+        border-radius: 5px;
+      }
       footer {
         margin: 10px 0;
         padding: 10px;
@@ -474,6 +478,7 @@ main {
             width: 100%;
             line-height: 20px;
             padding: 10px;
+            cursor: none;
             ul {
               padding: 10px 0;
               li {
@@ -520,6 +525,9 @@ main {
       }
       p {
         padding: 0 0 10px;
+      }
+      p:last-child {
+        padding: 0 0 30px;
       }
       img.img-center {
         margin: 20px auto;

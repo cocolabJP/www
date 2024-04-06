@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20240401.173816">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20240406.111321">
 </head>
 <body>
 <div class="app page publication" id="app" data-type="page">
@@ -46,28 +46,34 @@
   <div class="content clearfix">
     <nav>
       <ul>
-        <li>2024年度</li>
-        <li>〜2023年度</li>
+        <li @click="scrollTo('2024')">2024年度</li>
+        <li @click="scrollTo('2023')">2023年度まで</li>
       </ul>
     </nav>
     <article>
-      <h3>2023年度まで</h3>
-      <h4>書籍</h4>
-      <ol class="publication">
-        <li>
-          安本慶一, 荒川豊, <span class="author">松田裕貴</span>:
-          <span class="title">“スッキリ!がってん!IoTの本,”</span>
-          pp.1-143, 2021, 電気書院.
-        </li>
-      </ol>
-      <h4>論文誌・ジャーナル</h4>
-      <ol class="publication">
-        <li>
-          <span class="author">松田裕貴</span>, 尾崎えり子, 日高興人, 吉田友子, 小野博之, 仲林政子, 西浦弘望, 久保進也, 城野聖一:
-          <span class="title">“にしょロボくん： 地域の魅力発信アプリの共創を題材とするGIGAスクール端末を用いた全校縦割り活動の実践,”</span>
-          情報処理学会論文誌デジタルプラクティス（TDP）, Vol.4, No.2, pp.55-66 2023.
-        </li>
-      </ol>
+      <section id="2024">
+        <h3>2024年度</h3>
+        
+      </section>
+      <section id="2023">
+        <h3>2023年度まで</h3>
+        <h4>書籍</h4>
+        <ol class="publication">
+          <li>
+            安本慶一, 荒川豊, <span class="author">松田裕貴</span>:
+            <span class="title">“スッキリ!がってん!IoTの本,”</span>
+            pp.1-143, 2021, 電気書院.
+          </li>
+        </ol>
+        <h4>論文誌・ジャーナル</h4>
+        <ol class="publication">
+          <li>
+            <span class="author">松田裕貴</span>, 尾崎えり子, 日高興人, 吉田友子, 小野博之, 仲林政子, 西浦弘望, 久保進也, 城野聖一:
+            <span class="title">“にしょロボくん： 地域の魅力発信アプリの共創を題材とするGIGAスクール端末を用いた全校縦割り活動の実践,”</span>
+            情報処理学会論文誌デジタルプラクティス（TDP）, Vol.4, No.2, pp.55-66 2023.
+          </li>
+        </ol>
+      </section>
       <p>※このページは準備中です。教員の業績は<a href="https://yukimat.jp/">個人サイト（https://yukimat.jp/）</a>を御覧ください。</p>
     </article>
   </div>
@@ -87,6 +93,6 @@
 </footer>
 </div>
 <script type="importmap">{"imports": {"vue": "https://unpkg.com/vue@3.3.12/dist/vue.esm-browser.prod.js"}}</script>
-<script src="/static/js/main.js?v=20240401.173816" type="module"></script>
+<script src="/static/js/main.js?v=20240406.111321" type="module"></script>
 </body>
 </html>

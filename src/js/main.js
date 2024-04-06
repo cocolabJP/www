@@ -52,6 +52,12 @@ const app = createApp({
     },
     openDrawerMenu() {
       $("header").classList.toggle("drawer-opened");
+    },
+    scrollTo(target) {
+      window.scrollTo({
+        top: $(target).offsetTop - 85,
+        behavior: 'smooth'
+      });
     }
   },
 });

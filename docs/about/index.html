@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20240401.173816">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20240406.111321">
 </head>
 <body>
 <div class="app page about" id="app" data-type="page">
@@ -46,16 +46,16 @@
   <div class="content clearfix">
     <nav>
       <ul>
-        <li>研究室概要</li>
-        <li>配属希望の方へ</li>
-        <li>ロゴ</li>
+        <li @click="scrollTo('about')">研究室概要</li>
+        <li @click="scrollTo('message')">配属希望の方へ</li>
+        <li @click="scrollTo('logo-brand')">ロゴ・ブランド</li>
       </ul>
     </nav>
     <article>
-      <section>
+      <section id="about">
         <h3>コンヴィヴィアルコンピューティング研究室について</h3>
         <p>
-          岡山大学コンヴィヴィアルコンピューティング研究室（Convivial Computing Laboratory）は、2024年4月に発足します。
+          岡山大学コンヴィヴィアルコンピューティング研究室（Convivial Computing Laboratory）は、2024年4月に発足しました。
         </p>
         <p>
           本研究室では、Society 5.0時代に向けた「IoT・AI」と私たち「人」の“自立共生”に向けた技術の研究を通じて、個人から社会全体に至るまで、人が生き生きと暮らせる（= Convivialな）環境・社会を実現することを目指しています。コンヴィヴィアル（Convivial）とは、ラテン語の“Convivere”に由来し、「con-（with）」+「vivere（live）」=「自立共生」を意味する単語です。他にも「陽気な」「友好的な」といった意味も含まれています。理論的な研究だけでなく実際に動くシステムとして実装する応用的な研究まで、幅広い領域を対象としています。
@@ -94,7 +94,7 @@
           <li>ACM</li>
         </ul>
       </section>
-      <section>
+      <section id="message">
         <h3>学部４年生および修士課程入学希望の皆様へのメッセージ</h3>
         <p>
           コンヴィヴィアルコンピューティング研究室では、理論だけに留まらず、実際にシステムを実装し動かしてみたいという学生を募集しています。研究テーマは、各学生のスキルや目標を踏まえて、最も適したものを学生・教員で相談して決めていきます。研究テーマをより学生自身の興味関心に合わせられるようにするために、基本的には博士前期課程（修士）を見据えたスケジュールを設定しています（※もちろん、学部4年生で就職することも可能です）。
@@ -102,11 +102,11 @@
           また、研究成果については積極的な国内外の学会での発表を推奨しています。また、学会だけではなくハッカソン・アイデアソンへの参加、コンテストへの応募、外部資金の獲得、海外留学、起業なども歓迎します。研究室では企業との共同研究プロジェクトもあり、それらのプロジェクトに参画し活躍することで経済的なサポートを得ることも可能です。
         </p>
         <p>
-          興味のある方は、yukimat[at]is.naist.jp または<a href="https://twitter.com/yukimatJP">X（@yukimatJP）</a>まで連絡してください。
+          興味のある方は、yukimat[at]okayama-u.ac.jp または<a href="https://twitter.com/yukimatJP">X/Twitter（@yukimatJP）</a>まで連絡してください。
         </p>
       </section>
-      <section>
-        <h3>ロゴ</h3>
+      <section id="logo-brand">
+        <h3>ロゴ・ブランド</h3>
         <p>
           「Convivial Computing」の接頭文字“C”と“o”を並べ替えて配置することによって、人とクエスチョンマークを表しています。本研究室では、「人」がどのように世界を捉えているのかを理解することや、それに基づく「人」のためのIoT・AIを実現することをミッションとして掲げているため、「人」を中心とした「問い」を設定しよう、という想いを込めています。
           <img src="./img/logomark-concept.png" alt="コンヴィヴィアルコンピューティング研究室ロゴ" class="img-center">
@@ -134,6 +134,6 @@
 </footer>
 </div>
 <script type="importmap">{"imports": {"vue": "https://unpkg.com/vue@3.3.12/dist/vue.esm-browser.prod.js"}}</script>
-<script src="/static/js/main.js?v=20240401.173816" type="module"></script>
+<script src="/static/js/main.js?v=20240406.111321" type="module"></script>
 </body>
 </html>

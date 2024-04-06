@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20240401.173816">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20240406.111321">
 </head>
 <body>
 <div class="app page project" id="app" data-type="page">
@@ -46,26 +46,26 @@
   <div class="content clearfix">
     <nav>
       <ul>
-        <li>概要</li>
+        <li @click="scrollTo('overview')">概要</li>
         <li>プロジェクト
           <ul>
-            <li>EmoTour</li>
-            <li>MusA x EmoTour</li>
-            <li>BLECE</li>
-            <li>AbaCaaS</li>
-            <li>DisCaaS</li>
-            <li>Tongar</li>
-            <li>Sorashiru</li>
-            <li>ためしば</li>
-            <li>みんサポ</li>
-            <li>レポっと</li>
-            <li>にしょロボくん</li>
+            <li @click="scrollTo('emotour')">EmoTour</li>
+            <li @click="scrollTo('musa')">MusA x EmoTour</li>
+            <li @click="scrollTo('blece')">BLECE</li>
+            <li @click="scrollTo('abacaas')">AbaCaaS</li>
+            <li @click="scrollTo('discaas')">DisCaaS</li>
+            <li @click="scrollTo('tongar')">Tongar</li>
+            <li @click="scrollTo('sorashiru')">Sorashiru</li>
+            <li @click="scrollTo('tameshiba')">ためしば</li>
+            <li @click="scrollTo('minsapo')">みんサポ</li>
+            <li @click="scrollTo('repot')">レポっと</li>
+            <li @click="scrollTo('nishorobo')">にしょロボくん</li>
           </ul>
         </li>
       </ul>
     </nav>
     <article>
-      <section>
+      <section id="overview">
         <h3>概要</h3>
         <div class="clearfix container-flex-right-img">
           <img src="./img/project-1.png" alt="人から見える「世界」を理解し、ナビする">
@@ -93,7 +93,7 @@
       </section>
       <section>
         <h3>研究プロジェクト</h3>
-        <div class="project-card">
+        <div class="project-card" id="emotour">
           <h4>EmoTour： 観光客のマルチモーダルな感情・満足度推定</h4>
           <p>
             スマートフォンをはじめとするスマートデバイスを活用し、観光中に有益な情報が得られる「スマートツーリズム」が注目を集めています。このスマートツーリズムにおいて、より観光客の状況に即した観光情報を提供するためには、観光客が実地で抱く心理状態（感情・満足度など）を理解し考慮することが重要です。
@@ -103,7 +103,7 @@
           </p>
           <p><a href="http://research.ubi-lab.com/ja/emo-tour/">▶ 詳細はこちら</a></p>
         </div>
-        <div class="project-card">
+        <div class="project-card" id="musa">
           <h4>MusA x EmoTour： 理解度・興味によって変化する美術館ガイダンス</h4>
           <p>
             美術館は芸術作品を鑑賞する場として人々に親しまれています。しかし、美術館には膨大な数の展示作品があり、鑑賞者は興味や関心に合わせて作品を鑑賞することが難しいという課題があります。
@@ -112,7 +112,7 @@
             本研究では、鑑賞者の心理状態を芸術作品を鑑賞する際の仕草のセンシングに基づき推定することで、鑑賞者の興味や関心に合わせたナビゲーションの提供や、鑑賞体験の向上につなげることを目指しています。
           </p>
         </div>
-        <div class="project-card">
+        <div class="project-card" id="blece">
           <h4>BLECE： BLE電波受信状況を用いた公共空間の混雑度・体感混雑度推定</h4>
           <p>
             都市内で滞在・移動する人々にとって関心の高い情報の一つが、交通機関や飲食店、公共施設などといった様々な空間における混雑度情報です。しかしながら既存の混雑度計測サービスはそれぞれ異なる方式でデータ収集・情報提供がなされており、ユーザが横断的に混雑度情報を取得することが難しいことが問題となります。
@@ -122,14 +122,7 @@
           </p>
           <p><a href="https://www.iopt.jp/blece">▶ 詳細はこちら</a></p>
         </div>
-        <div class="project-card">
-          <h4>Tongar： トングでゴミ拾いするだけでポイ捨てゴミの種別・位置を記録するシステム</h4>
-          <p>
-            近年、奈良公園のシカをはじめ、野生の動物が誤ってポイ捨てゴミを食べて死に至る状況が発生しています。この点にとどまらず“ポイ捨て”は深刻な環境問題であり、解決が望まれています。Tongarは、ゴミ拾いに利用するトングにカメラを搭載し「どこ」で「どんな」ゴミが「いつ」捨てられているのかの情報を自動で収集するシステムです。
-          </p>
-          <p><a href="http://research.ubi-lab.com/ja/tongar/">▶ 詳細はこちら</a></p>
-        </div>
-        <div class="project-card">
+        <div class="project-card" id="abacaas">
           <h4>AbaCaaS： 卓上カメラを用いた珠算学習支援システム</h4>
           <p>
             算術力を獲得するための方法の一つとして、算盤（そろばん）を用いた計算、すなわち「珠算」が現代においても活用されています。珠算による計算は様々な方法・順序で「珠」を操作する必要があるため、習得には長期に渡る繰り返し学習を要することが知られています。学習過程では、様々な計算ミスや苦手な珠操作が生じますが、これらの「つまづき」には規則性・パターンがあると考えられます。
@@ -139,15 +132,48 @@
           </p>
           <p><a href="http://research.ubi-lab.com/ja/abacaas/">▶ 詳細はこちら</a></p>
         </div>
-        <div class="project-card">
+        <div class="project-card" id="discaas">
+          <h4>DisCaaS： 360度カメラをセンサとして用いるディスカッション中のマイクロ行動分析</h4>
+          <p>
+          </p>
+          <p><a href="http://research.ubi-lab.com/ja/discaas/">▶ 詳細はこちら</a></p>
+        </div>
+        <div class="project-card" id="tongar">
+          <h4>Tongar： トングでゴミ拾いするだけでポイ捨てゴミの種別・位置を記録するシステム</h4>
+          <p>
+            近年、奈良公園のシカをはじめ、野生の動物が誤ってポイ捨てゴミを食べて死に至る状況が発生しています。この点にとどまらず“ポイ捨て”は深刻な環境問題であり、解決が望まれています。Tongarは、ゴミ拾いに利用するトングにカメラを搭載し「どこ」で「どんな」ゴミが「いつ」捨てられているのかの情報を自動で収集するシステムです。
+          </p>
+          <p><a href="http://research.ubi-lab.com/ja/tongar/">▶ 詳細はこちら</a></p>
+        </div>
+        <div class="project-card" id="sorashiru">
+          <h4>DisCaaS： </h4>
+          <p>
+          </p>
+          <p><a href="https://www.iopt.jp/sorashiru/">▶ 詳細はこちら</a></p>
+        </div>
+        <div class="project-card" id="tameshiba">
           <h4>ためしば： ボトムアップ式のスマートシティアプリ</h4>
           <p>
             自治体だけでなく、市民や民間企業、大学といった様々な組織に属する人たちみんなで創るスマートシティアプリです。シビックテック（Civic Tech）の考え方で、オープンに街を良くするためのプラットフォームとして利用できるようにすることを目指しています。
           </p>
           <p><a href="http://research.ubi-lab.com/ja/tameshiba/">▶ 詳細はこちら</a></p>
         </div>
-        <div class="project-card">
-          <h4>レポっと： ブラウザで動作するユーザ参加型位置情報付き写真収集システム</h4>
+        <div class="project-card" id="minsapo">
+          <h4>みんサポ生駒</h4>
+          <p>
+            
+          </p>
+          <p><a href="">▶ 詳細はこちら</a></p>
+        </div>
+        <div class="project-card" id="repot">
+          <h4>レポっと ブラウザで動作するユーザ参加型位置情報付き写真収集システム</h4>
+          <p>
+            
+          </p>
+          <p><a href="https://app.iopt.jp/signin">▶ 詳細はこちら</a></p>
+        </div>
+        <div class="project-card" id="nishorobo">
+          <h4>にしょロボくん</h4>
           <p>
             
           </p>
@@ -172,6 +198,6 @@
 </footer>
 </div>
 <script type="importmap">{"imports": {"vue": "https://unpkg.com/vue@3.3.12/dist/vue.esm-browser.prod.js"}}</script>
-<script src="/static/js/main.js?v=20240401.173816" type="module"></script>
+<script src="/static/js/main.js?v=20240406.111321" type="module"></script>
 </body>
 </html>
