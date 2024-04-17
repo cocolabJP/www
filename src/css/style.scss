@@ -75,6 +75,7 @@ a {
 }
 .ic-web:before {
   content: "public";
+  color: var(--accent-color);
 }
 div.app {
   position: relative;
@@ -648,6 +649,7 @@ main {
           .ic-web {
             font-size: 1.1rem;
             padding: 0 0 0 5px;
+            margin: 0 -10px 0 0;
           }
         }
       }
