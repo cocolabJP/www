@@ -547,7 +547,7 @@ main {
         font-size: 1.4rem;
       }
       h4 {
-        padding: 10px 0 20px;
+        padding: 10px 0 15px;
         font-size: 1.2rem;
       }
       p {
@@ -644,10 +644,12 @@ main {
           span {
             display: block;
             font-size: 0.9rem;
+            letter-spacing: 0.05rem;
           }
           small {
             display: block;
             font-size: 0.9rem;
+            letter-spacing: 0.05rem;
           }
           .ic-web {
             font-size: 1.1rem;
@@ -657,9 +659,24 @@ main {
         }
       }
       ol.publication {
-        margin: 0 0 40px;
+        margin: 0 0 20px;
+        * {
+          font-size: 0.9rem;
+          letter-spacing: 0.05rem;
+          text-align: justify;
+          word-wrap: normal;
+          word-break: normal;
+        }
         li {
           margin: 3px 5px 3px 30px;
+          span.author {
+            font-weight: bold;
+          }
+          span.title {
+            display: block;
+            font-weight: bold;
+            color: var(--accent-color);
+          }
         }
       }
     }
