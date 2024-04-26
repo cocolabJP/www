@@ -1,4 +1,5 @@
-import { createApp } from 'vue'
+import { createApp } from 'vue';
+import axios from 'axios';
 
 const $ = (id) => {
   return document.getElementById(id);
@@ -9,7 +10,8 @@ const app = createApp({
   data() {
     return {
       pageType: 'page',
-      logoWidth: 180
+      logoWidth: 180,
+      news: [],
     };
   },
   created: function() {
@@ -23,6 +25,7 @@ const app = createApp({
     if(this.pageType == 'top') {
       this.onResizeWindow();
       this.onScroll();
+      this.loadTumblrNews();
     }
   },
   destroyed: function () {
@@ -58,6 +61,28 @@ const app = createApp({
         top: $(target).offsetTop - 85,
         behavior: 'smooth'
       });
+    },
+    async loadTumblrNews() {
+      axios.get("https://cocolab.yukimat.jp/rss/", {
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          }
+        })
+        .then((res) => {
+          if(res.status == 200) {
+            this.news = res.data.news;
+          }
+        })
+        .catch(err => {
+          console.log("err:", err);
+        });
+    },
+    getPrettyDate(dt) {
+      return new Date(dt).toLocaleDateString('ja-JP', {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      }).replaceAll("/", ".");
     }
   },
 });

@@ -71,48 +71,18 @@
       </section>
       <section>
         <h2>お知らせ</h2>
-        <ul class="news">
-          <li>
-            <time datetime="2024-04-18">2024.04.18</time>
-            <a href="https://www.civictech.jp/newsnote/20230518-%E3%82%B7%E3%83%93%E3%83%83%E3%82%AF%E3%83%86%E3%83%83%E3%82%AF%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%82%B9-%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E9%96%8B%E5%A7%8B">佐賀市「SAGAスマート街なかプロジェクト」におけるシビックテックアライアンス参画機関になりました。</a>
-          </li>
-          <li>
-            <time datetime="2024-04-17">2024.04.17</time>
-            <a href="https://www.facebook.com/events/778513637554136">シビックテックさいたま4月勉強会（4/18開催）</a>にて、講師の松田が講演します。
-          </li>
-          <li>
-            <time datetime="2024-04-01">2024.04.01</time>
-            Convivial Computing Laboratoryが発足しました！<br>
-            3名のB4学生が研究室に配属されました。
-          </li>
-          <li>
-            <time datetime="2024-02-16">2024.02.16</time>
-            学部3年生向け研究室説明会を行います。<br>
-            <a href="https://www.dropbox.com/scl/fi/k0anscupnmllqnm9ats7k/cocolab_intro.pdf?rlkey=qhm00shwpzjh063huhfr61oz6&dl=0">▶資料はこちら</a>
+        <ul class="news" id="news">
+          <li v-if="news.length == 0">loading...</li>
+          <li v-else
+              v-for="n in news">
+            <time :datetime="n.date">${ getPrettyDate(n.date) }</time>
+            <a :href="n.url">${ n.title }</a>
           </li>
         </ul>
       </section>
     </div>
   </section>
   <aside>
-
   </aside>
 </main>
-<footer>
-  <div class="container">
-    <ul>
-      <li><a href="/">ホーム</a></li>
-      <li><a href="/about/">研究室紹介</a></li>
-      <li><a href="/people/">メンバー</a></li>
-      <li><a href="/project/">プロジェクト</a></li>
-      <li><a href="/publication/">研究業績</a></li>
-      <li><a href="/access/">アクセス</a></li>
-    </ul>
-  </div>
-  <p class="copyright">&copy; Convivial Computing Laboratory, Okayama University</p>
-</footer>
-</div>
-<script type="importmap">{"imports": {"vue": "https://unpkg.com/vue@3.3.12/dist/vue.esm-browser.prod.js"}}</script>
-<script src="/static/js/main.js?v=<%= version %>" type="module"></script>
-</body>
-</html>
+<%- include('./_footer') %>
