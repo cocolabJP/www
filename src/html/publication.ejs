@@ -6,18 +6,30 @@
   <div class="content clearfix">
     <nav class="clearfix">
       <ul>
-        <li @click="scrollTo('2024')">2024年度</li>
-        <li @click="scrollTo('2023')">2023年度まで</li>
+        <li @click="scrollTo('2024')">2024年度
+          <ul>
+            <li @click.stop="scrollTo('2024-j')">論文誌・ジャーナル</li>
+            <li @click.stop="scrollTo('2024-i')">国際会議</li>
+            <li @click.stop="scrollTo('2024-d')">国内研究会</li>
+            <li @click.stop="scrollTo('2024-t')">講演・LT</li>
+          </ul>
+        </li>
+        <li @click="scrollTo('2023')">2023年度まで
+          <ul>
+            <li @click.stop="scrollTo('2023-b')">書籍</li>
+            <li @click.stop="scrollTo('2023-j')">論文誌・ジャーナル</li>
+          </ul>
+        </li>
       </ul>
     </nav>
     <article>
       <section id="2024">
         <h3>2024年度</h3>
-        <h4>論文誌・ジャーナル</h4>
+        <h4 id="2024-j">論文誌・ジャーナル</h4>
         <ol class="publication">
           <li class='ref-item'>TBA
         </ol>
-        <h4>国際会議</h4>
+        <h4 id="2024-i">国際会議</h4>
         <ol class="publication">
           <li class='ref-item'>
             <p>Victor Romero II, Tomokazu Matsui, <span class="author">Yuki Matsuda</span>, Hirohiko Suwa, Keiichi Yasumoto:
@@ -50,11 +62,11 @@
             The 8th International Workshop on Big Data and IoT Security in Smart Computing (BITS '24), 2024. (accepted)</p>
             <ul><li><a href="https://www.yama.info.waseda.ac.jp/en/bits2024">Link</a></li></ul>
         </ol>
-        <h4>国内研究会</h4>
+        <h4 id="2024-d">国内研究会</h4>
         <ol class="publication">
           <li class='ref-item'>TBA
         </ol>
-        <h4>講演・LT</h4>
+        <h4 id="2024-t">講演・LT</h4>
         <ol class="publication">
           <li class='ref-item'>
             <p><span class="author">松田裕貴</span>, 佐藤拓也:
@@ -66,7 +78,7 @@
       </section>
       <section id="2023">
         <h3>2023年度まで</h3>
-        <h4>書籍</h4>
+        <h4 id="2023-b">書籍</h4>
         <ol class="publication">
           <li class='ref-item'>
             <p>安本慶一, 荒川豊, <span class="author">松田裕貴</span>:
@@ -80,7 +92,7 @@ https://honto.jp/netstore/pd-book_31129333.html">Honto</a></li>
             </ul>
           </li>
         </ol>
-        <h4>論文誌・ジャーナル</h4>
+        <h4 id="2023-j">論文誌・ジャーナル</h4>
         <ol class="publication">
           <li class='ref-item'>
             <p>Jiaxuan Zhang, <span class="author">Yuki Matsuda</span>, Manato Fujimoto, Hirohiko Suwa, Keiichi Yasumoto:
