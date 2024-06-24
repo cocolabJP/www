@@ -679,7 +679,8 @@ main {
           }
         }
       }
-      ol.publication {
+      ol.publication,
+      ol.multi-line {
         margin: 0 0 20px;
         * {
           font-size: 0.9rem;
@@ -688,6 +689,28 @@ main {
           word-wrap: normal;
           word-break: normal;
         }
+        ul {
+          padding: 0;
+          margin: 0;
+          &::after {
+            content: "";
+            display: block;
+            clear: both;
+          }
+          li {
+            list-style: none;
+            float: left;
+            background: #eee;
+            border-radius: 8px;
+            margin: 0 5px 0 0;
+            a {
+              display: block;
+              padding: 2px 10px 4px;
+            }
+          }
+        }
+      }
+      ol.publication {
         li.ref-item {
           margin: 5px 5px 10px 30px;
           span.author {
@@ -701,25 +724,27 @@ main {
           p {
             padding: 0 0 6px;
           }
-          ul {
-            padding: 0;
-            margin: 0;
-            &::after {
-              content: "";
-              display: block;
-              clear: both;
-            }
-            li {
-              list-style: none;
-              float: left;
-              background: #eee;
-              border-radius: 8px;
-              margin: 0 5px 0 0;
-              a {
-                display: block;
-                padding: 2px 10px 4px;
-              }
-            }
+        }
+      }
+      ol.multi-line {
+        li {
+          margin: 5px 5px 10px 30px;
+          color: #000;
+          a {
+            display: block;
+            padding: 0 0 2px 0;
+          }
+          p {
+            padding: 0 0 6px;
+            line-height: 20px;
+            font-weight: bold;
+          }
+          span {
+            display: block;
+            padding: 2px 0 0;
+            color: #666;
+            line-height: 20px;
+            font-weight: normal;
           }
         }
       }
