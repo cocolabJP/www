@@ -74,11 +74,14 @@
         <ul class="news" id="news">
           <li v-if="news.length == 0">loading...</li>
           <li v-else
-              v-for="n in news">
+              v-for="n in news.slice(0, 5)">
             <time :datetime="n.date">${ getPrettyDate(n.date) }</time>
             <a :href="n.url">${ n.title }</a>
           </li>
         </ul>
+        <div class="news-more" v-if="news.length > 5">
+          <a href="https://cocolabjp.tumblr.com/">➔ もっと見る</a>
+        </div>
         <h2>研究室の日常</h2>
         <div class="twitter">
           <a class="twitter-timeline" data-lang="ja" data-width="570" data-height="500" data-theme="light" href="https://twitter.com/cocolabJP?ref_src=twsrc%5Etfw">Tweets by cocolabJP</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
