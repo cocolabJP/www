@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20240701.073717">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20240701.083807">
 </head>
 <body>
 <div class="app page publication" id="app" data-type="page">
@@ -54,6 +54,8 @@
             <li @click.stop="scrollTo('2024-i')">国際会議</li>
             <li @click.stop="scrollTo('2024-d')">国内研究会</li>
             <li @click.stop="scrollTo('2024-t')">講演・LT</li>
+            <li @click.stop="scrollTo('2024-p')">メディア掲載</li>
+            <li @click.stop="scrollTo('2024-a')">受賞</li>
           </ul>
         </li>
         <li @click="scrollTo('2023')">2023年度まで
@@ -157,13 +159,29 @@
             <ul><li><a href="https://www.facebook.com/events/778513637554136">Link</a></li></ul>
           </li>
         </ol>
-        <h4 id="2024-a">メディア掲載</h4>
+        <h4 id="2024-p">メディア掲載</h4>
         <ol class="multi-line">
           <li><p>Japan Times
             <span>Japan’s gamified environment apps target a greener mindset</span>
             <span>2024.06.16</span></p>
             <ul><li><a href="https://www.japantimes.co.jp/environment/2024/06/16/sustainability/gamification-environment-apps-japan/">Link</a></li></ul>
-        </li>
+          </li>
+        </ol>
+        <h4 id="2024-a">受賞</h4>
+        <ol class="multi-line">
+          <li><p>情報処理学会 DICOMO 2024 「野口賞（デモ賞）」
+            <span>未知ゴミ識別のための判定手法の比較と実用化に向けた検討</span>
+            <span>立花巧樹, 呉健朗, 松田裕貴, 諏訪博彦, 安本慶一</span>
+            <span>2024.06.28</span></p>
+            <ul><li><a href="https://dicomo.org/">Link</a></li></ul>
+          </li>
+          <li><p>情報処理学会 DICOMO 2024 「ヤングリサーチャ賞」
+            <span>未知ゴミ識別のための判定手法の比較と実用化に向けた検討</span>
+            <span>立花巧樹</span>
+            <span>2024.06.28</span></p>
+            <ul><li><a href="https://dicomo.org/">Link</a></li></ul>
+          </li>
+        </ol>
       </section>
       <section id="2023">
         <h3>2023年度まで</h3>
@@ -245,6 +263,6 @@ https://doi.org/10.1145/3580784">DOI</a></li>
     "axios": "https://unpkg.com/axios/dist/esm/axios.min.js"
   }
 }</script>
-<script src="/static/js/main.js?v=20240701.073717" type="module"></script>
+<script src="/static/js/main.js?v=20240701.083807" type="module"></script>
 </body>
 </html>
