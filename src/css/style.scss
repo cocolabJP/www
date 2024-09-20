@@ -732,12 +732,12 @@ main {
       ol.multi-line {
         li {
           margin: 5px 5px 10px 30px;
-          color: #000;
           a {
             display: block;
             padding: 0 0 2px 0;
           }
           p {
+            color: var(--accent-color);
             padding: 0 0 6px;
             line-height: 20px;
             font-weight: bold;
