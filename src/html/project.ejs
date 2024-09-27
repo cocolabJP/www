@@ -9,6 +9,7 @@
         <li @click="scrollTo('overview')">概要</li>
         <li @click="scrollTo('project')">プロジェクト
           <ul>
+            <li @click.stop="scrollTo('breid')">BReID</li>
             <li @click.stop="scrollTo('emotour')">EmoTour</li>
             <li @click.stop="scrollTo('musa')">MusA x EmoTour</li>
             <li @click.stop="scrollTo('blece')">BLECE</li>
@@ -54,6 +55,13 @@
       </section>
       <section id="project">
         <h3>研究プロジェクト</h3>
+        <div class="project-card" id="breid">
+          <h4>BReID: 複数のBLEスキャナを用いた都市空間の人流計測</h4>
+          <p>
+            都市内で滞在・移動する人々がどのような回遊行動を取っているのかを分析することはマーケティングや都市設計のために重要です。
+            本研究では、人々が持つスマートフォンなどの電子機器から発されるBLE（Bluetooth Low Energy）の電波を環境側からスキャンし、ランダマイズされたMACアドレスのデバイスをRe-identificaitonすることで、都市空間を移動する人を限定的に追跡可能とする手法の確立を目指しています。
+          </p>
+        </div>
         <div class="project-card" id="emotour">
           <h4>EmoTour： 観光客のマルチモーダルな感情・満足度推定</h4>
           <p>
@@ -126,7 +134,7 @@
         <div class="project-card" id="minsapo">
           <h4>みんサポ生駒</h4>
           <p>
-            
+            ソーシャルグッドな活動を市民の投票で支援する新しい共創の枠組みです。
           </p>
           <p><a href="https://www.iopt.jp/tameshiba/minsapo/">▶ 詳細はこちら</a></p>
         </div>
@@ -158,6 +166,7 @@
               <li>生駒市</li>
               <li>奈良県</li>
               <li>奈良県立美術館</li>
+              <li>佐賀市</li>
             </ul>
           <li>民間企業
             <ul>
@@ -168,11 +177,19 @@
               <li>奈良交通株式会社</li>
               <li>YuMake株式会社</li>
               <li>近鉄ケーブルネットワーク株式会社</li>
+              <li>一般財団法人西粟倉むらまるごと研究所</li>
+              <li>株式会社ローカルメディアラボ</li>
             </ul>
           <li>大学・学術機関
             <ul>
               <li>奈良先端科学技術大学院大学</li>
+              <li>九州大学</li>
               <li>DFKI（ドイツ人工知能研究センター）</li>
+              <li>大阪公立大学</li>
+              <li>慶應義塾大学</li>
+              <li>慶應義塾ミュージアム・コモンズ</li>
+              <li>名古屋大学</li>
+              <li>京都橘大学</li>
             </ul>
         </ul>
       </section>
