@@ -47,9 +47,10 @@
 <main class="clearfix">
   <section>
     <div class="slider">
-      <ul>
-        <li><img src="/static/img/top-visual/202404_startup.png"></li>
+      <ul id="slider-content">
+        <li v-for="slide in slides"><a :href="slide.url" target="_blank"><img :src="getSlideImgSrc(slide)" loading="lazy"></a></li>
       </ul>
+      <div class="slider-progress"><p class="progress-bar" id="progress-bar"></p></div>
     </div>
     <div class="content-2col clearfix">
       <section>

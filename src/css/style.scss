@@ -395,23 +395,65 @@ main {
   display: block;
   padding: 0 var(--side-margin);
   div.slider {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3.1;
+    @media screen and (max-width: 920px) { aspect-ratio: 2.5; }
+    @media screen and (max-width: 640px) { aspect-ratio: 2.0; }
+    border-radius: 15px;
+    overflow: hidden;
+    background: #999;
     ul {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transition: 1s top ease-in-out;
       li {
         list-style: none;
         width: 100%;
-        aspect-ratio: 3;
-        @media screen and (max-width: 920px) {
-          aspect-ratio: 2.5;
-        }
-        @media screen and (max-width: 640px) {
-          aspect-ratio: 2;
-        }
-        border-radius: 15px;
-        overflow: hidden;
+        aspect-ratio: 3.1;
+        @media screen and (max-width: 920px) { aspect-ratio: 2.5; }
+        @media screen and (max-width: 640px) { aspect-ratio: 2.0; }
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+      }
+    }
+    div.slider-progress {
+      position: absolute;
+      z-index: 10;
+      top: 15px;
+      left: 15px;
+      width: 100px;
+      height: 10px;
+      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      p.progress-bar {
+        width: 0px;
+        height: 10px;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.3);
+        transition: 0.3s width linear;
+      }
+      p.progress-bar.anim {
+        width: 100px;
+        transition: 4.5s width ease-out;
+      }
+      @media screen and (max-width: 640px) {
+        width: 60px;
+        height: 6px;
+        border-radius: 3px;
+        p.progress-bar {
+          height: 6px;
+          border-radius: 3px;
+        }
+        p.progress-bar.anim {
+          width: 60px;
         }
       }
     }

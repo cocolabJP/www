@@ -5,6 +5,12 @@ const $ = (id) => {
   return document.getElementById(id);
 }
 
+const SLIDE_ITEMS = [
+  {"img": "202404_startup", "url": "https://note.com/cocolabjp/n/n705cb3d2b866"},
+  {"img": "202409_ipsjKansai", "url": "https://cocolabjp.tumblr.com/post/763005611667570688"},
+  {"img": "202409_100program", "url": "https://cocolabjp.tumblr.com/post/762935350489464832"}
+];
+
 const app = createApp({
   delimiters: ['${', '}'],
   data() {
@@ -12,6 +18,8 @@ const app = createApp({
       pageType: 'page',
       logoWidth: 180,
       news: [],
+      slides: SLIDE_ITEMS,
+      slideIndex: -1,
     };
   },
   created: function() {
@@ -25,6 +33,7 @@ const app = createApp({
     if(this.pageType == 'top') {
       this.onResizeWindow();
       this.onScroll();
+      this.setupSlideshow();
       this.loadTumblrNews();
     }
   },
@@ -52,6 +61,22 @@ const app = createApp({
         $("header").classList.remove("scaled");
         $("logomark").style.width = "";
       }
+    },
+    setupSlideshow() {
+      this.slideshowAnim();
+      setInterval(() => {
+        this.slideshowAnim();
+      }, 5000);
+    },
+    slideshowAnim() {
+      $("progress-bar").classList.remove("anim");
+      setTimeout(() => { $("progress-bar").classList.add("anim"); }, 500);
+      this.slideIndex++;
+      if(this.slideIndex == this.slides.length) { this.slideIndex = 0; }
+      $("slider-content").style.top = (-100 * this.slideIndex) + "%";
+    },
+    getSlideImgSrc(slide) {
+      return "/static/img/top-visual/" + slide.img + ".png";
     },
     openDrawerMenu() {
       $("header").classList.toggle("drawer-opened");
