@@ -781,6 +781,19 @@ main {
           }
           p {
             padding: 0 0 6px;
+            &:has(+ p) {
+              padding: 0 0 2px;
+            }
+          }
+          p + p {
+            padding: 0 0 8px;
+            opacity: 0.8;
+            font-size: 0.85rem;
+            cursor: pointer;
+            &:before {
+              content: "...";
+              padding: 0 3px 0 0;
+            }
           }
         }
       }

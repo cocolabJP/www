@@ -87,6 +87,12 @@ const app = createApp({
         behavior: 'smooth'
       });
     },
+    scrollToRef(target) {
+      window.scrollTo({
+        top: $(target).offsetTop - 100,
+        behavior: 'smooth'
+      });
+    },
     async loadTumblrNews() {
       axios.get("https://cocolab.yukimat.jp/rss/", {
           headers: {

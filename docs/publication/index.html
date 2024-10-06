@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20240930.044115">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20241006.072052">
 </head>
 <body>
 <div class="app page publication" id="app" data-type="page">
@@ -76,7 +76,8 @@
             <p><span class="author">松田裕貴</span>, 諏訪博彦:
             <span class="title">“《特集 ナラティブと人工知能》センシングと行動変容におけるナラティブ...ってなんだ?,”</span>
             人工知能, Vol.39, No.5, pp.638-644, 2024.</p>
-            <ul><li><a href="https://doi.org/10.11517/jjsai.39.5_638">DOI</a></li></ul>
+            <ul><li><a href="https://doi.org/10.11517/jjsai.39.5_638">DOI</a>
+                <li><a href="/publication/files/202409_JSAI-Magazine_Matsuda.pdf">PDF</a></li></li></ul>
           <li class="ref-item">
             <p><span class="author">松田裕貴</span>:
             <span class="title">“オフィスワーカーの心身と環境センシングに向けたアプリケーションの開発と評価,”</span>
@@ -95,6 +96,7 @@
             <p>Carolin Schindler, Daiki Mayumi, <span class="author">Yuki Matsuda</span>, Niklas Rach, Keiichi Yasumoto, Wolfgang Minker:
             <span class="title">“ARCADE: An Augmented Reality Display Environment for Multimodal Interaction with Conversational Agents,”</span>
             arXiv:2408.06222, pp.1-3, 2024.</p>
+            <p @click.stop="scrollToRef('carolin-icmi2024')">published: ICMI'24 (Carolin et al.)</p>
             <ul><li><a href="https://doi.org/10.48550/arXiv.2408.06222">DOI</a></li>
                 <li><a href="https://arxiv.org/pdf/2408.06222">PDF</a></li></ul>
         </ol>
@@ -118,7 +120,7 @@
         </ol>
         <h4 id="2024-i">国際会議</h4>
         <ol class="publication">
-          <li class='ref-item'>
+          <li class='ref-item' id="carolin-icmi2024">
             <p>Carolin Schindler, Daiki Mayumi, <span class="author">Yuki Matsuda</span>, Niklas Rach, Keiichi Yasumoto, Wolfgang Minker:
             <span class="title">“ARCADE: An Augmented Reality Display Environment for Multimodal Interaction with Conversational Agents,”</span>
             The 26th ACM International Conference on Multimodal Interaction (ICMI '24), pp.x-x, 2024. (accepted)</p>
@@ -386,6 +388,6 @@ https://doi.org/10.1145/3580784">DOI</a></li>
     "axios": "https://unpkg.com/axios/dist/esm/axios.min.js"
   }
 }</script>
-<script src="/static/js/main.js?v=20240930.044115" type="module"></script>
+<script src="/static/js/main.js?v=20241006.072052" type="module"></script>
 </body>
 </html>
