@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20241105.162136">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20241113.022153">
 </head>
 <body>
 <div class="app top" id="app" data-type="top">
@@ -75,13 +75,25 @@
         <ul class="news" id="news">
           <li v-if="news.length == 0">loading...</li>
           <li v-else
-              v-for="n in news.slice(0, 5)">
+              v-for="n in news.slice(0, 8)">
             <time :datetime="n.date">${ getPrettyDate(n.date) }</time>
-            <a :href="n.url">${ n.title }</a>
+            <a :href="n.url" v-html="n.title"></a>
           </li>
         </ul>
-        <div class="news-more" v-if="news.length > 5">
+        <div class="news-more" :class="{show: news.length > 8}">
           <a href="https://cocolabjp.tumblr.com/tagged/cocolab">➔ もっと見る</a>
+        </div>
+        <h2>研究室ブログ</h2>
+        <ul class="blog" id="blog">
+          <li v-if="blog.length == 0">loading...</li>
+          <li v-else
+              v-for="n in blog.slice(0, 5)">
+            <time :datetime="n.date">${ getPrettyDate(n.date) }</time>
+            <a :href="n.url" v-html="n.title"></a>
+          </li>
+        </ul>
+        <div class="blog-more" :class="{show: blog.length > 5}">
+          <a href="https://note.com/cocolabjp/m/m8dc0c6036545">➔ もっと見る</a>
         </div>
         <h2>研究室の日常</h2>
         <div class="twitter">
@@ -114,6 +126,6 @@
     "axios": "https://unpkg.com/axios/dist/esm/axios.min.js"
   }
 }</script>
-<script src="/static/js/main.js?v=20241105.162136" type="module"></script>
+<script src="/static/js/main.js?v=20241113.022153" type="module"></script>
 </body>
 </html>

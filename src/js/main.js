@@ -18,6 +18,7 @@ const app = createApp({
       pageType: 'page',
       logoWidth: 180,
       news: [],
+      blog: [],
       slides: SLIDE_ITEMS,
       slideIndex: -1,
     };
@@ -102,6 +103,7 @@ const app = createApp({
         .then((res) => {
           if(res.status == 200) {
             this.news = res.data.news;
+            this.blog = res.data.blog;
           }
         })
         .catch(err => {

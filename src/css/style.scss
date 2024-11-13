@@ -512,7 +512,8 @@ main {
         border: 1px dotted #ddd;
         border-width: 1px 0 0;
       }
-      ul.news {
+      ul.news,
+      ul.blog {
         border: 1px dotted #ddd;
         border-width: 1px 0 0;
         li {
@@ -520,6 +521,7 @@ main {
           padding: 10px 15px;
           border: 1px dotted #ddd;
           border-width: 0 0 1px;
+          line-height: 1.3em;
           time {
             display: block;
             color: #666;
@@ -527,7 +529,11 @@ main {
           }
         }
       }
-      div.news-more {
+      div.news-more, 
+      div.blog-more {
+        &:not(.show) {
+          visibility: hidden;
+        }
         text-align: right;
         a {
           display: inline-block;
