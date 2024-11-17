@@ -6,7 +6,9 @@ const $ = (id) => {
 }
 
 const SLIDE_ITEMS = [
-  {"img": "202404_startup", "url": "https://note.com/cocolabjp/n/n705cb3d2b866"},
+  // {"img": "202404_startup", "url": "https://note.com/cocolabjp/n/n705cb3d2b866"},
+  {"img": "202411_geekten2024", "url": "https://x.com/geek_pjt/status/1855607841568305391"},
+  {"img": "202411_HAR-Book", "url": "https://cocolabjp.tumblr.com/post/766362900529020928"},
   {"img": "202409_ipsjKansai", "url": "https://cocolabjp.tumblr.com/post/763005611667570688"},
   {"img": "202409_100program", "url": "https://cocolabjp.tumblr.com/post/762935350489464832"}
 ];
