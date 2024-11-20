@@ -771,6 +771,28 @@ main {
                 color: white;
               }
             }
+            &.lab {
+              background: transparent;
+              height: 27px;
+              width: 27px;
+              border-radius: 0;
+              margin: 0 0 3px 3px;
+              & + .lab {
+                margin: 0 0 3px;
+              }
+              &.naist {
+                background: url("../img/parts/ic-naist.png") center center no-repeat;
+                background-size: 20px 20px;
+              }
+              &.cocolab {
+                background: url("../img/parts/ic-cocolab.png") center center no-repeat;
+                background-size: 20px 20px;
+              }
+              &.ulm {
+                background: url("../img/parts/ic-ulm.png") center center no-repeat;
+                background-size: 20px 20px;
+              }
+            }
           }
         }
       }
