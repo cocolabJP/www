@@ -630,6 +630,11 @@ main {
         min-width: min(95%, 400px);
         border-radius: 10px;
       }
+      img.img-hfill {
+        margin: 20px auto;
+        width: 100%;
+        border-radius: 10px;
+      }
       div.container-flex-right-img {
         margin: 0 0 20px;
         img {
