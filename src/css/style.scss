@@ -762,6 +762,9 @@ main {
             &:hover {
               opacity: 0.8;
             }
+            * {
+              font-size: 0.75rem;
+            }
             a {
               display: block;
               padding: 2px 10px 4px;
@@ -778,23 +781,23 @@ main {
             }
             &.lab {
               background: transparent;
-              height: 27px;
-              width: 27px;
+              height: 24px;
+              width: 24px;
               border-radius: 0;
               margin: 0 0 3px 3px;
               & + .lab {
                 margin: 0 0 3px;
               }
               &.naist {
-                background: url("../img/parts/ic-naist.png") center center no-repeat;
+                background: url("../img/parts/ic-logo-naist.png") center center no-repeat;
                 background-size: 20px 20px;
               }
               &.cocolab {
-                background: url("../img/parts/ic-cocolab.png") center center no-repeat;
+                background: url("../img/parts/ic-logo-cocolab.png") center center no-repeat;
                 background-size: 20px 20px;
               }
-              &.ulm {
-                background: url("../img/parts/ic-ulm.png") center center no-repeat;
+              &.uulm {
+                background: url("../img/parts/ic-logo-uulm.png") center center no-repeat;
                 background-size: 20px 20px;
               }
             }
