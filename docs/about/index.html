@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20241211.025324">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20241226.025539">
 </head>
 <body>
 <div class="app page about" id="app" data-type="page">
@@ -47,15 +47,15 @@
   <div class="content clearfix">
     <nav class="clearfix">
       <ul>
-        <li @click="scrollTo('about')">研究室概要</li>
-        <li @click="scrollTo('message')">配属希望の方へ</li>
-        <li @click="scrollTo('environment')">研究環境</li>
-        <li @click="scrollTo('logo-brand')">ロゴ・ブランド</li>
+        <li @click="scrollToH3('about')">研究室概要</li>
+        <li @click="scrollToH3('message')">配属希望の方へ</li>
+        <li @click="scrollToH3('environment')">研究環境</li>
+        <li @click="scrollToH3('logo-brand')">ロゴ・ブランド</li>
       </ul>
     </nav>
     <article>
       <section id="about">
-        <h3>コンヴィヴィアルコンピューティング研究室について</h3>
+        <h3><span>コンヴィヴィアルコンピューティング研究室について</span></h3>
         <p>
           岡山大学コンヴィヴィアルコンピューティング研究室（Convivial Computing Laboratory）は、2024年4月に発足しました。
           <img src="./img/2024-member.jpg" alt="2024年度メンバー" class="img-hfill">
@@ -67,38 +67,44 @@
           現代におけるIoT・AIは、人の生活を便利にする「ただの道具」としての役割を超越し、もはや人の身体・頭脳の一部と言えるものや、人の生活に欠かせないパートナーと言えるものへと進化しつつあります。しかしながら、これまでの科学技術の発展にともない私達の生活は便利になった一方で、人に本来備わっていたはずの「能力」が失われてしまう、といったことが起きています。特に、近年のIoT・AIの発展は目覚ましく、この流れはますます加速していくことが予想されます。本研究室では、そのような時代において「IoT・AIと人のより良い関係性とは何か？」という問いを、情報科学を中心とした分野横断的なアプローチで追究していきます。
           <img src="./img/convivial-computing.png" alt="ちょうどいいIoT・AI" class="img-center">
         </p>
-        <h4>研究キーワード</h4>
-        <ul class="keyword">
-          <li>Internet of Things（IoT）</li>
-          <li>ユビキタスコンピューティング</li>
-          <li>モバイルコンピューティング</li>
-          <li>ウェアラブルコンピューティング</li>
-          <li>センシング</li>
-          <li>感情認識</li>
-          <li>行動認識</li>
-          <li>機械学習</li>
-          <li>シミュレーション</li>
-          <li>デジタルツイン</li>
-          <li>ヒューマン・コンピュータ・インタラクション（HCI）</li>
-          <li>ナビゲーション</li>
-          <li>対話システム</li>
-          <li>情報推薦</li>
-          <li>学習支援</li>
-          <li>健康支援</li>
-          <li>シビックテック</li>
-          <li>文化・芸術</li>
-        </ul>
-        <h4>関連学会</h4>
-        <ul>
-          <li>情報処理学会（IPSJ）</li>
-          <li>電子情報通信学会（IEICE）</li>
-          <li>人工知能学会（JSAI）</li>
-          <li>IEEE</li>
-          <li>ACM</li>
-        </ul>
+        <div>
+          <h4>研究キーワード</h4>
+          <ul class="keyword">
+            <li>Internet of Things（IoT）</li>
+            <li>ユビキタスコンピューティング</li>
+            <li>モバイルコンピューティング</li>
+            <li>ウェアラブルコンピューティング</li>
+            <li>センシング</li>
+            <li>感情認識</li>
+            <li>行動認識</li>
+            <li>機械学習</li>
+            <li>シミュレーション</li>
+            <li>デジタルツイン</li>
+            <li>ヒューマン・コンピュータ・インタラクション（HCI）</li>
+            <li>ナビゲーション</li>
+            <li>対話システム</li>
+            <li>情報推薦</li>
+            <li>学習支援</li>
+            <li>健康支援</li>
+            <li>シビックテック</li>
+            <li>文化・芸術</li>
+          </ul>
+        </div>
+        <div>
+          <h4>関連学会</h4>
+          <ul>
+            <li>情報処理学会（IPSJ）</li>
+            <li>電子情報通信学会（IEICE）</li>
+            <li>人工知能学会（JSAI）</li>
+            <li>AIoT行動変容学会（BTI）</li>
+            <li>言語処理学会（NLP）</li>
+            <li>IEEE</li>
+            <li>ACM</li>
+          </ul>
+        </div>
       </section>
       <section id="message">
-        <h3>学部４年生および修士課程入学希望の皆様へのメッセージ</h3>
+        <h3><span>学部４年生および修士課程入学希望の皆様へのメッセージ</span></h3>
         <p>
           コンヴィヴィアルコンピューティング研究室では、理論だけに留まらず、実際にシステムを実装し動かしてみたいという学生を募集しています。研究テーマは、各学生のスキルや目標を踏まえて、最も適したものを学生・教員で相談して決めていきます。研究テーマをより学生自身の興味関心に合わせられるようにするために、基本的には博士前期課程（修士）を見据えたスケジュールを設定しています（※もちろん、学部4年生で就職することも可能です）。
           <img src="./img/schedule.png" alt="研究活動の流れ" class="img-center">
@@ -109,7 +115,7 @@
         </p>
       </section>
       <section id="environment">
-        <h3>研究環境・研究室の雰囲気</h3>
+        <h3><span>研究環境・研究室の雰囲気</span></h3>
         <p>
           発足して1年目のため、現在進行系で環境を整えています。今年度は学生室と教員室を同一の部屋とし、教員・学生がコミュニケーションが取りやすい環境を整えています。
           <img src="/static/img/uploads/202404_student-room.png" class="img-center">
@@ -124,7 +130,7 @@
         </p>
       </section>
       <section id="logo-brand">
-        <h3>ロゴ・ブランド</h3>
+        <h3><span>ロゴ・ブランド</span></h3>
         <p>
           「Convivial Computing」の接頭文字“C”と“o”を並べ替えて配置することによって、人とクエスチョンマークを表しています。本研究室では、「人」がどのように世界を捉えているのかを理解することや、それに基づく「人」のためのIoT・AIを実現することをミッションとして掲げているため、「人」を中心とした「問い」を設定しよう、という想いを込めています。
           <img src="./img/logomark-concept.png" alt="コンヴィヴィアルコンピューティング研究室ロゴ" class="img-center">
@@ -158,6 +164,6 @@
     "axios": "https://unpkg.com/axios/dist/esm/axios.min.js"
   }
 }</script>
-<script src="/static/js/main.js?v=20241211.025324" type="module"></script>
+<script src="/static/js/main.js?v=20241226.025539" type="module"></script>
 </body>
 </html>

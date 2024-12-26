@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20241211.025324">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20241226.025539">
 </head>
 <body>
 <div class="app page access" id="app" data-type="page">
@@ -47,14 +47,14 @@
   <div class="content clearfix">
     <nav class="clearfix">
       <ul>
-        <li @click="scrollTo('place')">所在地</li>
-        <li @click="scrollTo('contact')">問い合わせ</li>
-        <li @click="scrollTo('link')">関連リンク</li>
+        <li @click="scrollToH3('place')">所在地</li>
+        <li @click="scrollToH3('contact')">問い合わせ</li>
+        <li @click="scrollToH3('link')">関連リンク</li>
       </ul>
     </nav>
     <article>
       <section id="place">
-        <h3>所在地</h3>
+        <h3><span>所在地</span></h3>
         <p>
           〒700-0082 岡山県岡山市北区津島中3丁目1-1<br>
           岡山大学工学部 4号館 602室
@@ -64,7 +64,7 @@
         </div>
       </section>
       <section id="contact">
-        <h3>問い合わせ</h3>
+        <h3><span>問い合わせ</span></h3>
         <ul>
           <li>Email： cocolab[at]okayama-u.ac.jp</li>
           <li>Tel: 086-251-8172（内線: 8172）</li>
@@ -72,7 +72,7 @@
         </ul>
       </section>
       <section id="link">
-        <h3>関連リンク</h3>
+        <h3><span>関連リンク</span></h3>
         <ul>
           <li><a href="https://www.engr.okayama-u.ac.jp/iem/">工学部 情報・電気・数理データサイエンス系<br>（https://www.engr.okayama-u.ac.jp/iem/）</a></li>
           <li><a href="https://www.cs.okayama-u.ac.jp/">工学部 情報・電気・数理データサイエンス系 情報工学コース<br>（https://www.cs.okayama-u.ac.jp/）</a></li>
@@ -103,6 +103,6 @@
     "axios": "https://unpkg.com/axios/dist/esm/axios.min.js"
   }
 }</script>
-<script src="/static/js/main.js?v=20241211.025324" type="module"></script>
+<script src="/static/js/main.js?v=20241226.025539" type="module"></script>
 </body>
 </html>

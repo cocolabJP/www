@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20241211.025324">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20241226.025539">
 </head>
 <body>
 <div class="app page project" id="app" data-type="page">
@@ -47,32 +47,39 @@
   <div class="content clearfix">
     <nav class="clearfix">
       <ul>
-        <li @click="scrollTo('overview')">概要</li>
-        <li @click="scrollTo('project')">プロジェクト
+        <li @click="scrollToH3('overview')">概要</li>
+        <li @click="scrollToH3('project-iopt')">IoT・人から見える「世界」を理解し、ナビする
           <ul>
-            <li @click.stop="scrollTo('breid')">BReID</li>
-            <li @click.stop="scrollTo('emotour')">EmoTour</li>
-            <li @click.stop="scrollTo('musa')">MusA x EmoTour</li>
-            <li @click.stop="scrollTo('blece')">BLECE</li>
-            <li @click.stop="scrollTo('abacaas')">AbaCaaS</li>
-            <li @click.stop="scrollTo('discaas')">DisCaaS</li>
-            <li @click.stop="scrollTo('tongar')">Tongar</li>
-            <li @click.stop="scrollTo('sorashiru')">Sorashiru</li>
-            <li @click.stop="scrollTo('tameshiba')">ためしば</li>
-            <li @click.stop="scrollTo('minsapo')">みんサポ</li>
-            <li @click.stop="scrollTo('repot')">レポっと</li>
-            <li @click.stop="scrollTo('nishorobo')">にしょロボくん</li>
+            <li @click.stop="scrollToH5('breid-walk')">BReID Walk</li>
+            <li @click.stop="scrollToH5('breid-bus')">BReID Bus</li>
+            <li @click.stop="scrollToH5('blece')">BLECE</li>
+            <li @click.stop="scrollToH5('emotour')">EmoTour</li>
+            <li @click.stop="scrollToH5('musa')">Convivial Museum Guide</li>
+            <li @click.stop="scrollToH5('sorashiru')">ソラシル</li>
+            <li @click.stop="scrollToH5('discaas')">DisCaaS</li>
+          </ul>
+        <li @click="scrollToH3('project-device')">新しいIoT・AIを発明する
+          <ul>
+            <li @click.stop="scrollToH5('abacaas')">AbaCaaS</li>
+            <li @click.stop="scrollToH5('tongar')">Tongar</li>
+          </ul>
+        <li @click="scrollToH3('project-device')">プラットフォーム・コミュニティを創る
+          <ul>
+            <li @click.stop="scrollToH5('tameshiba')">ためしば</li>
+            <li @click.stop="scrollToH5('repot')">レポっと</li>
+            <li @click.stop="scrollToH5('nishorobo')">にしょロボくん</li>
+            <li @click.stop="scrollToH5('minsapo')">みんサポ</li>
           </ul>
         </li>
-        <li @click="scrollTo('collabo-proj')">共同研究・連携機関</li>
+        <li @click="scrollToH3('collabo-proj')">共同研究・連携機関</li>
       </ul>
     </nav>
     <article>
       <section id="overview">
-        <h3>概要</h3>
+        <h3><span>概要</span></h3>
         <div class="clearfix container-flex-right-img">
           <img src="./img/project-1.png" alt="人から見える「世界」を理解し、ナビする">
-          <h4>人から見える「世界」を理解し、ナビする</h4>
+          <h4 class="no-sticky">IoT・人から見える「世界」を理解し、ナビする</h4>
           <p>
             人から見えている「世界」は、IoTで観測できる「世界」とは少し異なっていることがあります。
             IoTがこの“差”を理解できるようになれば、これまでにないナビゲーションや情報推薦が実現できる可能性があります。
@@ -81,126 +88,162 @@
         </div>
         <div class="clearfix container-flex-right-img">
           <img src="./img/project-2.png" alt="新しいIoT・AIを発明する">
-          <h4>新しいIoT・AIを発明する</h4>
+          <h4 class="no-sticky">新しいIoT・AIを発明する</h4>
           <p class="clearfix">
             現在市販されているIoTを用いることで、様々な人や環境をセンシングしたり情報を提示したりすることが可能ですが、全てが網羅されているわけではありません。新たなIoTやAIを発明することによって、今までにセンシングできなかった情報を得られたり、それに基づく情報提示が実現でる可能性があります。そのために、ハードウェアからソフトウェアに至るまで、IoTのセンシング・データ処理・情報提示の方法を編み出す研究に取り組んでいます。
           </p>
         </div>
         <div class="clearfix container-flex-right-img">
           <img src="./img/project-3.png" alt="プラットフォーム・コミュニティを創る">
-          <h4>プラットフォーム・コミュニティを創る</h4>
+          <h4 class="no-sticky">プラットフォーム・コミュニティを創る</h4>
           <p class="clearfix">
             研究開発したIoT・AIを社会実装していくためには、ITに精通していない人々でも簡単に技術を扱うことができ、かつ、持続可能な形で運用できるようなシステム・仕組みを構築することが肝要です。その実現に向けて、街に存在する様々なコミュニティや活動と連携しつつ、システムを運用する方法を実践的に模索する研究に取り組んでいます。
           </p>
         </div>
       </section>
-      <section id="project">
-        <h3>研究プロジェクト</h3>
-        <div class="project-card" id="breid">
-          <h4>BReID: 複数のBLEスキャナを用いた都市空間の人流計測</h4>
-          <p>
-            都市内で滞在・移動する人々がどのような回遊行動を取っているのかを分析することはマーケティングや都市設計のために重要です。
-            本研究では、人々が持つスマートフォンなどの電子機器から発されるBLE（Bluetooth Low Energy）の電波を環境側からスキャンし、ランダマイズされたMACアドレスのデバイスをRe-identificaitonすることで、都市空間を移動する人を限定的に追跡可能とする手法の確立を目指しています。
-          </p>
+      <section id="project-iopt">
+        <h3><span>IoT・人から見える「世界」を理解し、ナビする</span></h3>
+        <div id="blece-breid">
+          <h4>BLEを用いた都市空間の人流・混雑度推定</h4>
+          <div class="clearfix container-flex-right-img">
+            <img src="./img/pj-BReID-BLECE.png" alt="BLEを用いた都市空間の人流・混雑度推定">
+            <p>
+              交通機関や飲食店、公共施設などといった様々な空間において、滞在・移動する人々がどのような回遊行動を取っているか（人流）、どの空間が混雑しているか（混雑度）、といった情報を分析することは、マーケティング・都市計画・混雑度平準化・ナビゲーションなどの様々な目的を達成するために重要です。
+              このプロジェクトでは、人々が持つスマートフォンなどの電子機器から発されるBLE（Bluetooth Low Energy）の電波を環境側からスキャンし、分析を行うことによって都市空間の人流・混雑度を推定することを目指しています。
+            </p>
+          </div>
+          <div class="project-card" id="breid-walk">
+            <h5>BReID Walk: 都市空間の人流推定</h5>
+            <p>
+              都市空間で人々が「どこ」から「どこ」へ移動するのか？（人流）を推定するプロジェクトです。人々が持つスマートフォンなどの電子機器から発されるBLEのランダマイズされたMACアドレスを“Re-identificaiton”することによって、都市空間を移動する人を限定的に追跡可能とする手法の確立を目指しています。
+            </p>
+          </div>
+          <div class="project-card" id="breid-bus">
+            <h5>BReID Bus: 路線バスのODデータ（乗降ログ）推定</h5>
+            <p>
+              路線バスなどの「公共交通機関」で、人々が「どこ」で乗って「どこ」で降りるのか（Origin-Destination： OD）のデータを推定するプロジェクトです。人々が持つスマートフォンなどの電子機器から発されるBLEのランダマイズされたMACアドレスを“Re-identificaiton”することによって、乗車・降車のタイミングを正確に推定する手法の確立を目指しています。
+            </p>
+          </div>
+          <div class="project-card" id="blece">
+            <h5>BLECE： 公共空間の混雑度・体感混雑度推定</h5>
+            <p>
+              交通機関や飲食店、公共施設などといった様々な空間における混雑度を推定するプロジェクトです。人々が持つスマートフォンなどの電子機器から発されるBLEの電波を環境側からスキャンし、電波受信状況からある特定空間の混雑度を推定することにより、場所や環境に依存しないユニバーサルな混雑度推定手法の確立を目指しています。
+            </p>
+            <p><a href="https://www.iopt.jp/blece">▶ 詳細はこちら</a></p>
+          </div>
         </div>
-        <div class="project-card" id="emotour">
-          <h4>EmoTour： 観光客のマルチモーダルな感情・満足度推定</h4>
-          <p>
-            スマートフォンをはじめとするスマートデバイスを活用し、観光中に有益な情報が得られる「スマートツーリズム」が注目を集めています。このスマートツーリズムにおいて、より観光客の状況に即した観光情報を提供するためには、観光客が実地で抱く心理状態（感情・満足度など）を理解し考慮することが重要です。
-          </p>
-          <p>
-            そこで本研究では、観光客の心理状態が観光中の無意識的な仕草、例えば頭や体の動きや表情や声色といった形で現れるという仮説のもと、その仕草を計測・分析することで観光中の観光客の心理状態を推定する手法の実現を目指しています。
-          </p>
-          <p><a href="http://research.ubi-lab.com/ja/emo-tour/">▶ 詳細はこちら</a></p>
+        <div>
+          <h4>マルチモーダルセンシングによる心理状態推定＆ナビゲーション</h4>
+          <div class="project-card" id="emotour">
+            <h5>EmoTour： 観光客のマルチモーダルな感情・満足度推定</h5>
+            <p>
+              スマートフォンをはじめとするスマートデバイスを活用し、観光中に有益な情報が得られる「スマートツーリズム」が注目を集めています。このスマートツーリズムにおいて、より観光客の状況に即した観光情報を提供するためには、観光客が実地で抱く心理状態（感情・満足度など）を理解し考慮することが重要です。
+            </p>
+            <p>
+              そこで本研究では、観光客の心理状態が観光中の無意識的な仕草、例えば頭や体の動きや表情や声色といった形で現れるという仮説のもと、その仕草を計測・分析することで観光中の観光客の心理状態を推定する手法の実現を目指しています。
+            </p>
+            <p><a href="http://research.ubi-lab.com/ja/emo-tour/">▶ 詳細はこちら</a></p>
+          </div>
+          <div class="project-card" id="musa">
+            <h5>Convivial Museum Guide： 理解度・興味によって変化する美術館ガイダンス</h5>
+            <p>
+              美術館は芸術作品を鑑賞する場として人々に親しまれています。しかし、美術館には膨大な数の展示作品があり、鑑賞者は興味や関心に合わせて作品を鑑賞することが難しいという課題があります。
+            </p>
+            <p>
+              本研究では、鑑賞者の心理状態を芸術作品を鑑賞する際の仕草のセンシングに基づき推定することで、鑑賞者の興味や関心に合わせたナビゲーションの提供や、鑑賞体験の向上につなげることを目指しています。
+            </p>
+          </div>
         </div>
-        <div class="project-card" id="musa">
-          <h4>MusA x EmoTour： 理解度・興味によって変化する美術館ガイダンス</h4>
-          <p>
-            美術館は芸術作品を鑑賞する場として人々に親しまれています。しかし、美術館には膨大な数の展示作品があり、鑑賞者は興味や関心に合わせて作品を鑑賞することが難しいという課題があります。
-          </p>
-          <p>
-            本研究では、鑑賞者の心理状態を芸術作品を鑑賞する際の仕草のセンシングに基づき推定することで、鑑賞者の興味や関心に合わせたナビゲーションの提供や、鑑賞体験の向上につなげることを目指しています。
-          </p>
+        <div>
+          <h4>人の体感の推定</h4>
+          <div class="project-card" id="sorashiru">
+            <h5>ソラシル： みんなの手でつくる「じぶん温度」 </h5>
+            <p>
+              sorashiru（ソラシル）は、体感温度をアプリで記録するだけで、「じぶん温度」を知ることができるようになるアプリです。
+            </p>
+            <p>
+              人それぞれが感じる体感温度のことを「じぶん温度」と名付け、AIによる解析によって算出することを目指しています。
+            </p>
+            <p><a href="https://www.iopt.jp/sorashiru/">▶ 詳細はこちら</a></p>
+          </div>
+          <div class="project-card" id="discaas">
+            <h5>DisCaaS： 360度カメラをセンサとして用いるディスカッション中のマイクロ行動分析</h5>
+            <p>
+            </p>
+            <p><a href="http://research.ubi-lab.com/ja/discaas/">▶ 詳細はこちら</a></p>
+          </div>
         </div>
-        <div class="project-card" id="blece">
-          <h4>BLECE： BLE電波受信状況を用いた公共空間の混雑度・体感混雑度推定</h4>
-          <p>
-            都市内で滞在・移動する人々にとって関心の高い情報の一つが、交通機関や飲食店、公共施設などといった様々な空間における混雑度情報です。しかしながら既存の混雑度計測サービスはそれぞれ異なる方式でデータ収集・情報提供がなされており、ユーザが横断的に混雑度情報を取得することが難しいことが問題となります。
-          </p>
-          <p>
-            本研究では、人々が持つスマートフォンなどの電子機器から発されるBLE（Bluetooth Low Energy）の電波を環境側からスキャンし、電波受信状況からある特定空間の混雑度を推定することにより、場所や環境に依存しないユニバーサルな混雑度推定手法の確立を目指しています。
-          </p>
-          <p><a href="https://www.iopt.jp/blece">▶ 詳細はこちら</a></p>
+      </section>
+      <section id="project-device">
+        <h3><span>新しいIoT・AIを発明する</span></h3>
+        <div>
+          <h4>教育支援</h4>
+          <div class="project-card" id="abacaas">
+            <h5>AbaCaaS： 卓上カメラを用いた珠算学習支援システム</h5>
+            <p>
+              算術力を獲得するための方法の一つとして、算盤（そろばん）を用いた計算、すなわち「珠算」が現代においても活用されています。珠算による計算は様々な方法・順序で「珠」を操作する必要があるため、習得には長期に渡る繰り返し学習を要することが知られています。学習過程では、様々な計算ミスや苦手な珠操作が生じますが、これらの「つまづき」には規則性・パターンがあると考えられます。
+            </p>
+            <p>
+              そこで、卓上カメラをセンサとして用いることで算盤の盤面（入力値）を推定するとともに、苦手を克服するための個人に合わせた問題生成・提示などによって、「珠算」の能力習得を支援する方法の確立を目指しています。
+            </p>
+            <p><a href="http://research.ubi-lab.com/ja/abacaas/">▶ 詳細はこちら</a></p>
+          </div>
         </div>
-        <div class="project-card" id="abacaas">
-          <h4>AbaCaaS： 卓上カメラを用いた珠算学習支援システム</h4>
-          <p>
-            算術力を獲得するための方法の一つとして、算盤（そろばん）を用いた計算、すなわち「珠算」が現代においても活用されています。珠算による計算は様々な方法・順序で「珠」を操作する必要があるため、習得には長期に渡る繰り返し学習を要することが知られています。学習過程では、様々な計算ミスや苦手な珠操作が生じますが、これらの「つまづき」には規則性・パターンがあると考えられます。
-          </p>
-          <p>
-            そこで、卓上カメラをセンサとして用いることで算盤の盤面（入力値）を推定するとともに、苦手を克服するための個人に合わせた問題生成・提示などによって、「珠算」の能力習得を支援する方法の確立を目指しています。
-          </p>
-          <p><a href="http://research.ubi-lab.com/ja/abacaas/">▶ 詳細はこちら</a></p>
+        <div>
+          <h4>街のセンシング</h4>
+          <div class="project-card" id="tongar">
+            <h5>Tongar： トングでゴミ拾いするだけでポイ捨てゴミの種別・位置を記録するシステム</h5>
+            <p>
+              近年、奈良公園のシカをはじめ、野生の動物が誤ってポイ捨てゴミを食べて死に至る状況が発生しています。この点にとどまらず“ポイ捨て”は深刻な環境問題であり、解決が望まれています。Tongarは、ゴミ拾いに利用するトングにカメラを搭載し「どこ」で「どんな」ゴミが「いつ」捨てられているのかの情報を自動で収集するシステムです。
+            </p>
+            <p><a href="http://research.ubi-lab.com/ja/tongar/">▶ 詳細はこちら</a></p>
+          </div>
         </div>
-        <div class="project-card" id="discaas">
-          <h4>DisCaaS： 360度カメラをセンサとして用いるディスカッション中のマイクロ行動分析</h4>
-          <p>
-          </p>
-          <p><a href="http://research.ubi-lab.com/ja/discaas/">▶ 詳細はこちら</a></p>
+      </section>
+      <section id="project-platform">
+        <h3><span>プラットフォーム・コミュニティを創る</span></h3>
+        <div>
+          <h4>プラットフォーム</h4>
+          <div class="project-card" id="tameshiba">
+            <h5>ためしば： ボトムアップ式のスマートシティアプリ</h5>
+            <p>
+              自治体だけでなく、市民や民間企業、大学といった様々な組織に属する人たちみんなで創るスマートシティアプリです。シビックテック（Civic Tech）の考え方で、オープンに街を良くするためのプラットフォームとして利用できるようにすることを目指しています。
+            </p>
+            <p><a href="http://research.ubi-lab.com/ja/tameshiba/">▶ 詳細はこちら</a></p>
+          </div>
+          <div class="project-card" id="repot">
+            <h5>レポっと： ブラウザで動作するユーザ参加型位置情報付き写真収集システム</h5>
+            <p>
+              「レポっと」は、みんなの視点で見た街の様子を共有するためのプラットフォームです。
+              ブラウザだけで動作し、位置情報付きの写真📸・コメント💭・ハッシュタグ🔖 を投稿することができます。
+            </p>
+            <p>
+              集めたデータはデジタルアーカイブ化し、オープンデータとして公開しています。
+            </p>
+            <p><a href="https://www.iopt.jp/repot">▶ 詳細はこちら</a></p>
+            <p><a href="https://repot-archive.cocolab.jp/">▷ 収集データのアーカイブはこちら</a></p>
+          </div>
+          <div class="project-card" id="nishorobo">
+            <h5>にしょロボくん： 小学生が創る地域のデジタル図鑑</h5>
+            <p>
+              子供目線で地域の情報を収集して「世界に一つだけの地域のデジタル図鑑：にしょロボくん」を創る、全校縦割り活動プロジェクトです。ワークシートやギガスクール端末を用いて様々な形式（テキスト・写真・音声・動画・地図・絵…）でニッチな街の情報を可視化します。
+            </p>
+            <p><a href="https://www.iopt.jp/nishorobo">▶ 詳細はこちら</a></p>
+          </div>
         </div>
-        <div class="project-card" id="tongar">
-          <h4>Tongar： トングでゴミ拾いするだけでポイ捨てゴミの種別・位置を記録するシステム</h4>
-          <p>
-            近年、奈良公園のシカをはじめ、野生の動物が誤ってポイ捨てゴミを食べて死に至る状況が発生しています。この点にとどまらず“ポイ捨て”は深刻な環境問題であり、解決が望まれています。Tongarは、ゴミ拾いに利用するトングにカメラを搭載し「どこ」で「どんな」ゴミが「いつ」捨てられているのかの情報を自動で収集するシステムです。
-          </p>
-          <p><a href="http://research.ubi-lab.com/ja/tongar/">▶ 詳細はこちら</a></p>
-        </div>
-        <div class="project-card" id="sorashiru">
-          <h4>ソラシル： みんなの手でつくる「じぶん温度」 </h4>
-          <p>
-            sorashiru（ソラシル）は、体感温度をアプリで記録するだけで、「じぶん温度」を知ることができるようになるアプリです。
-          </p>
-          <p>
-            人それぞれが感じる体感温度のことを「じぶん温度」と名付け、AIによる解析によって算出することを目指しています。
-          </p>
-          <p><a href="https://www.iopt.jp/sorashiru/">▶ 詳細はこちら</a></p>
-        </div>
-        <div class="project-card" id="tameshiba">
-          <h4>ためしば： ボトムアップ式のスマートシティアプリ</h4>
-          <p>
-            自治体だけでなく、市民や民間企業、大学といった様々な組織に属する人たちみんなで創るスマートシティアプリです。シビックテック（Civic Tech）の考え方で、オープンに街を良くするためのプラットフォームとして利用できるようにすることを目指しています。
-          </p>
-          <p><a href="http://research.ubi-lab.com/ja/tameshiba/">▶ 詳細はこちら</a></p>
-        </div>
-        <div class="project-card" id="minsapo">
-          <h4>みんサポ生駒</h4>
-          <p>
-            ソーシャルグッドな活動を市民の投票で支援する新しい共創の枠組みです。
-          </p>
-          <p><a href="https://www.iopt.jp/tameshiba/minsapo/">▶ 詳細はこちら</a></p>
-        </div>
-        <div class="project-card" id="repot">
-          <h4>レポっと： ブラウザで動作するユーザ参加型位置情報付き写真収集システム</h4>
-          <p>
-            「レポっと」は、みんなの視点で見た街の様子を共有するためのプラットフォームです。
-            ブラウザだけで動作し、位置情報付きの写真📸・コメント💭・ハッシュタグ🔖 を投稿することができます。
-          </p>
-          <p>
-            集めたデータはデジタルアーカイブ化し、オープンデータとして公開しています。
-          </p>
-          <p><a href="https://www.iopt.jp/repot">▶ 詳細はこちら</a></p>
-          <p><a href="https://repot-archive.cocolab.jp/">▷ 収集データのアーカイブはこちら</a></p>
-        </div>
-        <div class="project-card" id="nishorobo">
-          <h4>にしょロボくん： 小学生が創る地域のデジタル図鑑</h4>
-          <p>
-            子供目線で地域の情報を収集して「世界に一つだけの地域のデジタル図鑑：にしょロボくん」を創る、全校縦割り活動プロジェクトです。ワークシートやギガスクール端末を用いて様々な形式（テキスト・写真・音声・動画・地図・絵…）でニッチな街の情報を可視化します。
-          </p>
-          <p><a href="https://www.iopt.jp/nishorobo">▶ 詳細はこちら</a></p>
+        <div>
+          <h4>仕組み</h4>
+          <div class="project-card" id="minsapo">
+            <h5>みんサポ生駒</h5>
+            <p>
+              ソーシャルグッドな活動を市民の投票で支援する新しい共創の枠組みです。
+            </p>
+            <p><a href="https://www.iopt.jp/tameshiba/minsapo/">▶ 詳細はこちら</a></p>
+          </div>
         </div>
       </section>
       <section id="collabo-proj">
-        <h3>共同研究・連携機関</h3>
+        <h3><span>共同研究・連携機関</span></h3>
         <ul>
           <li>自治体・行政機関
             <ul>
@@ -258,6 +301,6 @@
     "axios": "https://unpkg.com/axios/dist/esm/axios.min.js"
   }
 }</script>
-<script src="/static/js/main.js?v=20241211.025324" type="module"></script>
+<script src="/static/js/main.js?v=20241226.025539" type="module"></script>
 </body>
 </html>

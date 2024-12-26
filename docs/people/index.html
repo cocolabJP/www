@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20241211.025324">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20241226.025539">
 </head>
 <body>
 <div class="app page people" id="app" data-type="page">
@@ -47,15 +47,15 @@
   <div class="content clearfix">
     <nav class="clearfix">
       <ul>
-        <li @click="scrollTo('faculty')">教員</li>
-        <li @click="scrollTo('student-ou')">学生（岡山大学）</li>
-        <li @click="scrollTo('student-naist')">学生（奈良先端大）</li>
-        <li @click="scrollTo('collaborator')">連携研究者</li>
+        <li @click="scrollToH3('faculty')">教員</li>
+        <li @click="scrollToH3('student-ou')">学生（岡山大学）</li>
+        <li @click="scrollToH3('student-naist')">学生（奈良先端大）</li>
+        <li @click="scrollToH3('collaborator')">連携研究者</li>
       </ul>
     </nav>
     <article>
       <section id="faculty">
-        <h3>教員・スタッフ</h3>
+        <h3><span>教員・スタッフ</span></h3>
         <ul class="people">
           <li>
             <img src="/static/img/people/yukimat.jpg" alt="松田裕貴（Yuki Matsuda）">
@@ -71,7 +71,7 @@
         </ul>
       </section>
       <section id="student-ou">
-        <h3>学生（岡山大学）</h3>
+        <h3><span>学生（岡山大学）</span></h3>
         <ul class="people">
           <li>
             <img src="/static/img/people/0_default.png">
@@ -91,7 +91,7 @@
         </ul>
       </section>
       <section id="student-naist">
-        <h3>学生（奈良先端科学技術大学院大学）</h3>
+        <h3><span>学生（奈良先端科学技術大学院大学）</span></h3>
         <ul class="people">
           <li>
             <img src="/static/img/people/0_default.png">
@@ -211,7 +211,7 @@
         </ul>
       </section>
       <section id="collaborator">
-        <h3>連携研究者</h3>
+        <h3><span>連携研究者</span></h3>
         <ul class="people">
           <li>
             <img src="/static/img/people/collaborator/yasumoto.png">
@@ -289,6 +289,6 @@
     "axios": "https://unpkg.com/axios/dist/esm/axios.min.js"
   }
 }</script>
-<script src="/static/js/main.js?v=20241211.025324" type="module"></script>
+<script src="/static/js/main.js?v=20241226.025539" type="module"></script>
 </body>
 </html>

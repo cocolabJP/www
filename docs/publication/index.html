@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20241211.025324">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20241226.025539">
 </head>
 <body>
 <div class="app page publication" id="app" data-type="page">
@@ -47,460 +47,492 @@
   <div class="content clearfix">
     <nav class="clearfix">
       <ul>
-        <li @click="scrollTo('2024')">2024年度
+        <li @click="scrollToH3('2024')">2024年度
           <ul>
-            <li @click.stop="scrollTo('2024-b')">書籍</li>
-            <li @click.stop="scrollTo('2024-m')">特集・解説</li>
-            <li @click.stop="scrollTo('2024-pp')">プレプリント</li>
-            <li @click.stop="scrollTo('2024-j')">論文誌・ジャーナル</li>
-            <li @click.stop="scrollTo('2024-i')">国際会議</li>
-            <li @click.stop="scrollTo('2024-d')">国内研究会</li>
-            <li @click.stop="scrollTo('2024-t')">講演・LT</li>
-            <li @click.stop="scrollTo('2024-n')">メディア掲載</li>
-            <li @click.stop="scrollTo('2024-a')">受賞</li>
+            <li @click.stop="scrollToH4('2024-b')">書籍</li>
+            <li @click.stop="scrollToH4('2024-m')">特集・解説</li>
+            <li @click.stop="scrollToH4('2024-pp')">プレプリント</li>
+            <li @click.stop="scrollToH4('2024-j')">論文誌・ジャーナル</li>
+            <li @click.stop="scrollToH4('2024-i')">国際会議</li>
+            <li @click.stop="scrollToH4('2024-d')">国内研究会</li>
+            <li @click.stop="scrollToH4('2024-t')">講演・LT</li>
+            <li @click.stop="scrollToH4('2024-n')">メディア掲載</li>
+            <li @click.stop="scrollToH4('2024-a')">受賞</li>
           </ul>
         </li>
-        <li @click="scrollTo('2023')">2023年度まで
+        <li @click="scrollToH3('2023')">2023年度まで
           <ul>
-            <li @click.stop="scrollTo('2023-b')">書籍</li>
-            <li @click.stop="scrollTo('2023-j')">論文誌・ジャーナル</li>
+            <li @click.stop="scrollToH4('2023-b')">書籍</li>
+            <li @click.stop="scrollToH4('2023-j')">論文誌・ジャーナル</li>
           </ul>
         </li>
       </ul>
     </nav>
     <article>
       <section id="2024">
-        <h3>2024年度</h3>
-        <h4 id="2024-b">書籍</h4>
-        <ol class="publication">
-          <li class='ref-item'>
-            <p>荒川豊, 石田繁巳, <span class="author">松田裕貴</span>, 中村優吾, 安本慶一:
-            <span class="title">“センサと機械学習ではじめる人間行動認識 - 触って動かして理解するセンサデータ処理,”</span>
-            pp.1-129, 2024, 電気書院.</p>
-            <ul><li><a href="
-https://www.denkishoin.co.jp/products/view/2078">出版社サイト</a></li>
-                <li><a href="
-https://www.amazon.co.jp/dp/4485302652">Amazon</a></li></ul>
-        </ol>
-        <h4 id="2024-m">特集・解説</h4>
-        <ol class="publication">
-          <li class="ref-item">
-            <p><span class="author">松田裕貴</span>, 諏訪博彦:
-            <span class="title">“《特集 ナラティブと人工知能》センシングと行動変容におけるナラティブ...ってなんだ?,”</span>
-            人工知能, Vol.39, No.5, pp.638-644, 2024.</p>
-            <ul><li><a href="https://doi.org/10.11517/jjsai.39.5_638">DOI</a>
-                <li><a href="/publication/files/202409_JSAI-Magazine_Matsuda.pdf">PDF</a></li></li></ul>
-          <li class="ref-item">
-            <p><span class="author">松田裕貴</span>:
-            <span class="title">“オフィスワーカーの心身と環境センシングに向けたアプリケーションの開発と評価,”</span>
-            生体センシング技術の開発とヘルスケア、遠隔診断への応用, pp.297-306, 2024.</p>
-            <ul><li><a href="https://www.gijutu.co.jp/doc/b_2245.htm">Link</a></li></ul>
-          <li class="ref-item">
-            <p><span class="author">松田裕貴</span>:
-            <span class="title">“ICTそろばん学習支援システム「AbaCaaS」,”</span>
-            電気計算 2024年6月号, Vol.92, No.6, pp.51-56, 2024.</p>
-            <ul><li><a href="https://www.denkishoin.co.jp/products/view/2046">Link</a></li>
-                <li><a href="https://www.amazon.co.jp/dp/B0CWN9KDKG/">Amazon</a></li></ul>
-        </ol>
-        <h4 id="2024-pp">プレプリント</h4>
-        <ol class="publication">
-          <li class='ref-item'>
-            <p>Carolin Schindler, Daiki Mayumi, <span class="author">Yuki Matsuda</span>, Niklas Rach, Keiichi Yasumoto, Wolfgang Minker:
-            <span class="title">“ARCADE: An Augmented Reality Display Environment for Multimodal Interaction with Conversational Agents,”</span>
-            arXiv:2408.06222, pp.1-3, 2024.</p>
-            <p @click.stop="scrollToRef('carolin-icmi2024')">published: ICMI'24 (Schindler et al.)</p>
-            <ul><li><a href="https://doi.org/10.48550/arXiv.2408.06222">DOI</a></li>
-                <li><a href="https://arxiv.org/pdf/2408.06222">PDF</a></li>
-                <li class="lab uulm"></li></ul>
-          <li class='ref-item'>
-            <p>Annalena Aicher, <span class="author">Yuki Matsuda</span>, Keiichi Yasumoto, Wolfgang Minker, Elisabeth André, Stefan Ultes:
-            <span class="title">“Exploring the Impact of Non-Verbal Virtual Agent Behavior on User Engagement in Argumentative Dialogues,”</span>
-            arXiv:2411.11102, pp.1-9, 2024.</p>
-            <p @click.stop="scrollToRef('annalena-hai2024')">published: HAI'24 (Aicher et al.)</p>
-            <ul><li><a href="https://hai-conference.net/hai2024/">Link</a></li>
-                <li><a href="https://doi.org/10.48550/arXiv.2411.11102">DOI</a></li>
-                <li class="lab uulm"></li></ul>
-        </ol>
-        <h4 id="2024-j">論文誌・ジャーナル</h4>
-        <ol class="publication">
-          <li class='ref-item'>
-            <p>Sergio De León Aguilar, <span class="author">Yuki Matsuda</span>, Keiichi Yasumoto:
-            <span class="title">“Mobile Augmented Reality Interface for Instruction-based Disaster Preparedness Guidelines,”</span>
-            Sensors and Materials, Vol.36, No.10, pp.4585-4606, 2024.</p>
-            <ul><li><a href="https://doi.org/10.18494/SAM5215">DOI</a></li>
-                <li><a href="https://sensors.myu-group.co.jp/sm_pdf/SM3819.pdf">PDF</a></li>
-                <li class="lab naist"></li></ul>
-          <li class='ref-item'>
-            <p>松田裕貴, 榊原太一, 真弓大輝, <span class="author">松田裕貴</span>, 水本旭洋, 安本慶一:
-            <span class="title">“非特定テレビ視聴履歴データの放送局間統合手法,”</span>
-            情報処理学会論文誌, Vol.65, No.10, pp.1488-1500, 2024.</p>
-            <ul><li><a href="http://doi.org/10.20729/00239892">DOI</a></li>
-                <li><a href="/publication/files/202410_IPSJJournal_MatsudaHiroki.pdf">PDF</a>
-                <li class="lab naist"></li></li></ul>
-          <li class='ref-item'>
-            <p>Annalena Aicher, <span class="author">Yuki Matsuda</span>, Keichii Yasumoto, Wolfgang Minker, Elisabeth André, Stefan Ultes:
-            <span class="title">“Enhancing Reflective and Conversational User Engagement in Argumentative Dialogues with Virtual Agents,”</span>
-            Multimodal Technologies and Interaction, Vol.8, No.8:71, pp.1-44, 2024.</p>
-            <ul><li><a href="https://doi.org/10.3390/mti8080071">DOI</a></li>
-                <li><a href="https://www.mdpi.com/2414-4088/8/8/71/pdf?version=1722929669">PDF</a></li>
-                <li class="lab uulm"></li></ul>
-          <li class='ref-item'>
-            <p>Daiki Mayumi, Yugo Nakamura, <span class="author">Yuki Matsuda</span>, Shinya Misaki, Keiichi Yasumoto:
-            <span class="title">“Aromug: a Mug-type Olfactory Interface to Enhance the Sweetness Perception of Beverages,”</span>
-            IEEE Access, Vol.12, pp.78366-78378, 2024.</p>
-            <ul><li><a href="https://doi.org/10.1109/ACCESS.2024.3401392">DOI</a></li>
-                <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10530960">PDF</a></li>
-                <li class="lab naist"></li></ul>
-          <li class='ref-item'>
-            <p><span class="author">Yuki Matsuda</span>:
-            <span class="title">“Abacus Manipulation Understanding by Behavior Sensing Utilizing Document Camera as a Sensor,”</span>
-            International Journal of Activity and Behavior Computing, Vol.2024, No.1, pp.1-16, 2024.</p>
-            <ul><li><a href="https://doi.org/10.60401/ijabc.2">DOI</a></li>
-                <li><a href="https://www.jstage.jst.go.jp/article/ijabc/2024/1/2024_2/_pdf/-char/en">PDF</a></li>
-                <li class="lab cocolab"></li></ul>
-        </ol>
-        <h4 id="2024-i">国際会議</h4>
-        <ol class="publication">
-          <li class='ref-item' id="carolin-icmi2024">
-            <p>Carolin Schindler, Daiki Mayumi, <span class="author">Yuki Matsuda</span>, Niklas Rach, Keiichi Yasumoto, Wolfgang Minker:
-            <span class="title">“ARCADE: An Augmented Reality Display Environment for Multimodal Interaction with Conversational Agents,”</span>
-            Companion Proceedings of the 26th International Conference on Multimodal Interaction (ICMI Companion '24), pp.85-87, 2024.</p>
-            <ul><li><a href="https://icmi.acm.org/2024/">Link</a></li>
-                <li><a href="https://doi.org/10.1145/3686215.3688376">DOI</a></li>
-                <li><a href="https://dl.acm.org/doi/pdf/10.1145/3686215.3688376">PDF</a></li>
-                <li class="lab uulm"></li></ul>
-          <li class='ref-item' id="annalena-hai2024">
-            <p>Annalena Aicher, <span class="author">Yuki Matsuda</span>, Keiichi Yasumoto, Wolfgang Minker, Elisabeth André, Stefan Ultes:
-            <span class="title">“Exploring the Impact of Non-Verbal Virtual Agent Behavior on User Engagement in Argumentative Dialogues,”</span>
-            The 12th International Conference on Human-Agent Interaction (HAI '24), pp.224-232, 2024.</p>
-            <ul><li><a href="https://hai-conference.net/hai2024/">Link</a></li>
-                <li><a href="https://doi.org/10.1145/3687272.3688315">DOI</a>
-                <li class="award"><a href="">Best Paper Award</a></li>
-                <li class="lab uulm"></li></ul>
-          <li class='ref-item'>
-            <p>Victor Romero II, Tomokazu Matsui, <span class="author">Yuki Matsuda</span>, Hirohiko Suwa, Keiichi Yasumoto:
-            <span class="title">“Towards Opportunistic Federated Learning Using Independent Subnetwork Training,”</span>
-            The 10th International Conference on Smart Computing (SmartComp '24), pp.174-181, 2024.</p>
-            <ul><li><a href="https://smartcomp.w.waseda.jp/accepted-papers/">Link</a></li>
-                <li><a href="https://doi.org/10.1109/SMARTCOMP61445.2024.00044">DOI</a></li>
-                <li><a href="/publication/files/202406_SmartComp_Victor.pdf">PDF</a></li>
-                <li class="lab naist"></li></ul>
-          <li class='ref-item'>
-            <p>Haruka Sakagami, Osamu Yamada, <span class="author">Yuki Matsuda</span>, Hirohiko Suwa, Keiichi Yasumoto:
-            <span class="title">“A Method for City-wide PoI-level Congestion Prediction via Assimilation of Actual and Simulation-based PoI Congestion Data,”</span>
-            The 10th International Conference on Smart Computing (SmartComp '24), pp.39-46, 2024.</p>
-            <ul><li><a href="https://smartcomp.w.waseda.jp/accepted-papers/">Link</a></li>
-                <li><a href="https://doi.org/10.1109/SMARTCOMP61445.2024.00027">DOI</a></li>
-                <li><a href="/publication/files/202406_SmartComp_Sakagami.pdf">PDF</a></li>
-                <li class="lab naist"></li></ul>
-          <li class='ref-item'>
-            <p><span class="author">Yuki Matsuda</span>:
-            <span class="title">“A Table-top Interface for Real-time Coaching in Abacus Learning,”</span>
-            The 10th International Conference on Smart Computing (SmartComp '24, Demo), pp.243-245, 2024.</p>
-            <ul><li><a href="https://smartcomp.w.waseda.jp/accepted-papers/">Link</a></li>
-                <li><a href="https://doi.org/10.1109/SMARTCOMP61445.2024.00056">DOI</a></li>
-                <li><a href="/publication/files/202406_SmartComp_Matsuda.pdf">PDF</a></li>
-                <li class="lab cocolab"></li></ul>
-          <li class='ref-item'>
-            <p>Chingyuan Lin, <span class="author">Yuki Matsuda</span>, Hirohiko Suwa, Keiichi Yasumoto:
-            <span class="title">“Detecting Distress Changes Using Multimodal Data During Interaction with A Smart Speaker,”</span>
-            The 10th International Conference on Smart Computing (SmartComp '24, SmartSys '24), pp.352-357, 2024.</p>
-            <ul><li><a href="http://smartsys2024.dii.unipi.it/">Link</a></li>
-                <li><a href="https://doi.org/10.1109/SMARTCOMP61445.2024.00080">DOI</a></li>
-                <li><a href="/publication/files/202406_SmartComp_Lin.pdf">PDF</a></li>
-                <li class="lab naist"></li></ul>
-          <li class='ref-item'>
-            <p>Osamu Yamada, <span class="author">Yuki Matsuda</span>, Hirohiko Suwa, Keiichi Yasumoto:
-            <span class="title">“Crowd Flow Prediction from Mobile Traces Through Time Series PoI Stay Counts,”</span>
-            The 10th International Conference on Smart Computing (SmartComp '24, SSC '24), pp.268-273, 2024.</p>
-            <ul><li><a href="http://ssc2024.unime.it/">Link</a></li>
-                <li><a href="https://doi.org/10.1109/SMARTCOMP61445.2024.00066">DOI</a></li>
-                <li><a href="/publication/files/202406_SmartComp_Yamada.pdf">PDF</a></li>
-                <li class="lab naist"></li></ul>
-          <li class='ref-item'>
-            <p>Lucas Maris, <span class="author">Yuki Matsuda</span>, Keiichi Yasumoto:
-            <span class="title">“Protecting Cross-camera Person Re-identification Data with Image Differential Privacy,”</span>
-            The 10th International Conference on Smart Computing (SmartComp '24, BITS '24), pp.388-393, 2024.</p>
-            <ul><li><a href="https://www.yama.info.waseda.ac.jp/en/bits2024">Link</a></li>
-                <li><a href="https://doi.org/10.1109/SMARTCOMP61445.2024.00086">DOI</a></li>
-                <li><a href="/publication/files/202406_SmartComp_Lucas.pdf">PDF</a></li>
-                <li class="lab naist"></li></ul>
-        </ol>
-        <h4 id="2024-d">国内研究会</h4>
-        <ol class="publication">
-          <li class='ref-item'>
-            <p>真弓大輝, <span class="author">松田裕貴</span>, 松田裕貴, 横田哲弥, 榊原太一, 安本慶一:
-              <span class="title">“非特定テレビ視聴履歴データを用いたテレビ視聴行動クラスタリング手法の構築と評価,”</span>
-              AIoT行動変容学会第8回研究会 (BTI-8), pp.23-30, 岡山県岡山市, 2024年12月.</p>
-            <ul><li><a href="http://www.sig-bti.jp/event/bti08.html">Link</a></li>
-                <li class="lab naist"></li></ul>
-          <li class='ref-item'>
-            <p><span class="author">松田裕貴</span>, 立花巧樹, 呉健朗, 諏訪博彦:
-              <span class="title">“マルチモーダルセンサとLLMを用いた個人の体感推定手法の検討,”</span>
-              コラボレーションとネットワークサービスワークショップ2024 (CN Workshop '24), pp.85-86, 石川県加賀市, 2024年11月.</p>
-            <ul><li><a href="https://www.ipsj.or.jp/sig/cn/cnws/2024/">Link</a></li>
-                <li><a href="http://id.nii.ac.jp/1001/00240522/">DOI</a></li>
-                <li class="lab naist"></li></ul>
-          <li class='ref-item'>
-            <p>土橋有理, 秦恭史, <span class="author">松田裕貴</span>, 諏訪博彦, 安本慶一:
-              <span class="title">“ゲーミフィケーションを活用した外出交流促進システムの開発,”</span>
-              第32回マルチメディア通信と分散処理ワークショップ (DPSWS '24), pp.168-171, 広島県廿日市市, 2024年10月.</p>
-            <ul><li><a href="https://www.dpsws.org/2024/">Link</a></li>
-                <li><a href="/publication/files/202410_DPSWS_Tsuchihashi.pdf">PDF</a></li>
-                <li><a href="http://id.nii.ac.jp/1001/00239969/">DOI</a></li>
-                <li class="lab naist"></li></ul>
-          <li class='ref-item'>
-            <p>筒井巽水, <span class="author">松田裕貴</span>, 秦恭史, 諏訪博彦, 峯英一郎, 稲場圭信, 安本慶一:
-              <span class="title">“スマートフォンのブラウザ記憶領域を用いた災害情報流通システムの実装,”</span>
-              第32回マルチメディア通信と分散処理ワークショップ (DPSWS '24), pp.160-167, 広島県廿日市市, 2024年10月.</p>
-            <ul><li><a href="https://www.dpsws.org/2024/">Link</a></li>
-                <li><a href="/publication/files/202410_DPSWS_Tsutsui.pdf">PDF</a></li>
-                <li><a href="http://id.nii.ac.jp/1001/00239970/">DOI</a></li>
-                <li class="award"><a href="https://www.dpsws.org/2024/?Award">優秀デモンストレーション賞</a></li>
-                <li class="lab naist"></li></ul>
-          <li class='ref-item'>
-            <p>Muhammad Furqan Rasyid, Tomokazu Matsui, <span class="author">Yuki Matsuda</span>, Hirohiko Suwa, Keiichi Yasumoto:
-              <span class="title">“EyeWise: A Nudge Theory-Based Approach to Enhancing Blink Behavior in Computer Users,”</span>
-              第32回マルチメディア通信と分散処理ワークショップ (DPSWS '24), pp.221-223, 広島県廿日市市, 2024年10月.</p>
-            <ul><li><a href="https://www.dpsws.org/2024/">Link</a></li>
-                <li><a href="/publication/files/202410_DPSWS_Furqan.pdf">PDF</a></li>
-                <li><a href="http://id.nii.ac.jp/1001/00239982/">DOI</a></li>
-                <li class="lab naist"></li></ul>
-          <li class='ref-item'>
-            <p>吉村太斗, 林虎太朗, 新井イスマイル, <span class="author">松田裕貴</span>:
-              <span class="title">“BLEのランダムMACアドレスを用いたODデータ推定に向けた初期検討,”</span>
-              2024年度 情報処理学会関西支部 支部大会, G-11, pp.1-8, オンライン, 2024年9月.</p>
-            <ul><li><a href="https://kansai.ipsj.or.jp/guide/2024shibutaikai-kaisai.html">Link</a></li>
-                <li><a href="/publication/files/202409_IPSJ-Kansai_Yoshimura.pdf">PDF</a></li>
-                <li><a href="http://id.nii.ac.jp/1001/00238709/">DOI</a></li>
-                <li class="award"><a href="">支部大会奨励賞</a></li>
-                <li class="lab cocolab"></li></ul>
-          <li class='ref-item'>
-            <p>林虎太朗, 吉村太斗, 諏訪博彦, <span class="author">松田裕貴</span>:
-              <span class="title">“複数台のBLEスキャナを用いた都市人流推定に向けた基礎検討,”</span>
-              2024年度 情報処理学会関西支部 支部大会, G-38, pp.1-8, オンライン, 2024年9月.</p>
-            <ul><li><a href="https://kansai.ipsj.or.jp/guide/2024shibutaikai-kaisai.html">Link</a></li>
-                <li><a href="/publication/files/202409_IPSJ-Kansai_Hayashi.pdf">PDF</a></li>
-                <li><a href="http://id.nii.ac.jp/1001/00238735/">DOI</a></li>
-                <li class="lab cocolab"></li></ul>
-          <li class='ref-item'>
-            <p>鳥垣耀平, 諏訪博彦, 安本慶一, <span class="author">松田裕貴</span>:
-              <span class="title">“美術館における鑑賞者の心理状態推定に向けた基礎分析,”</span>
-              2024年度 情報処理学会関西支部 支部大会, G-16, pp.1-6, オンライン, 2024年9月.</p>
-            <ul><li><a href="https://kansai.ipsj.or.jp/guide/2024shibutaikai-kaisai.html">Link</a></li>
-                <li><a href="/publication/files/202409_IPSJ-Kansai_Torigaki.pdf">PDF</a></li>
-                <li><a href="http://id.nii.ac.jp/1001/00238714/">DOI</a></li>
-                <li class="award"><a href="">学生優秀発表賞</a></li>
-                <li class="lab cocolab"></li></ul>
-          <li class='ref-item'>
-            <p>菊池尊勝, 池永拓海, 細川蓮, <span class="author">松田裕貴</span>, 諏訪博彦, 安本慶一:
-              <span class="title">“ユーザー参加型BLEスキャニングによる都市空間の混雑度推定に向けた検討,”</span>
-              2024年度 情報処理学会関西支部 支部大会, C-06, pp.1-6, オンライン, 2024年9月.</p>
-            <ul><li><a href="https://kansai.ipsj.or.jp/guide/2024shibutaikai-kaisai.html">Link</a></li>
-                <li><a href="/publication/files/202409_IPSJ-Kansai_Kikuchi.pdf">PDF</a></li>
-                <li><a href="http://id.nii.ac.jp/1001/00238695/">DOI</a></li>
-                <li class="award"><a href="">支部大会奨励賞</a></li>
-                <li class="lab naist"></li></ul>
-          <li class='ref-item'>
-            <p>古城司, 由田翔吾, 坪内孝太, <span class="author">松田裕貴</span>, 諏訪博彦, 安本慶一:
-              <span class="title">“野生動物の生息域推定精度向上のためのLiDAR点群データによる痕跡分類手法の提案,”</span>
-              2024年度 情報処理学会関西支部 支部大会, G-55, pp.1-6, オンライン, 2024年9月.</p>
-            <ul><li><a href="https://kansai.ipsj.or.jp/guide/2024shibutaikai-kaisai.html">Link</a></li>
-                <li><a href="/publication/files/202409_IPSJ-Kansai_Kojo.pdf">PDF</a></li>
-                <li><a href="http://id.nii.ac.jp/1001/00238750/">DOI</a></li>
-                <li class="award"><a href="">支部大会奨励賞</a></li>
-                <li class="lab naist"></li></ul>
-          <li class='ref-item'>
-            <p>長山和樹, 諏訪博彦, <span class="author">松田裕貴</span>, 安本慶一:
-              <span class="title">“サイクリストPoIを自動検出／評価をするための走行ログデータ解析手法の提案,”</span>
-              2024年度 情報処理学会関西支部 支部大会, G-37, pp.1-7, オンライン, 2024年9月.</p>
-            <ul><li><a href="https://kansai.ipsj.or.jp/guide/2024shibutaikai-kaisai.html">Link</a></li>
-                <li><a href="/publication/files/202409_IPSJ-Kansai_Nagayama.pdf">PDF</a></li>
-                <li><a href="http://id.nii.ac.jp/1001/00238734/">DOI</a></li>
-                <li class="lab naist"></li></ul>
-          <li class='ref-item'>
-            <p>立花巧樹, 呉健朗, <span class="author">松田裕貴</span>, 諏訪博彦, 安本慶一:
-            <span class="title">“未知ゴミ識別のための判定手法の比較と実用化に向けた検討,”</span>
-            マルチメディア, 分散, 協調とモバイル（DICOMO 2024）シンポジウム論文集, pp.33-38, 岩手県花巻市, 2024年6月.</p>
-            <ul><li><a href="https://dicomo.org/">Link</a></li>
-                <li><a href="/publication/files/202407_DICOMO_Tachibana.pdf">PDF</a></li>
-                <li><a href="http://id.nii.ac.jp/1001/00240002/">DOI</a></li></li>
-                <li class="award"><a href="https://dicomo.org/commendation/">野口賞（デモ賞）</a></li>
-                <li class="award"><a href="https://dicomo.org/commendation/">ヤングリーサチャ賞</a></li>
-                <li class="lab naist"></li></ul>
-        </ol>
-        <h4 id="2024-t">講演・LT</h4>
-        <ol class="publication">
-          <li class='ref-item'>
-            <p><span class="author">Yuki Matsuda</span>:
-            <span class="title">“Towards Low-cost People Flow Monitoring in Urban Spaces based on BLE Signal Sensing,”</span>
-            The 5th IEICE-CS International Conference on Emerging Technologies for Communications (IEICE ICETC 2024), 2024.</p>
-            <ul><li><a href="https://www.ieice.org/cs/icetc/">Link</a></li></ul>
-          <li class='ref-item'>
-            <p><span class="author">松田裕貴</span>:
-            <span class="title">“視線情報を用いた人の『コンテキスト（状況）』の分析,”</span>
-            第41回おかやま生体信号研究会, 2024.</p>
-            <ul><li><a href="https://obiss.tech/wp/2024/10/11/reikai-0041-plan/">Link</a></li></ul>
-          <li class='ref-item'>
-            <p><span class="author">松田裕貴</span>:
-            <span class="title">“人の感覚を理解するAIoTの実現に向けて,”</span>
-            第23回情報科学技術フォーラム（FIT '24）, イベント「IoTが拓く未来：センサデータから見る人間の世界」, 2024.</p>
-            <ul><li><a href="https://www.ipsj.or.jp/event/fit/fit2024/abstract/data/html/event/event_A-5.html">Link</a></li></ul>
-          <li class='ref-item'>
-            <p><span class="author">松田裕貴</span>:
-            <span class="title">“人や環境の状況を理解・変容するためのAIoT (Artificial Intelligence of Things),”</span>
-            第54回岡山情報通信技術研究会（OICT54）, 2024.</p>
-          <li class='ref-item'>
-            <p><span class="author">松田裕貴</span>, 土田修平, 越後宏紀:
-            <span class="title">“人にやさしい社会を実現する Internet of Things(IoT),”</span>
-            河合塾みらい探究プログラム「情報科学の最先端をのぞいてみよう！〜若手トップ研究者が紹介〜」, 2024.</p>
-            <ul><li><a href="https://www.kawai-juku.ac.jp/event/spc/k-ship/detail-s/#program7">Link</a></li></ul>
-          <li class='ref-item'>
-            <p><span class="author">松田裕貴</span>:
-            <span class="title">“AIoTによるコンヴィヴィアル社会の実現に向けた研究紹介,”</span>
-            岡山大学 令和6年度第1回 Cypher研究会, 2024.</p>
-            <ul><li><a href="https://www.cypher.okayama-u.ac.jp/seminar/%E4%BB%A4%E5%92%8C6%E5%B9%B4%E5%BA%A6%E7%AC%AC1%E5%9B%9Ecypher%E7%A0%94%E7%A9%B6%E4%BC%9A/">Link</a></li></ul>
-          <li class='ref-item'>
-            <p><span class="author">松田裕貴</span>, 佐藤拓也:
-            <span class="title">“写真で街の様子を共有するプラットフォーム「レポっと」の魅力を知ろう！,”</span>
-            シビックテックさいたま 4月勉強会, 2024.</p>
-            <ul><li><a href="https://www.facebook.com/events/778513637554136">Link</a></li></ul>
-        </ol>
-        <h4 id="2024-n">メディア掲載</h4>
-        <ol class="multi-line">
-          <li><p>The Gov't of Japan
-            <span>Want to eat healthy and turn your meals into works of art?</span>
-            <span>2024.07.19</span></p>
-            <ul><li><a href="https://x.com/JapanGov/status/1814178396588708049">X（Twitter）</a></li>
-                <li><a href="https://www.facebook.com/JapanGov/videos/1925759991253692/">Facebook</a></li></ul>
-          <li><p>Japan Times
-            <span>Japan’s gamified environment apps target a greener mindset</span>
-            <span>2024.06.16</span></p>
-            <ul><li><a href="https://www.japantimes.co.jp/environment/2024/06/16/sustainability/gamification-environment-apps-japan/">Link</a></li></ul>
-        </ol>
-        <h4 id="2024-a">受賞</h4>
-        <ol class="multi-line">
-          <li><p>ヒーローズ・リーグ2024 「特別賞」
-            <span>AbaCaaS： 算盤の盤面認識に基づく珠算学習支援システム</span>
-            <span>松田裕貴</span>
-            <span>2024.12.07</span></p>
-            <ul><li><a href="https://protopedia.net/event/hl2024">Link</a></li>
-                <li><a href="https://protopedia.net/prototype/3743">Protopedia</a></li>
-            </ul>
-          <li><p>ヒーローズ・リーグ2024 「ロボットフレンドリー賞」
-            <span>PhotoBot</span>
-            <span>山﨑七輝・周思君・𠮷村太斗</span>
-            <span>2024.12.07</span></p>
-            <ul><li><a href="https://protopedia.net/event/hl2024">Link</a></li>
-                <li><a href="https://protopedia.net/prototype/6397">Protopedia</a></li>
-            </ul>
-          <li><p>The 12th International Conference on Human-Agent Interaction (HAI '24) 「Best Paper Award」
-            <span>Exploring the Impact of Non-Verbal Virtual Agent Behavior on User Engagement in Argumentative Dialogues</span>
-            <span>Annalena Aicher, Yuki Matsuda, Keiichi Yasumoto, Wolfgang Minker, Elisabeth André, Stefan Ultes</span>
-            <span>2024.11.27</span></p>
-            <ul><li><a href="https://hai-conference.net/hai2024/">Link</a></li></ul>
-          <li><p>技育展2024 「優勝」「企業賞（株式会社サイバーエージェント賞）」
-            <span>PhotoBot - 運転中でもいい景色をAIで判定して自動撮影してくれるアプリ</span>
-            <span>山﨑七輝, 周思君, 吉村太斗</span>
-            <span>2024.11.12</span></p>
-            <ul><li><a href="https://100program.jp/">Link</a></li></ul>
-          <li><p>第32回マルチメディア通信と分散処理ワークショップ (DPSWS '24) 「優秀デモンストレーション賞」
-            <span>スマートフォンのブラウザ記憶領域を用いた災害情報流通システムの実装</span>
-            <span>筒井巽水, 松田裕貴, 秦恭史, 諏訪博彦, 峯英一郎, 稲場圭信, 安本慶一</span>
-            <span>2024.11.01</span></p>
-            <ul><li><a href="https://www.dpsws.org/2024/?Award">Link</a></li></ul>
-          <li><p>2024年度 情報処理学会関西支部 支部大会 「学生優秀発表賞」
-            <span>美術館における鑑賞者の心理状態推定に向けた基礎分析</span>
-            <span>鳥垣耀平</span>
-            <span>2024.09.29</span></p>
-            <ul><li><a href="https://kansai.ipsj.or.jp/record/">Link</a></li></ul>
-          <li><p>2024年度 情報処理学会関西支部 支部大会 「支部大会奨励賞」
-            <span>BLEのランダムMACアドレスを用いたODデータ推定に向けた初期検討</span>
-            <span>吉村太斗</span>
-            <span>2024.09.29</span></p>
-            <ul><li><a href="https://kansai.ipsj.or.jp/record/">Link</a></li></ul>
-          <li><p>2024年度 情報処理学会関西支部 支部大会 「支部大会奨励賞」
-            <span>ユーザー参加型BLEスキャニングによる都市空間の混雑度推定に向けた検討</span>
-            <span>菊池尊勝</span>
-            <span>2024.09.29</span></p>
-            <ul><li><a href="https://kansai.ipsj.or.jp/record/">Link</a></li></ul>
-          <li><p>2024年度 情報処理学会関西支部 支部大会 「支部大会奨励賞」
-            <span>野生動物の生息域推定精度向上のためのLiDAR点群データによる痕跡分類手法の提案</span>
-            <span>古城司</span>
-            <span>2024.09.29</span></p>
-            <ul><li><a href="https://kansai.ipsj.or.jp/record/">Link</a></li></ul>
-          <li><p>100 Program 「最優秀賞」「優秀アプリ賞」「優秀AI賞」「東大IPC賞」
-            <span>ドライブ中でもいい景色をAIで判定して自動撮影するアプリ</span>
-            <span>山﨑七輝, 周思君, 吉村太斗</span>
-            <span>2024.09.29</span></p>
-            <ul><li><a href="https://100program.jp/">Link</a></li></ul>
-          <li><p>電子情報通信学会 センサネットワークとモバイルインテリジェンス研究会 「2023年度最優秀発表賞」
-            <span>書画カメラを用いた珠算行動センシング</span>
-            <span>松田裕貴</span>
-            <span>2024.07.18</span></p>
-            <ul><li><a href="https://www.ieice.org/~semi/pub/ja/awards-ja.html">Link</a></li></ul>
-          <li><p>情報処理学会 DICOMO 2024 「野口賞（デモ賞）」
-            <span>未知ゴミ識別のための判定手法の比較と実用化に向けた検討</span>
-            <span>立花巧樹, 呉健朗, 松田裕貴, 諏訪博彦, 安本慶一</span>
-            <span>2024.06.28</span></p>
-            <ul><li><a href="https://dicomo.org/commendation/">Link</a></li></ul>
-          <li><p>情報処理学会 DICOMO 2024 「ヤングリサーチャ賞」
-            <span>未知ゴミ識別のための判定手法の比較と実用化に向けた検討</span>
-            <span>立花巧樹</span>
-            <span>2024.06.28</span></p>
-            <ul><li><a href="https://dicomo.org/commendation/">Link</a></li></ul>
-        </ol>
+        <h3><span>2024年度</span></h3>
+        <div id="2024-b">
+          <h4>書籍</h4>
+          <ol class="publication">
+            <li class='ref-item'>
+              <p>荒川豊, 石田繁巳, <span class="author">松田裕貴</span>, 中村優吾, 安本慶一:
+              <span class="title">“センサと機械学習ではじめる人間行動認識 - 触って動かして理解するセンサデータ処理,”</span>
+              pp.1-129, 2024, 電気書院.</p>
+              <ul><li><a href="
+  https://www.denkishoin.co.jp/products/view/2078">出版社サイト</a></li>
+                  <li><a href="
+  https://www.amazon.co.jp/dp/4485302652">Amazon</a></li></ul>
+          </ol>
+        </div>
+        <div id="2024-m">
+          <h4>特集・解説</h4>
+          <ol class="publication">
+            <li class="ref-item">
+              <p><span class="author">松田裕貴</span>, 諏訪博彦:
+              <span class="title">“《特集 ナラティブと人工知能》センシングと行動変容におけるナラティブ...ってなんだ?,”</span>
+              人工知能, Vol.39, No.5, pp.638-644, 2024.</p>
+              <ul><li><a href="https://doi.org/10.11517/jjsai.39.5_638">DOI</a>
+                  <li><a href="/publication/files/202409_JSAI-Magazine_Matsuda.pdf">PDF</a></li></li></ul>
+            <li class="ref-item">
+              <p><span class="author">松田裕貴</span>:
+              <span class="title">“オフィスワーカーの心身と環境センシングに向けたアプリケーションの開発と評価,”</span>
+              生体センシング技術の開発とヘルスケア、遠隔診断への応用, pp.297-306, 2024.</p>
+              <ul><li><a href="https://www.gijutu.co.jp/doc/b_2245.htm">Link</a></li></ul>
+            <li class="ref-item">
+              <p><span class="author">松田裕貴</span>:
+              <span class="title">“ICTそろばん学習支援システム「AbaCaaS」,”</span>
+              電気計算 2024年6月号, Vol.92, No.6, pp.51-56, 2024.</p>
+              <ul><li><a href="https://www.denkishoin.co.jp/products/view/2046">Link</a></li>
+                  <li><a href="https://www.amazon.co.jp/dp/B0CWN9KDKG/">Amazon</a></li></ul>
+          </ol>
+        </div>
+        <div id="2024-pp">
+          <h4>プレプリント</h4>
+          <ol class="publication">
+            <li class='ref-item'>
+              <p>Carolin Schindler, Daiki Mayumi, <span class="author">Yuki Matsuda</span>, Niklas Rach, Keiichi Yasumoto, Wolfgang Minker:
+              <span class="title">“ARCADE: An Augmented Reality Display Environment for Multimodal Interaction with Conversational Agents,”</span>
+              arXiv:2408.06222, pp.1-3, 2024.</p>
+              <p @click.stop="scrollToRef('carolin-icmi2024')">published: ICMI'24 (Schindler et al.)</p>
+              <ul><li><a href="https://doi.org/10.48550/arXiv.2408.06222">DOI</a></li>
+                  <li><a href="https://arxiv.org/pdf/2408.06222">PDF</a></li>
+                  <li class="lab uulm"></li></ul>
+            <li class='ref-item'>
+              <p>Annalena Aicher, <span class="author">Yuki Matsuda</span>, Keiichi Yasumoto, Wolfgang Minker, Elisabeth André, Stefan Ultes:
+              <span class="title">“Exploring the Impact of Non-Verbal Virtual Agent Behavior on User Engagement in Argumentative Dialogues,”</span>
+              arXiv:2411.11102, pp.1-9, 2024.</p>
+              <p @click.stop="scrollToRef('annalena-hai2024')">published: HAI'24 (Aicher et al.)</p>
+              <ul><li><a href="https://hai-conference.net/hai2024/">Link</a></li>
+                  <li><a href="https://doi.org/10.48550/arXiv.2411.11102">DOI</a></li>
+                  <li class="lab uulm"></li></ul>
+          </ol>
+        </div>
+        <div id="2024-j">
+          <h4>論文誌・ジャーナル</h4>
+          <ol class="publication">
+            <li class='ref-item'>
+              <p>Sergio De León Aguilar, <span class="author">Yuki Matsuda</span>, Keiichi Yasumoto:
+              <span class="title">“Mobile Augmented Reality Interface for Instruction-based Disaster Preparedness Guidelines,”</span>
+              Sensors and Materials, Vol.36, No.10, pp.4585-4606, 2024.</p>
+              <ul><li><a href="https://doi.org/10.18494/SAM5215">DOI</a></li>
+                  <li><a href="https://sensors.myu-group.co.jp/sm_pdf/SM3819.pdf">PDF</a></li>
+                  <li class="lab naist"></li></ul>
+            <li class='ref-item'>
+              <p>松田裕貴, 榊原太一, 真弓大輝, <span class="author">松田裕貴</span>, 水本旭洋, 安本慶一:
+              <span class="title">“非特定テレビ視聴履歴データの放送局間統合手法,”</span>
+              情報処理学会論文誌, Vol.65, No.10, pp.1488-1500, 2024.</p>
+              <ul><li><a href="http://doi.org/10.20729/00239892">DOI</a></li>
+                  <li><a href="/publication/files/202410_IPSJJournal_MatsudaHiroki.pdf">PDF</a>
+                  <li class="lab naist"></li></li></ul>
+            <li class='ref-item'>
+              <p>Annalena Aicher, <span class="author">Yuki Matsuda</span>, Keichii Yasumoto, Wolfgang Minker, Elisabeth André, Stefan Ultes:
+              <span class="title">“Enhancing Reflective and Conversational User Engagement in Argumentative Dialogues with Virtual Agents,”</span>
+              Multimodal Technologies and Interaction, Vol.8, No.8:71, pp.1-44, 2024.</p>
+              <ul><li><a href="https://doi.org/10.3390/mti8080071">DOI</a></li>
+                  <li><a href="https://www.mdpi.com/2414-4088/8/8/71/pdf?version=1722929669">PDF</a></li>
+                  <li class="lab uulm"></li></ul>
+            <li class='ref-item'>
+              <p>Daiki Mayumi, Yugo Nakamura, <span class="author">Yuki Matsuda</span>, Shinya Misaki, Keiichi Yasumoto:
+              <span class="title">“Aromug: a Mug-type Olfactory Interface to Enhance the Sweetness Perception of Beverages,”</span>
+              IEEE Access, Vol.12, pp.78366-78378, 2024.</p>
+              <ul><li><a href="https://doi.org/10.1109/ACCESS.2024.3401392">DOI</a></li>
+                  <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10530960">PDF</a></li>
+                  <li class="lab naist"></li></ul>
+            <li class='ref-item'>
+              <p><span class="author">Yuki Matsuda</span>:
+              <span class="title">“Abacus Manipulation Understanding by Behavior Sensing Utilizing Document Camera as a Sensor,”</span>
+              International Journal of Activity and Behavior Computing, Vol.2024, No.1, pp.1-16, 2024.</p>
+              <ul><li><a href="https://doi.org/10.60401/ijabc.2">DOI</a></li>
+                  <li><a href="https://www.jstage.jst.go.jp/article/ijabc/2024/1/2024_2/_pdf/-char/en">PDF</a></li>
+                  <li class="lab cocolab"></li></ul>
+          </ol>
+        </div>
+        <div id="2024-i">
+          <h4>国際会議</h4>
+          <ol class="publication">
+            <li class='ref-item' id="carolin-icmi2024">
+              <p>Carolin Schindler, Daiki Mayumi, <span class="author">Yuki Matsuda</span>, Niklas Rach, Keiichi Yasumoto, Wolfgang Minker:
+              <span class="title">“ARCADE: An Augmented Reality Display Environment for Multimodal Interaction with Conversational Agents,”</span>
+              Companion Proceedings of the 26th International Conference on Multimodal Interaction (ICMI Companion '24), pp.85-87, 2024.</p>
+              <ul><li><a href="https://icmi.acm.org/2024/">Link</a></li>
+                  <li><a href="https://doi.org/10.1145/3686215.3688376">DOI</a></li>
+                  <li><a href="https://dl.acm.org/doi/pdf/10.1145/3686215.3688376">PDF</a></li>
+                  <li class="lab uulm"></li></ul>
+            <li class='ref-item' id="annalena-hai2024">
+              <p>Annalena Aicher, <span class="author">Yuki Matsuda</span>, Keiichi Yasumoto, Wolfgang Minker, Elisabeth André, Stefan Ultes:
+              <span class="title">“Exploring the Impact of Non-Verbal Virtual Agent Behavior on User Engagement in Argumentative Dialogues,”</span>
+              The 12th International Conference on Human-Agent Interaction (HAI '24), pp.224-232, 2024.</p>
+              <ul><li><a href="https://hai-conference.net/hai2024/">Link</a></li>
+                  <li><a href="https://doi.org/10.1145/3687272.3688315">DOI</a>
+                  <li class="award"><a href="">Best Paper Award</a></li>
+                  <li class="lab uulm"></li></ul>
+            <li class='ref-item'>
+              <p>Victor Romero II, Tomokazu Matsui, <span class="author">Yuki Matsuda</span>, Hirohiko Suwa, Keiichi Yasumoto:
+              <span class="title">“Towards Opportunistic Federated Learning Using Independent Subnetwork Training,”</span>
+              The 10th International Conference on Smart Computing (SmartComp '24), pp.174-181, 2024.</p>
+              <ul><li><a href="https://smartcomp.w.waseda.jp/accepted-papers/">Link</a></li>
+                  <li><a href="https://doi.org/10.1109/SMARTCOMP61445.2024.00044">DOI</a></li>
+                  <li><a href="/publication/files/202406_SmartComp_Victor.pdf">PDF</a></li>
+                  <li class="lab naist"></li></ul>
+            <li class='ref-item'>
+              <p>Haruka Sakagami, Osamu Yamada, <span class="author">Yuki Matsuda</span>, Hirohiko Suwa, Keiichi Yasumoto:
+              <span class="title">“A Method for City-wide PoI-level Congestion Prediction via Assimilation of Actual and Simulation-based PoI Congestion Data,”</span>
+              The 10th International Conference on Smart Computing (SmartComp '24), pp.39-46, 2024.</p>
+              <ul><li><a href="https://smartcomp.w.waseda.jp/accepted-papers/">Link</a></li>
+                  <li><a href="https://doi.org/10.1109/SMARTCOMP61445.2024.00027">DOI</a></li>
+                  <li><a href="/publication/files/202406_SmartComp_Sakagami.pdf">PDF</a></li>
+                  <li class="lab naist"></li></ul>
+            <li class='ref-item'>
+              <p><span class="author">Yuki Matsuda</span>:
+              <span class="title">“A Table-top Interface for Real-time Coaching in Abacus Learning,”</span>
+              The 10th International Conference on Smart Computing (SmartComp '24, Demo), pp.243-245, 2024.</p>
+              <ul><li><a href="https://smartcomp.w.waseda.jp/accepted-papers/">Link</a></li>
+                  <li><a href="https://doi.org/10.1109/SMARTCOMP61445.2024.00056">DOI</a></li>
+                  <li><a href="/publication/files/202406_SmartComp_Matsuda.pdf">PDF</a></li>
+                  <li class="lab cocolab"></li></ul>
+            <li class='ref-item'>
+              <p>Chingyuan Lin, <span class="author">Yuki Matsuda</span>, Hirohiko Suwa, Keiichi Yasumoto:
+              <span class="title">“Detecting Distress Changes Using Multimodal Data During Interaction with A Smart Speaker,”</span>
+              The 10th International Conference on Smart Computing (SmartComp '24, SmartSys '24), pp.352-357, 2024.</p>
+              <ul><li><a href="http://smartsys2024.dii.unipi.it/">Link</a></li>
+                  <li><a href="https://doi.org/10.1109/SMARTCOMP61445.2024.00080">DOI</a></li>
+                  <li><a href="/publication/files/202406_SmartComp_Lin.pdf">PDF</a></li>
+                  <li class="lab naist"></li></ul>
+            <li class='ref-item'>
+              <p>Osamu Yamada, <span class="author">Yuki Matsuda</span>, Hirohiko Suwa, Keiichi Yasumoto:
+              <span class="title">“Crowd Flow Prediction from Mobile Traces Through Time Series PoI Stay Counts,”</span>
+              The 10th International Conference on Smart Computing (SmartComp '24, SSC '24), pp.268-273, 2024.</p>
+              <ul><li><a href="http://ssc2024.unime.it/">Link</a></li>
+                  <li><a href="https://doi.org/10.1109/SMARTCOMP61445.2024.00066">DOI</a></li>
+                  <li><a href="/publication/files/202406_SmartComp_Yamada.pdf">PDF</a></li>
+                  <li class="lab naist"></li></ul>
+            <li class='ref-item'>
+              <p>Lucas Maris, <span class="author">Yuki Matsuda</span>, Keiichi Yasumoto:
+              <span class="title">“Protecting Cross-camera Person Re-identification Data with Image Differential Privacy,”</span>
+              The 10th International Conference on Smart Computing (SmartComp '24, BITS '24), pp.388-393, 2024.</p>
+              <ul><li><a href="https://www.yama.info.waseda.ac.jp/en/bits2024">Link</a></li>
+                  <li><a href="https://doi.org/10.1109/SMARTCOMP61445.2024.00086">DOI</a></li>
+                  <li><a href="/publication/files/202406_SmartComp_Lucas.pdf">PDF</a></li>
+                  <li class="lab naist"></li></ul>
+          </ol>
+        </div>
+        <div id="2024-d">
+          <h4>国内研究会</h4>
+          <ol class="publication">
+            <li class='ref-item'>
+              <p>真弓大輝, <span class="author">松田裕貴</span>, 松田裕貴, 横田哲弥, 榊原太一, 安本慶一:
+                <span class="title">“非特定テレビ視聴履歴データを用いたテレビ視聴行動クラスタリング手法の構築と評価,”</span>
+                AIoT行動変容学会第8回研究会 (BTI-8), pp.23-30, 岡山県岡山市, 2024年12月.</p>
+              <ul><li><a href="http://www.sig-bti.jp/event/bti08.html">Link</a></li>
+                  <li class="lab naist"></li></ul>
+            <li class='ref-item'>
+              <p><span class="author">松田裕貴</span>, 立花巧樹, 呉健朗, 諏訪博彦:
+                <span class="title">“マルチモーダルセンサとLLMを用いた個人の体感推定手法の検討,”</span>
+                コラボレーションとネットワークサービスワークショップ2024 (CN Workshop '24), pp.85-86, 石川県加賀市, 2024年11月.</p>
+              <ul><li><a href="https://www.ipsj.or.jp/sig/cn/cnws/2024/">Link</a></li>
+                  <li><a href="http://id.nii.ac.jp/1001/00240522/">DOI</a></li>
+                  <li class="lab naist"></li></ul>
+            <li class='ref-item'>
+              <p>土橋有理, 秦恭史, <span class="author">松田裕貴</span>, 諏訪博彦, 安本慶一:
+                <span class="title">“ゲーミフィケーションを活用した外出交流促進システムの開発,”</span>
+                第32回マルチメディア通信と分散処理ワークショップ (DPSWS '24), pp.168-171, 広島県廿日市市, 2024年10月.</p>
+              <ul><li><a href="https://www.dpsws.org/2024/">Link</a></li>
+                  <li><a href="/publication/files/202410_DPSWS_Tsuchihashi.pdf">PDF</a></li>
+                  <li><a href="http://id.nii.ac.jp/1001/00239969/">DOI</a></li>
+                  <li class="lab naist"></li></ul>
+            <li class='ref-item'>
+              <p>筒井巽水, <span class="author">松田裕貴</span>, 秦恭史, 諏訪博彦, 峯英一郎, 稲場圭信, 安本慶一:
+                <span class="title">“スマートフォンのブラウザ記憶領域を用いた災害情報流通システムの実装,”</span>
+                第32回マルチメディア通信と分散処理ワークショップ (DPSWS '24), pp.160-167, 広島県廿日市市, 2024年10月.</p>
+              <ul><li><a href="https://www.dpsws.org/2024/">Link</a></li>
+                  <li><a href="/publication/files/202410_DPSWS_Tsutsui.pdf">PDF</a></li>
+                  <li><a href="http://id.nii.ac.jp/1001/00239970/">DOI</a></li>
+                  <li class="award"><a href="https://www.dpsws.org/2024/?Award">優秀デモンストレーション賞</a></li>
+                  <li class="lab naist"></li></ul>
+            <li class='ref-item'>
+              <p>Muhammad Furqan Rasyid, Tomokazu Matsui, <span class="author">Yuki Matsuda</span>, Hirohiko Suwa, Keiichi Yasumoto:
+                <span class="title">“EyeWise: A Nudge Theory-Based Approach to Enhancing Blink Behavior in Computer Users,”</span>
+                第32回マルチメディア通信と分散処理ワークショップ (DPSWS '24), pp.221-223, 広島県廿日市市, 2024年10月.</p>
+              <ul><li><a href="https://www.dpsws.org/2024/">Link</a></li>
+                  <li><a href="/publication/files/202410_DPSWS_Furqan.pdf">PDF</a></li>
+                  <li><a href="http://id.nii.ac.jp/1001/00239982/">DOI</a></li>
+                  <li class="lab naist"></li></ul>
+            <li class='ref-item'>
+              <p>吉村太斗, 林虎太朗, 新井イスマイル, <span class="author">松田裕貴</span>:
+                <span class="title">“BLEのランダムMACアドレスを用いたODデータ推定に向けた初期検討,”</span>
+                2024年度 情報処理学会関西支部 支部大会, G-11, pp.1-8, オンライン, 2024年9月.</p>
+              <ul><li><a href="https://kansai.ipsj.or.jp/guide/2024shibutaikai-kaisai.html">Link</a></li>
+                  <li><a href="/publication/files/202409_IPSJ-Kansai_Yoshimura.pdf">PDF</a></li>
+                  <li><a href="http://id.nii.ac.jp/1001/00238709/">DOI</a></li>
+                  <li class="award"><a href="">支部大会奨励賞</a></li>
+                  <li class="lab cocolab"></li></ul>
+            <li class='ref-item'>
+              <p>林虎太朗, 吉村太斗, 諏訪博彦, <span class="author">松田裕貴</span>:
+                <span class="title">“複数台のBLEスキャナを用いた都市人流推定に向けた基礎検討,”</span>
+                2024年度 情報処理学会関西支部 支部大会, G-38, pp.1-8, オンライン, 2024年9月.</p>
+              <ul><li><a href="https://kansai.ipsj.or.jp/guide/2024shibutaikai-kaisai.html">Link</a></li>
+                  <li><a href="/publication/files/202409_IPSJ-Kansai_Hayashi.pdf">PDF</a></li>
+                  <li><a href="http://id.nii.ac.jp/1001/00238735/">DOI</a></li>
+                  <li class="lab cocolab"></li></ul>
+            <li class='ref-item'>
+              <p>鳥垣耀平, 諏訪博彦, 安本慶一, <span class="author">松田裕貴</span>:
+                <span class="title">“美術館における鑑賞者の心理状態推定に向けた基礎分析,”</span>
+                2024年度 情報処理学会関西支部 支部大会, G-16, pp.1-6, オンライン, 2024年9月.</p>
+              <ul><li><a href="https://kansai.ipsj.or.jp/guide/2024shibutaikai-kaisai.html">Link</a></li>
+                  <li><a href="/publication/files/202409_IPSJ-Kansai_Torigaki.pdf">PDF</a></li>
+                  <li><a href="http://id.nii.ac.jp/1001/00238714/">DOI</a></li>
+                  <li class="award"><a href="">学生優秀発表賞</a></li>
+                  <li class="lab cocolab"></li></ul>
+            <li class='ref-item'>
+              <p>菊池尊勝, 池永拓海, 細川蓮, <span class="author">松田裕貴</span>, 諏訪博彦, 安本慶一:
+                <span class="title">“ユーザー参加型BLEスキャニングによる都市空間の混雑度推定に向けた検討,”</span>
+                2024年度 情報処理学会関西支部 支部大会, C-06, pp.1-6, オンライン, 2024年9月.</p>
+              <ul><li><a href="https://kansai.ipsj.or.jp/guide/2024shibutaikai-kaisai.html">Link</a></li>
+                  <li><a href="/publication/files/202409_IPSJ-Kansai_Kikuchi.pdf">PDF</a></li>
+                  <li><a href="http://id.nii.ac.jp/1001/00238695/">DOI</a></li>
+                  <li class="award"><a href="">支部大会奨励賞</a></li>
+                  <li class="lab naist"></li></ul>
+            <li class='ref-item'>
+              <p>古城司, 由田翔吾, 坪内孝太, <span class="author">松田裕貴</span>, 諏訪博彦, 安本慶一:
+                <span class="title">“野生動物の生息域推定精度向上のためのLiDAR点群データによる痕跡分類手法の提案,”</span>
+                2024年度 情報処理学会関西支部 支部大会, G-55, pp.1-6, オンライン, 2024年9月.</p>
+              <ul><li><a href="https://kansai.ipsj.or.jp/guide/2024shibutaikai-kaisai.html">Link</a></li>
+                  <li><a href="/publication/files/202409_IPSJ-Kansai_Kojo.pdf">PDF</a></li>
+                  <li><a href="http://id.nii.ac.jp/1001/00238750/">DOI</a></li>
+                  <li class="award"><a href="">支部大会奨励賞</a></li>
+                  <li class="lab naist"></li></ul>
+            <li class='ref-item'>
+              <p>長山和樹, 諏訪博彦, <span class="author">松田裕貴</span>, 安本慶一:
+                <span class="title">“サイクリストPoIを自動検出／評価をするための走行ログデータ解析手法の提案,”</span>
+                2024年度 情報処理学会関西支部 支部大会, G-37, pp.1-7, オンライン, 2024年9月.</p>
+              <ul><li><a href="https://kansai.ipsj.or.jp/guide/2024shibutaikai-kaisai.html">Link</a></li>
+                  <li><a href="/publication/files/202409_IPSJ-Kansai_Nagayama.pdf">PDF</a></li>
+                  <li><a href="http://id.nii.ac.jp/1001/00238734/">DOI</a></li>
+                  <li class="lab naist"></li></ul>
+            <li class='ref-item'>
+              <p>立花巧樹, 呉健朗, <span class="author">松田裕貴</span>, 諏訪博彦, 安本慶一:
+              <span class="title">“未知ゴミ識別のための判定手法の比較と実用化に向けた検討,”</span>
+              マルチメディア, 分散, 協調とモバイル（DICOMO 2024）シンポジウム論文集, pp.33-38, 岩手県花巻市, 2024年6月.</p>
+              <ul><li><a href="https://dicomo.org/">Link</a></li>
+                  <li><a href="/publication/files/202407_DICOMO_Tachibana.pdf">PDF</a></li>
+                  <li><a href="http://id.nii.ac.jp/1001/00240002/">DOI</a></li></li>
+                  <li class="award"><a href="https://dicomo.org/commendation/">野口賞（デモ賞）</a></li>
+                  <li class="award"><a href="https://dicomo.org/commendation/">ヤングリーサチャ賞</a></li>
+                  <li class="lab naist"></li></ul>
+          </ol>
+        </div>
+        <div id="2024-t">
+          <h4>講演・LT</h4>
+          <ol class="publication">
+            <li class='ref-item'>
+              <p><span class="author">松田裕貴</span>:
+              <span class="title">“ICTとモニタリング～どうやってデータを計測して、活用するのか～,”</span>
+              『未来の海を共に見守る－市民参加型モニタリング－』セミナー, 2024.</p>
+              <ul><li><a href="https://chushikoku.env.go.jp/procure/topics_00253.html">Link</a></li></ul>
+            <li class='ref-item'>
+              <p><span class="author">松田裕貴</span>:
+              <span class="title">“人の体感を考慮した気象APIの実現に向けたデータ解析,”</span>
+              YuMake Sky Meetup vol.2, 2024.</p>
+              <ul><li><a href="https://yumake.connpass.com/event/336440/">Link</a></li></ul>
+            <li class='ref-item'>
+              <p><span class="author">Yuki Matsuda</span>:
+              <span class="title">“Towards Low-cost People Flow Monitoring in Urban Spaces based on BLE Signal Sensing,”</span>
+              The 5th IEICE-CS International Conference on Emerging Technologies for Communications (IEICE ICETC 2024), 2024.</p>
+              <ul><li><a href="https://www.ieice.org/cs/icetc/">Link</a></li></ul>
+            <li class='ref-item'>
+              <p><span class="author">松田裕貴</span>:
+              <span class="title">“視線情報を用いた人の『コンテキスト（状況）』の分析,”</span>
+              第41回おかやま生体信号研究会, 2024.</p>
+              <ul><li><a href="https://obiss.tech/wp/2024/10/11/reikai-0041-plan/">Link</a></li></ul>
+            <li class='ref-item'>
+              <p><span class="author">松田裕貴</span>:
+              <span class="title">“人の感覚を理解するAIoTの実現に向けて,”</span>
+              第23回情報科学技術フォーラム（FIT '24）, イベント「IoTが拓く未来：センサデータから見る人間の世界」, 2024.</p>
+              <ul><li><a href="https://www.ipsj.or.jp/event/fit/fit2024/abstract/data/html/event/event_A-5.html">Link</a></li></ul>
+            <li class='ref-item'>
+              <p><span class="author">松田裕貴</span>:
+              <span class="title">“人や環境の状況を理解・変容するためのAIoT (Artificial Intelligence of Things),”</span>
+              第54回岡山情報通信技術研究会（OICT54）, 2024.</p>
+            <li class='ref-item'>
+              <p><span class="author">松田裕貴</span>, 土田修平, 越後宏紀:
+              <span class="title">“人にやさしい社会を実現する Internet of Things(IoT),”</span>
+              河合塾みらい探究プログラム「情報科学の最先端をのぞいてみよう！〜若手トップ研究者が紹介〜」, 2024.</p>
+              <ul><li><a href="https://www.kawai-juku.ac.jp/event/spc/k-ship/detail-s/#program7">Link</a></li></ul>
+            <li class='ref-item'>
+              <p><span class="author">松田裕貴</span>:
+              <span class="title">“AIoTによるコンヴィヴィアル社会の実現に向けた研究紹介,”</span>
+              岡山大学 令和6年度第1回 Cypher研究会, 2024.</p>
+              <ul><li><a href="https://www.cypher.okayama-u.ac.jp/seminar/%E4%BB%A4%E5%92%8C6%E5%B9%B4%E5%BA%A6%E7%AC%AC1%E5%9B%9Ecypher%E7%A0%94%E7%A9%B6%E4%BC%9A/">Link</a></li></ul>
+            <li class='ref-item'>
+              <p><span class="author">松田裕貴</span>, 佐藤拓也:
+              <span class="title">“写真で街の様子を共有するプラットフォーム「レポっと」の魅力を知ろう！,”</span>
+              シビックテックさいたま 4月勉強会, 2024.</p>
+              <ul><li><a href="https://www.facebook.com/events/778513637554136">Link</a></li></ul>
+          </ol>
+        </div>
+        <div id="2024-n">
+          <h4>メディア掲載</h4>
+          <ol class="multi-line">
+            <li><p>The Gov't of Japan
+              <span>Want to eat healthy and turn your meals into works of art?</span>
+              <span>2024.07.19</span></p>
+              <ul><li><a href="https://x.com/JapanGov/status/1814178396588708049">X（Twitter）</a></li>
+                  <li><a href="https://www.facebook.com/JapanGov/videos/1925759991253692/">Facebook</a></li></ul>
+            <li><p>Japan Times
+              <span>Japan’s gamified environment apps target a greener mindset</span>
+              <span>2024.06.16</span></p>
+              <ul><li><a href="https://www.japantimes.co.jp/environment/2024/06/16/sustainability/gamification-environment-apps-japan/">Link</a></li></ul>
+          </ol>
+        </div>
+        <div id="2024-a">
+          <h4>受賞</h4>
+          <ol class="multi-line">
+            <li><p>ヒーローズ・リーグ2024 「特別賞」
+              <span>AbaCaaS： 算盤の盤面認識に基づく珠算学習支援システム</span>
+              <span>松田裕貴</span>
+              <span>2024.12.07</span></p>
+              <ul><li><a href="https://protopedia.net/event/hl2024">Link</a></li>
+                  <li><a href="https://protopedia.net/prototype/3743">Protopedia</a></li>
+              </ul>
+            <li><p>ヒーローズ・リーグ2024 「ロボットフレンドリー賞」
+              <span>PhotoBot</span>
+              <span>山﨑七輝・周思君・𠮷村太斗</span>
+              <span>2024.12.07</span></p>
+              <ul><li><a href="https://protopedia.net/event/hl2024">Link</a></li>
+                  <li><a href="https://protopedia.net/prototype/6397">Protopedia</a></li>
+              </ul>
+            <li><p>The 12th International Conference on Human-Agent Interaction (HAI '24) 「Best Paper Award」
+              <span>Exploring the Impact of Non-Verbal Virtual Agent Behavior on User Engagement in Argumentative Dialogues</span>
+              <span>Annalena Aicher, Yuki Matsuda, Keiichi Yasumoto, Wolfgang Minker, Elisabeth André, Stefan Ultes</span>
+              <span>2024.11.27</span></p>
+              <ul><li><a href="https://hai-conference.net/hai2024/">Link</a></li></ul>
+            <li><p>技育展2024 「優勝」「企業賞（株式会社サイバーエージェント賞）」
+              <span>PhotoBot - 運転中でもいい景色をAIで判定して自動撮影してくれるアプリ</span>
+              <span>山﨑七輝, 周思君, 吉村太斗</span>
+              <span>2024.11.12</span></p>
+              <ul><li><a href="https://100program.jp/">Link</a></li></ul>
+            <li><p>第32回マルチメディア通信と分散処理ワークショップ (DPSWS '24) 「優秀デモンストレーション賞」
+              <span>スマートフォンのブラウザ記憶領域を用いた災害情報流通システムの実装</span>
+              <span>筒井巽水, 松田裕貴, 秦恭史, 諏訪博彦, 峯英一郎, 稲場圭信, 安本慶一</span>
+              <span>2024.11.01</span></p>
+              <ul><li><a href="https://www.dpsws.org/2024/?Award">Link</a></li></ul>
+            <li><p>2024年度 情報処理学会関西支部 支部大会 「学生優秀発表賞」
+              <span>美術館における鑑賞者の心理状態推定に向けた基礎分析</span>
+              <span>鳥垣耀平</span>
+              <span>2024.09.29</span></p>
+              <ul><li><a href="https://kansai.ipsj.or.jp/record/">Link</a></li></ul>
+            <li><p>2024年度 情報処理学会関西支部 支部大会 「支部大会奨励賞」
+              <span>BLEのランダムMACアドレスを用いたODデータ推定に向けた初期検討</span>
+              <span>吉村太斗</span>
+              <span>2024.09.29</span></p>
+              <ul><li><a href="https://kansai.ipsj.or.jp/record/">Link</a></li></ul>
+            <li><p>2024年度 情報処理学会関西支部 支部大会 「支部大会奨励賞」
+              <span>ユーザー参加型BLEスキャニングによる都市空間の混雑度推定に向けた検討</span>
+              <span>菊池尊勝</span>
+              <span>2024.09.29</span></p>
+              <ul><li><a href="https://kansai.ipsj.or.jp/record/">Link</a></li></ul>
+            <li><p>2024年度 情報処理学会関西支部 支部大会 「支部大会奨励賞」
+              <span>野生動物の生息域推定精度向上のためのLiDAR点群データによる痕跡分類手法の提案</span>
+              <span>古城司</span>
+              <span>2024.09.29</span></p>
+              <ul><li><a href="https://kansai.ipsj.or.jp/record/">Link</a></li></ul>
+            <li><p>100 Program 「最優秀賞」「優秀アプリ賞」「優秀AI賞」「東大IPC賞」
+              <span>ドライブ中でもいい景色をAIで判定して自動撮影するアプリ</span>
+              <span>山﨑七輝, 周思君, 吉村太斗</span>
+              <span>2024.09.29</span></p>
+              <ul><li><a href="https://100program.jp/">Link</a></li></ul>
+            <li><p>電子情報通信学会 センサネットワークとモバイルインテリジェンス研究会 「2023年度最優秀発表賞」
+              <span>書画カメラを用いた珠算行動センシング</span>
+              <span>松田裕貴</span>
+              <span>2024.07.18</span></p>
+              <ul><li><a href="https://www.ieice.org/~semi/pub/ja/awards-ja.html">Link</a></li></ul>
+            <li><p>情報処理学会 DICOMO 2024 「野口賞（デモ賞）」
+              <span>未知ゴミ識別のための判定手法の比較と実用化に向けた検討</span>
+              <span>立花巧樹, 呉健朗, 松田裕貴, 諏訪博彦, 安本慶一</span>
+              <span>2024.06.28</span></p>
+              <ul><li><a href="https://dicomo.org/commendation/">Link</a></li></ul>
+            <li><p>情報処理学会 DICOMO 2024 「ヤングリサーチャ賞」
+              <span>未知ゴミ識別のための判定手法の比較と実用化に向けた検討</span>
+              <span>立花巧樹</span>
+              <span>2024.06.28</span></p>
+              <ul><li><a href="https://dicomo.org/commendation/">Link</a></li></ul>
+          </ol>
+        </div>
       </section>
       <section id="2023">
-        <h3>2023年度まで</h3>
-        <h4 id="2023-b">書籍</h4>
-        <ol class="publication">
-          <li class='ref-item'>
-            <p>安本慶一, 荒川豊, <span class="author">松田裕貴</span>:
-            <span class="title">“スッキリ!がってん!IoTの本,”</span>
-            pp.1-143, 2021, 電気書院.</p>
-            <ul><li><a href="
-https://www.denkishoin.co.jp/products/view/1319">出版社サイト</a></li>
-                <li><a href="
-https://www.amazon.co.jp/dp/4485600467">Amazon</a></li>
-                <li><a href="
-https://honto.jp/netstore/pd-book_31129333.html">Honto</a></li></ul>
-        </ol>
-        <h4 id="2023-j">論文誌・ジャーナル</h4>
-        <ol class="publication">
-          <li class='ref-item'>
-            <p>Jiaxuan Zhang, <span class="author">Yuki Matsuda</span>, Manato Fujimoto, Hirohiko Suwa, Keiichi Yasumoto:
-            <span class="title">“Movement Recognition via Channel-Activation-Wise sEMG Attention,”</span>
-            Methods, Vol.218, pp.39-47, 2023.</p>
-            <ul><li><a href="https://doi.org/10.1016/j.ymeth.2023.06.011">DOI</a></li>
-                <li><a href="https://www.sciencedirect.com/science/article/pii/S1046202323001093/pdfft?md5=70aad5b254e74e9f0a756b1c3a4da250&pid=1-s2.0-S1046202323001093-main.pdf">PDF</a></li></ul>
-          <li class='ref-item'>
-            <p>Daisuke Nose, Tomokazu Matsui, Takuya Otsuka, <span class="author">Yuki Matsuda</span>, Tadaaki Arimura, Keiichi Yasumoto, Masahiro Sugimoto, Shin-Ichiro Miura:
-            <span class="title">“Development of Machine Learning-Based Web System for Estimating Pleural Effusion Using Multi-Frequency Bioelectrical Impedance Analyses,”</span>
-            Journal of Cardiovascular Development and Disease, Vol.10, No.7:291, pp.1-14, 2023.</p>
-            <ul><li><a href="https://doi.org/10.3390/jcdd10070291">DOI</a></li>
-                <li><a href="https://www.mdpi.com/2308-3425/10/7/291/pdf">PDF</a></li></ul>
-          <li class='ref-item'>
-            <p>Koki Tachibana, Yugo Nakamura, <span class="author">Yuki Matsuda</span>, Hirohiko Suwa, Keiichi Yasumoto:
-            <span class="title">“ACOGARE: Acoustic-Based Litter Garbage Recognition Utilizing Smartwatch,”</span>
-            Sustainability, Vol.15, No.13:10079, pp.1-17, 2023.</p>
-            <ul><li><a href="https://doi.org/10.3390/su151310079">DOI</a></li>
-                <li><a href="https://yukimat.jp/data/pdf/paper/ACOGARE_j_202306_tachibana_sustainability.pdf">PDF</a></li></ul>
-          <li class='ref-item'>
-            <p><span class="author">松田裕貴</span>, 尾崎えり子, 日高興人, 吉田友子, 小野博之, 仲林政子, 西浦弘望, 久保進也, 城野聖一:
-            <span class="title">“にしょロボくん： 地域の魅力発信アプリの共創を題材とするGIGAスクール端末を用いた全校縦割り活動の実践,”</span>
-            情報処理学会論文誌デジタルプラクティス（TDP）, Vol.4, No.2, pp.55-66 2023.</p>
-            <ul><li><a href="
-http://id.nii.ac.jp/1001/00225512/">Link</a></li>
-                <li><a href="https://yukimat.jp/data/pdf/paper/Nishorobo_j_202304_yukimat_TDP.pdf">PDF</a></li></ul>
-          <li class='ref-item'>
-            <p>Yugo Nakamura, Rei Nakaoka, <span class="author">Yuki Matsuda</span>, Keiichi Yasumoto:
-            <span class="title">“eat2pic: An Eating-Painting Interactive System to Nudge Users into Making Healthier Diet Choices,”</span>
-            Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT), Vol.7, No.1, pp.1-23, 2023.</p>
-            <ul><li><a href="
-https://doi.org/10.1145/3580784">DOI</a></li>
-                <li><a href="https://dl.acm.org/doi/pdf/10.1145/3580784">PDF</a></li></ul>
-        </ol>
+        <h3><span>2023年度まで</span></h3>
+        <div id="2023-b">
+          <h4>書籍</h4>
+          <ol class="publication">
+            <li class='ref-item'>
+              <p>安本慶一, 荒川豊, <span class="author">松田裕貴</span>:
+              <span class="title">“スッキリ!がってん!IoTの本,”</span>
+              pp.1-143, 2021, 電気書院.</p>
+              <ul><li><a href="
+  https://www.denkishoin.co.jp/products/view/1319">出版社サイト</a></li>
+                  <li><a href="
+  https://www.amazon.co.jp/dp/4485600467">Amazon</a></li>
+                  <li><a href="
+  https://honto.jp/netstore/pd-book_31129333.html">Honto</a></li></ul>
+          </ol>
+        </div>
+        <div id="2023-j">
+          <h4>論文誌・ジャーナル</h4>
+          <ol class="publication">
+            <li class='ref-item'>
+              <p>Jiaxuan Zhang, <span class="author">Yuki Matsuda</span>, Manato Fujimoto, Hirohiko Suwa, Keiichi Yasumoto:
+              <span class="title">“Movement Recognition via Channel-Activation-Wise sEMG Attention,”</span>
+              Methods, Vol.218, pp.39-47, 2023.</p>
+              <ul><li><a href="https://doi.org/10.1016/j.ymeth.2023.06.011">DOI</a></li>
+                  <li><a href="https://www.sciencedirect.com/science/article/pii/S1046202323001093/pdfft?md5=70aad5b254e74e9f0a756b1c3a4da250&pid=1-s2.0-S1046202323001093-main.pdf">PDF</a></li></ul>
+            <li class='ref-item'>
+              <p>Daisuke Nose, Tomokazu Matsui, Takuya Otsuka, <span class="author">Yuki Matsuda</span>, Tadaaki Arimura, Keiichi Yasumoto, Masahiro Sugimoto, Shin-Ichiro Miura:
+              <span class="title">“Development of Machine Learning-Based Web System for Estimating Pleural Effusion Using Multi-Frequency Bioelectrical Impedance Analyses,”</span>
+              Journal of Cardiovascular Development and Disease, Vol.10, No.7:291, pp.1-14, 2023.</p>
+              <ul><li><a href="https://doi.org/10.3390/jcdd10070291">DOI</a></li>
+                  <li><a href="https://www.mdpi.com/2308-3425/10/7/291/pdf">PDF</a></li></ul>
+            <li class='ref-item'>
+              <p>Koki Tachibana, Yugo Nakamura, <span class="author">Yuki Matsuda</span>, Hirohiko Suwa, Keiichi Yasumoto:
+              <span class="title">“ACOGARE: Acoustic-Based Litter Garbage Recognition Utilizing Smartwatch,”</span>
+              Sustainability, Vol.15, No.13:10079, pp.1-17, 2023.</p>
+              <ul><li><a href="https://doi.org/10.3390/su151310079">DOI</a></li>
+                  <li><a href="https://yukimat.jp/data/pdf/paper/ACOGARE_j_202306_tachibana_sustainability.pdf">PDF</a></li></ul>
+            <li class='ref-item'>
+              <p><span class="author">松田裕貴</span>, 尾崎えり子, 日高興人, 吉田友子, 小野博之, 仲林政子, 西浦弘望, 久保進也, 城野聖一:
+              <span class="title">“にしょロボくん： 地域の魅力発信アプリの共創を題材とするGIGAスクール端末を用いた全校縦割り活動の実践,”</span>
+              情報処理学会論文誌デジタルプラクティス（TDP）, Vol.4, No.2, pp.55-66 2023.</p>
+              <ul><li><a href="
+  http://id.nii.ac.jp/1001/00225512/">Link</a></li>
+                  <li><a href="https://yukimat.jp/data/pdf/paper/Nishorobo_j_202304_yukimat_TDP.pdf">PDF</a></li></ul>
+            <li class='ref-item'>
+              <p>Yugo Nakamura, Rei Nakaoka, <span class="author">Yuki Matsuda</span>, Keiichi Yasumoto:
+              <span class="title">“eat2pic: An Eating-Painting Interactive System to Nudge Users into Making Healthier Diet Choices,”</span>
+              Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT), Vol.7, No.1, pp.1-23, 2023.</p>
+              <ul><li><a href="
+  https://doi.org/10.1145/3580784">DOI</a></li>
+                  <li><a href="https://dl.acm.org/doi/pdf/10.1145/3580784">PDF</a></li></ul>
+          </ol>
+        </div>
       </section>
       <p>※このページは準備中です。教員の業績は<a href="https://yukimat.jp/">個人サイト（https://yukimat.jp/）</a>を御覧ください。</p>
     </article>
@@ -527,6 +559,6 @@ https://doi.org/10.1145/3580784">DOI</a></li>
     "axios": "https://unpkg.com/axios/dist/esm/axios.min.js"
   }
 }</script>
-<script src="/static/js/main.js?v=20241211.025324" type="module"></script>
+<script src="/static/js/main.js?v=20241226.025539" type="module"></script>
 </body>
 </html>

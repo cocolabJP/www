@@ -85,17 +85,23 @@ const app = createApp({
     openDrawerMenu() {
       $("header").classList.toggle("drawer-opened");
     },
-    scrollTo(target) {
+    scrollTo(target, offset) {
       window.scrollTo({
-        top: $(target).offsetTop - 85,
+        top: $(target).offsetTop - offset,
         behavior: 'smooth'
       });
     },
+    scrollToH3(target) {
+      this.scrollTo(target, 70);
+    },
+    scrollToH4(target) {
+      this.scrollTo(target, 125);
+    },
+    scrollToH5(target) {
+      this.scrollTo(target, 180);
+    },
     scrollToRef(target) {
-      window.scrollTo({
-        top: $(target).offsetTop - 100,
-        behavior: 'smooth'
-      });
+      this.scrollTo(target, 180);
     },
     async loadTumblrNews() {
       axios.get("https://cocolab.yukimat.jp/rss/", {

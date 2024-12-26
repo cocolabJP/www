@@ -6,15 +6,15 @@
   <div class="content clearfix">
     <nav class="clearfix">
       <ul>
-        <li @click="scrollTo('faculty')">教員</li>
-        <li @click="scrollTo('student-ou')">学生（岡山大学）</li>
-        <li @click="scrollTo('student-naist')">学生（奈良先端大）</li>
-        <li @click="scrollTo('collaborator')">連携研究者</li>
+        <li @click="scrollToH3('faculty')">教員</li>
+        <li @click="scrollToH3('student-ou')">学生（岡山大学）</li>
+        <li @click="scrollToH3('student-naist')">学生（奈良先端大）</li>
+        <li @click="scrollToH3('collaborator')">連携研究者</li>
       </ul>
     </nav>
     <article>
       <section id="faculty">
-        <h3>教員・スタッフ</h3>
+        <h3><span>教員・スタッフ</span></h3>
         <ul class="people">
           <li>
             <img src="/static/img/people/yukimat.jpg" alt="松田裕貴（Yuki Matsuda）">
@@ -30,7 +30,7 @@
         </ul>
       </section>
       <section id="student-ou">
-        <h3>学生（岡山大学）</h3>
+        <h3><span>学生（岡山大学）</span></h3>
         <ul class="people">
           <li>
             <img src="/static/img/people/0_default.png">
@@ -50,7 +50,7 @@
         </ul>
       </section>
       <section id="student-naist">
-        <h3>学生（奈良先端科学技術大学院大学）</h3>
+        <h3><span>学生（奈良先端科学技術大学院大学）</span></h3>
         <ul class="people">
           <li>
             <img src="/static/img/people/0_default.png">
@@ -170,7 +170,7 @@
         </ul>
       </section>
       <section id="collaborator">
-        <h3>連携研究者</h3>
+        <h3><span>連携研究者</span></h3>
         <ul class="people">
           <li>
             <img src="/static/img/people/collaborator/yasumoto.png">
