@@ -6,6 +6,7 @@ const $ = (id) => {
 }
 
 const SLIDE_ITEMS = [
+  {"img": "202501_newyear", "url": "/"},
   {"img": "202412_heroesleague", "url": "https://cocolabjp.tumblr.com/post/769358700648464384"},
   {"img": "202411_geekten2024", "url": "https://cocolabjp.tumblr.com/post/767764346840481792"},
   {"img": "202411_HAR-Book", "url": "https://cocolabjp.tumblr.com/post/766362900529020928"},
