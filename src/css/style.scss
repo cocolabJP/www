@@ -540,8 +540,51 @@ main {
           padding: 10px;
         }
       }
-      div.twitter {
-        margin: 15px 5px;
+      ul.sns-list {
+        margin: 10px 0 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        li {
+          list-style: none;
+          flex-grow: 1;
+          flex-basis: 160px;
+          @media screen and (max-width: 600px) {
+            flex-basis: 140px;
+          }
+          a {
+            display: block;
+            padding: 5px;
+            border-radius: 5px;
+            &::after {
+              content: "";
+              display: block;
+              clear: both;
+            }
+            &:hover {
+              background: #eee;
+            }
+          }
+          img {
+            float: left;
+            margin: 3px 8px 3px 3px;
+            width: 36px;
+            height: 36px;
+            @media screen and (max-width: 640px) {
+              width: 32px;
+              height: 32px;
+            }
+          }
+          span {
+            font-size: 0.9rem;
+            line-height: 0.9rem;
+          }
+          p {
+            padding: 0;
+            font-size: 0.7rem;
+            line-height: 0.7rem;
+          }
+        }
       }
     }
     @media screen and (max-width: 640px) {
@@ -901,12 +944,13 @@ main {
 footer {
   margin: 0 var(--side-margin) 30px;
   div.container {
+    position: relative;
     height: 500px;
     background: var(--base-color) url('../img/logo/logo-footer.png') right 20px bottom 20px no-repeat;
     background-size: min(320px, 60%) auto;
     border-radius: 15px;
     padding: 30px;
-    ul {
+    ul.menu {
       li {
         list-style: none;
         color: white;
@@ -917,6 +961,39 @@ footer {
           padding: 5px 10px;
           &:hover {
             color: white;
+          }
+        }
+      }
+    }
+    ul.sns-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin: 30px 0 0;
+      @media screen and (min-width: 600px) and (max-width: 720px) {
+        width: 120px;
+      }
+      @media screen and (min-width: 600px) {
+        position: absolute;
+        bottom: 20px;
+      }
+      li {
+        display: inline-block;
+        list-style: none;
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+        }
+        a {
+          display: block;
+          padding: 2px;
+        }
+        img {
+          width: 28px;
+          height: 28px;
+          @media screen and (min-width: 600px) {
+            width: 36px;
+            height: 36px;
           }
         }
       }
