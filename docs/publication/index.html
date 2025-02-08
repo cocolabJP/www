@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20250128.024510">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20250208.064028">
 </head>
 <body>
 <div class="app page publication" id="app" data-type="page">
@@ -49,6 +49,11 @@
       <ul>
         <li @click="scrollToH3('2024')">2024年度
           <ul>
+            <li @click.stop="scrollToH4('2025-i')">国際会議</li>
+          </ul>
+        </li>
+        <li @click="scrollToH3('2024')">2024年度
+          <ul>
             <li @click.stop="scrollToH4('2024-b')">書籍</li>
             <li @click.stop="scrollToH4('2024-m')">特集・解説</li>
             <li @click.stop="scrollToH4('2024-pp')">プレプリント</li>
@@ -69,6 +74,21 @@
       </ul>
     </nav>
     <article>
+      <section id="2025">
+        <h3><span>2025年度</span></h3>
+        <div id="2025-i">
+          <h4>国際会議</h4>
+          <ol class="publication">
+            <li class='ref-item'>
+              <p><span class="author">Yuki Matsuda</span>, Toma Kobayashi, Hiroki Watanabe, Keiichi Yasumoto:
+              <span class="title">“Effects of Visual Stimuli on Perceived Sound Volume in Virtual Reality Spaces,”</span>
+              The 27th International Conference on Human-Computer Interaction (HCII '25), 2025. (accepted)</p>
+              <ul><li><a href="https://2025.hci.international/">Link</a></li>
+                  <li class="lab cocolab"></li></ul>
+            </li>
+          </ol>
+        </div>
+      </section>
       <section id="2024">
         <h3><span>2024年度</span></h3>
         <div id="2024-b">
@@ -173,7 +193,7 @@
             <li class='ref-item'>
               <p>Yugo Nakamura, <span class="author">Yuki Matsuda</span>, Yutaka Arakawa:
               <span class="title">“SenStick-Eye: A Sensing Platform to Observe Behavioral Insights from Small Everyday Objects,”</span>
-              2025 IEEE International Conference on Consumer Electronics (ICCE '25), 2025. (accepted)</p>
+              2025 IEEE International Conference on Consumer Electronics (ICCE '25), 2025.</p>
               <ul><li><a href="https://icce.org/2025/">Link</a></li>
                   <li><a href="/publication/files/202501_ICCE_Yugo.pdf">PDF</a></li>
                   <li class="award"><a href="https://cocolabjp.tumblr.com/post/772616133102714880/icce2025-award">Best Session Presentation Award</a></li>
@@ -578,6 +598,6 @@
     "axios": "https://unpkg.com/axios/dist/esm/axios.min.js"
   }
 }</script>
-<script src="/static/js/main.js?v=20250128.024510" type="module"></script>
+<script src="/static/js/main.js?v=20250208.064028" type="module"></script>
 </body>
 </html>
