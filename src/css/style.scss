@@ -880,12 +880,16 @@ main {
               & + .lab {
                 margin: 0 0 3px;
               }
-              &.naist {
-                background: url("../img/parts/ic-logo-naist.png") center center no-repeat;
-                background-size: 20px 20px;
-              }
               &.cocolab {
                 background: url("../img/parts/ic-logo-cocolab.png") center center no-repeat;
+                background-size: 20px 20px;
+              }
+              &.okayama-u {
+                background: url("../img/parts/ic-logo-okayama-u.png") center center no-repeat;
+                background-size: 20px 20px;
+              }
+              &.naist {
+                background: url("../img/parts/ic-logo-naist.png") center center no-repeat;
                 background-size: 20px 20px;
               }
               &.uulm {
