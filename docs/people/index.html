@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20250320.175441">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20250401.081830">
 </head>
 <body>
 <div class="app page people" id="app" data-type="page">
@@ -51,6 +51,7 @@
         <li @click="scrollToH3('student-ou')">学生（岡山大学）</li>
         <li @click="scrollToH3('student-naist')">学生（奈良先端大）</li>
         <li @click="scrollToH3('collaborator')">連携研究者</li>
+        <li @click="scrollToH3('alumni')">卒業生</li>
       </ul>
     </nav>
     <article>
@@ -135,16 +136,6 @@
           </li>
           <li>
             <img src="/static/img/people/0_default.png">
-            <h4>松田 裕貴</h4>
-            <span>D3</span>
-          </li>
-          <li>
-            <img src="/static/img/people/0_default.png">
-            <h4>張 嘉萱</h4>
-            <span>D3</span>
-          </li>
-          <li>
-            <img src="/static/img/people/0_default.png">
             <h4>立花 巧樹</h4>
             <span>D3</span>
           </li>
@@ -156,82 +147,42 @@
           <li>
             <img src="/static/img/people/0_default.png">
             <h4>Lucas Maris</h4>
-            <span>D2</span>
+            <span>D3</span>
           </li>
           <li>
             <img src="/static/img/people/0_default.png">
             <h4>上田 健太郎</h4>
-            <span>D2</span>
+            <span>D3</span>
           </li>
           <li>
             <img src="/static/img/people/0_default.png">
             <h4>真弓 大輝</h4>
-            <span>D2</span>
+            <span>D3</span>
           </li>
           <li>
             <img src="/static/img/people/0_default.png">
             <h4>Sergio De Leon</h4>
-            <span>D2</span>
+            <span>D3</span>
           </li>
           <li>
             <img src="/static/img/people/0_default.png">
             <h4>Romero Victor</h4>
-            <span>D1</span>
+            <span>D2</span>
           </li>
           <li>
             <img src="/static/img/people/0_default.png">
             <h4>Damiran Zolboo</h4>
-            <span>D1</span>
+            <span>D2</span>
           </li>
           <li>
             <img src="/static/img/people/0_default.png">
             <h4>Manyesela Yona Zakaria</h4>
-            <span>D1</span>
+            <span>D2</span>
           </li>
           <li>
             <img src="/static/img/people/0_default.png">
             <h4>Muhammad Furqun Rasyid</h4>
-            <span>D1</span>
-          </li>
-          <li>
-            <img src="/static/img/people/0_default.png">
-            <h4>池永 拓海</h4>
-            <span>M2</span>
-          </li>
-          <li>
-            <img src="/static/img/people/0_default.png">
-            <h4>小嵜 泰造</h4>
-            <span>M2</span>
-          </li>
-          <li>
-            <img src="/static/img/people/0_default.png">
-            <h4>澤野 耕平</h4>
-            <span>M2</span>
-          </li>
-          <li>
-            <img src="/static/img/people/0_default.png">
-            <h4>洲澤 春樹</h4>
-            <span>M2</span>
-          </li>
-          <li>
-            <img src="/static/img/people/0_default.png">
-            <h4>平良 繁幸</h4>
-            <span>M2</span>
-          </li>
-          <li>
-            <img src="/static/img/people/0_default.png">
-            <h4>土橋 有理</h4>
-            <span>M2</span>
-          </li>
-          <li>
-            <img src="/static/img/people/0_default.png">
-            <h4>筒井 巽水</h4>
-            <span>M2</span>
-          </li>
-          <li>
-            <img src="/static/img/people/0_default.png">
-            <h4>由田 翔吾</h4>
-            <span>M2</span>
+            <span>D2</span>
           </li>
         </ul>
       </section>
@@ -261,7 +212,7 @@
           <li>
             <img src="/static/img/people/collaborator/ishimaru.jpg">
             <h4>石丸 翔也<a class="ic ic-web" href="https://shoya.io/"></a></h4>
-            <span>特任教授 / 大阪公立大学</span>
+            <span>教授 / 大阪公立大学</span>
           </li>
           <li>
             <img src="/static/img/people/collaborator/ouchi.jpg">
@@ -279,6 +230,11 @@
             <span>助教 / NAIST</span>
           </li>
           <li>
+            <img src="/static/img/people/0_default.png">
+            <h4>佐々木 航<a class="ic ic-web" href="https://watarus.jp/"></a></h4>
+            <span>助教 / NAIST</span>
+          </li>
+          <li>
             <img src="/static/img/people/collaborator/minker.jpg">
             <h4>Wolfgang Minker<a class="ic ic-web" href="https://www.uni-ulm.de/nt/staff/professors/minker/"></a></h4>
             <span>Prof. Dr. Dr.-Ing. / Ulm University</span>
@@ -286,8 +242,56 @@
           <li>
             <img src="/static/img/people/collaborator/watanabe.jpg">
             <h4>渡邉 洸<a class="ic ic-web" href="https://ko-watanabe.github.io/"></a></h4>
-            <span>Ph.D. Student / RPTU・DFKI</span>
+            <span>リサーチャー / DFKI Kaiserslautern</span>
           </li>
+        </ul>
+      </section>
+      <section id="alumni">
+        <h3><span>卒業生</span></h3>
+        <h4>2024年度</h4>
+        <ul class="alumni">
+          <li>鳥垣 耀平
+              <span>岡山大学 学士課程</span>
+              <span>表情や仕草のセンシングによる美術鑑賞者の心理状態推定手法の提案と評価</span></li>
+          <li>林 虎太朗
+              <span>岡山大学 学士課程</span>
+              <span>BLEのアドバタイジングパケットを用いた都市の人流推定手法の提案と評価</span></li>
+          <li>𠮷村 太斗
+              <span>岡山大学 学士課程</span>
+              <span>BLEのアドバタイジングパケットを用いた路線バスのOrigin-Destination推定手法の提案と評価</span></li>
+          <li>松田 裕貴
+              <span>奈良先端科学技術大学院大学 博士後期課程</span>
+              <span><a href="https://library.naist.jp/opac/book/111625">非特定テレビ視聴履歴データの放送局間統合および視聴行動分析に関する研究</a></span></li>
+          <li>張 嘉萱
+              <span>奈良先端科学技術大学院大学 博士後期課程</span>
+              <span><a href="https://library.naist.jp/opac/book/111633">Analysis of Multi-Channel sEMG Data Using Transformer and Construction of a Simulated Abnormal Gait Dataset</a></span></li>
+          <li>Stirapongsasuti Sopicha
+              <span>奈良先端科学技術大学院大学 博士後期課程</span>
+              <span><a href="https://library.naist.jp/opac/book/111156">Privacy-Aware Platform for Smart Home Sensor Data</a></span></li>
+          <li>池永 拓海
+              <span>奈良先端科学技術大学院大学 博士前期課程</span>
+              <span></span></li>
+          <li>小嵜 泰造
+              <span>奈良先端科学技術大学院大学 博士前期課程</span>
+              <span></span></li>
+          <li>澤野 耕平
+              <span>奈良先端科学技術大学院大学 博士前期課程</span>
+              <span></span></li>
+          <li>洲澤 春樹
+              <span>奈良先端科学技術大学院大学 博士前期課程</span>
+              <span></span></li>
+          <li>平良 繁幸
+              <span>奈良先端科学技術大学院大学 博士前期課程</span>
+              <span></span></li>
+          <li>土橋 有理
+              <span>奈良先端科学技術大学院大学 博士前期課程</span>
+              <span></span></li>
+          <li>筒井 巽水
+              <span>奈良先端科学技術大学院大学 博士前期課程</span>
+              <span></span></li>
+          <li>由田 翔吾
+              <span>奈良先端科学技術大学院大学 博士前期課程</span>
+              <span></span></li>
         </ul>
       </section>
     </article>
@@ -322,6 +326,6 @@
     "axios": "https://unpkg.com/axios/dist/esm/axios.min.js"
   }
 }</script>
-<script src="/static/js/main.js?v=20250320.175441" type="module"></script>
+<script src="/static/js/main.js?v=20250401.081830" type="module"></script>
 </body>
 </html>

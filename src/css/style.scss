@@ -826,6 +826,15 @@ main {
           }
         }
       }
+      ul.alumni {
+        li {
+          span {
+            display: block;
+            font-size: 0.8rem;
+            color: #666;
+          }
+        }
+      }
       ol.publication,
       ol.multi-line {
         margin: 0 0 20px;
