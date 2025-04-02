@@ -6,9 +6,11 @@
   <div class="content clearfix">
     <nav class="clearfix">
       <ul>
-        <li @click="scrollToH3('2024')">2024年度
+        <li @click="scrollToH3('2025')">2025年度
           <ul>
+            <li @click.stop="scrollToH4('2025-j')">論文誌・ジャーナル</li>
             <li @click.stop="scrollToH4('2025-i')">国際会議</li>
+            <li @click.stop="scrollToH4('2025-d')">国内研究会</li>
           </ul>
         </li>
         <li @click="scrollToH3('2024')">2024年度
@@ -35,6 +37,17 @@
     <article>
       <section id="2025">
         <h3><span>2025年度</span></h3>
+        <div id="2025-j">
+          <h4>論文誌・ジャーナル</h4>
+          <ol class="publication">
+            <li class='ref-item'>
+              <p>Ko Watanabe, <span class="author">Yuki Matsuda</span>, Yugo Nakamura, Yutaka Arakawa, Shoya Ishimaru:
+              <span class="title">“TrackThinkDashboard: Understanding Student Self-Regulated Learning in Programming Study,”</span>
+              International Journal of Activity and Behavior Computing, Vol.2025, No.xx, pp.1-x, 2025. (accepted)</p>
+              <ul><li><a href="https://arxiv.org/abs/2503.19460">arXiv</a></li>
+                  <li class="lab dfki"></li></ul>
+          </ol>
+        </div>
         <div id="2025-i">
           <h4>国際会議</h4>
           <ol class="publication">
@@ -44,7 +57,30 @@
               The 27th International Conference on Human-Computer Interaction (HCII '25), 2025. (accepted)</p>
               <ul><li><a href="https://2025.hci.international/">Link</a></li>
                   <li class="lab cocolab"></li></ul>
-            </li>
+          </ol>
+        </div>
+        <div id="2025-d">
+          <h4>国内研究会</h4>
+          <ol class="publication">
+            <li class='ref-item'>
+              <p>林虎太朗, 吉村太斗, 小林博之, 今村亮, 伊藤みな, 牛島清豪, 諏訪博彦, <span class="author">松田裕貴</span>:
+                <span class="title">“BLEアドバタイズパケットによる都市人流推定の実践 〜佐賀市における国スポ開催期間のデータ分析と考察〜,”</span>
+                研究報告マルチメディア通信と分散処理（DPS）, Vol.2025-DPS-203, No.xx, pp.1-x, 沖縄県名護市, 2025年5月.</p>
+              <ul><li><a href="https://www.ipsjdps.org/node/270">Link</a></li>
+                  <li class="lab cocolab"></li></ul>
+            <li class='ref-item'>
+              <p>吉村太斗, 林虎太朗, 新井 イスマイル, <span class="author">松田裕貴</span>:
+                <span class="title">“BLEアドバタイジングパケットを用いた路線バスのODデータ推定
+ 〜実運行する2路線におけるデータ分析と考察〜,”</span>
+                研究報告高度交通システムとスマートコミュニティ（ITS）, Vol.2025-ITS-101, No.xx, pp.1-x, 沖縄県名護市, 2025年5月.</p>
+              <ul><li><a href="https://sites.google.com/sig-its.ipsj.or.jp/its/">Link</a></li>
+                  <li class="lab cocolab"></li></ul>
+            <li class='ref-item'>
+              <p>鳥垣耀平, <span class="author">松田裕貴</span>:
+                <span class="title">“表情や仕草データを用いた美術鑑賞者の心理状態推定手法の提案と評価,”</span>
+                電子情報通信学会技術研究報告, センサネットワークとモバイルインテリジェンス研究会（SeMI）, Vol.xx, No.xx, pp.1-x, 沖縄県名護市, 2025年5月.</p>
+              <ul><li><a href="https://ken.ieice.org/ken/program/index.php?tgs_regid=79aa692b4fc4e314fc2439467719f0a96ae97c891f7706e4c4f1d79411a1f27b&tgid=IEICE-SeMI">Link</a></li>
+                  <li class="lab cocolab"></li></ul>
           </ol>
         </div>
       </section>
