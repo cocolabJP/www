@@ -6,6 +6,7 @@ const $ = (id) => {
 }
 
 const SLIDE_ITEMS = [
+  {"img": "202504_kickoff", "url": "https://cocolabjp.tumblr.com/post/780186889493856256"},
   {"img": "202504_move", "url": "https://cocolabjp.tumblr.com/post/779575363018850305"},
   // {"img": "202503_newcomers", "url": "https://cocolabjp.tumblr.com/post/778560442957250560"},
   {"img": "202503_ipsjone", "url": "https://ipsj-one.org/"},
@@ -16,8 +17,8 @@ const SLIDE_ITEMS = [
   {"img": "202411_geekten2024", "url": "https://cocolabjp.tumblr.com/post/767764346840481792"},
   {"img": "202411_HAR-Book", "url": "https://cocolabjp.tumblr.com/post/766362900529020928"},
   {"img": "202409_ipsjKansai", "url": "https://cocolabjp.tumblr.com/post/763005611667570688"},
-  {"img": "202409_100program", "url": "https://cocolabjp.tumblr.com/post/762935350489464832"},
-  {"img": "202404_startup", "url": "https://note.com/cocolabjp/n/n705cb3d2b866"},
+  // {"img": "202409_100program", "url": "https://cocolabjp.tumblr.com/post/762935350489464832"},
+  // {"img": "202404_startup", "url": "https://note.com/cocolabjp/n/n705cb3d2b866"},
 ];
 
 const app = createApp({
