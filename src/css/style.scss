@@ -881,12 +881,21 @@ main {
                 color: white;
               }
             }
-            &.accepted {
+            &.accepted,
+            &.inpress {
               background: var(--theme-color);
               opacity: 0.8;
               height: 24px;
               color: white;
               padding: 0 8px;
+            }
+            &.accepted {
+              &:before {
+                content: "accepted";
+                font-size: 0.7rem;
+              }
+            }
+            &.inpress {
               &:before {
                 content: "in press";
                 font-size: 0.7rem;
