@@ -6,6 +6,7 @@ const $ = (id) => {
 }
 
 const SLIDE_ITEMS = [
+  {"img": "202511_lab-pv", "url": "https://youtu.be/f9qyBV11SAA"},
   {"img": "202509_ipsjKansai", "url": "https://cocolabjp.tumblr.com/post/796035693426196480"},
   {"img": "202509_ICMU2025", "url": "https://cocolabjp.tumblr.com/post/794487082880040960"},
   {"img": "202509_Tornado", "url": "https://cocolabjp.tumblr.com/post/794894287377727488"},
@@ -14,7 +15,7 @@ const SLIDE_ITEMS = [
   // {"img": "202504_move", "url": "https://cocolabjp.tumblr.com/post/779575363018850305"},
   // {"img": "202503_newcomers", "url": "https://cocolabjp.tumblr.com/post/778560442957250560"},
   // {"img": "202503_ipsjone", "url": "https://ipsj-one.org/"},
-  {"img": "202503_lab-pv", "url": "https://youtu.be/f9qyBV11SAA"},
+  // {"img": "202503_lab-pv", "url": "https://youtu.be/f9qyBV11SAA"},
   // {"img": "202502_lab-intro", "url": "https://cocolabjp.tumblr.com/post/775807831215685632"},
   // {"img": "202501_newyear", "url": "/"},
   // {"img": "202412_heroesleague", "url": "https://cocolabjp.tumblr.com/post/769358700648464384"},
