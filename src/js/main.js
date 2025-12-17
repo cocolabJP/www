@@ -6,7 +6,7 @@ const $ = (id) => {
 }
 
 const SLIDE_ITEMS = [
-  {"img": "202511_lab-pv", "url": "https://youtu.be/f9qyBV11SAA"},
+  {"img": "202511_lab-pv", "url": "https://youtu.be/Sd9_H3f3yPA"},
   {"img": "202509_ipsjKansai", "url": "https://cocolabjp.tumblr.com/post/796035693426196480"},
   {"img": "202509_ICMU2025", "url": "https://cocolabjp.tumblr.com/post/794487082880040960"},
   {"img": "202509_Tornado", "url": "https://cocolabjp.tumblr.com/post/794894287377727488"},
