@@ -993,6 +993,10 @@ main {
           }
         }
       }
+      p.address-en {
+        color: #666;
+        font-size: 0.8rem;
+      }
       div.access-map {
         margin: 10px 0;
         padding: 0;
@@ -1001,6 +1005,7 @@ main {
         iframe {
           display: block;
           width: 100%;
+          max-width: 100%;
         }
       }
     }
