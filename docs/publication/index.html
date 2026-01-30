@@ -60,6 +60,12 @@
   <div class="content clearfix">
     <nav class="clearfix">
       <ul>
+        <li @click="scrollToH3('2026')">2026年度
+          <ul>
+            <li @click.stop="scrollToH4('2026-j')">論文誌・ジャーナル</li>
+            <li @click.stop="scrollToH4('2026-i')">国際会議</li>
+          </ul>
+        </li>
         <li @click="scrollToH3('2025')">2025年度
           <ul>
             <li @click.stop="scrollToH4('2025-j')">論文誌・ジャーナル</li>
@@ -94,9 +100,9 @@
       </ul>
     </nav>
     <article>
-      <section id="2025">
-        <h3><span>2025年度</span></h3>
-        <div id="2025-j">
+      <section id="2026">
+        <h3><span>2026年度</span></h3>
+        <div id="2026-j">
           <h4>論文誌・ジャーナル</h4>
           <ol class="publication">
             <li class='ref-item'>
@@ -105,6 +111,33 @@
               Research and Practice in Technology Enhanced Learning, pp.x-xx, 2026.</p>
               <ul><li class="accepted"></li>
                   <li class="lab naist"></li></ul>
+          </ol>
+        </div>
+        <div id="2026-i">
+          <h4>国際会議</h4>
+          <ol class="publication">
+            <li class="ref-item">
+              <p><span class="author">Yuki Matsuda</span>, Mayu Miyake, Taiga Tsuzuki, Yoshihiro Kawakami:
+                <span class="title">“Remote Pointing over Telephony Channels: Audible-Sound Communication for Situated Industrial Support,”</span>
+                The 28th International Conference on Human-Computer Interaction (HCII '26), Vol.x, pp.x-x, 2026.</p>
+              <ul><li><a href="https://2026.hci.international/">Link</a></li>
+                  <li class="accepted"></li>
+                  <li class="lab cocolab"></li></ul>
+            <li class="ref-item">
+              <p>Yuri Tsuchihashi, Kyoji Hata, <span class="author">Yuki Matsuda</span>, Hirohiko Suwa, Keiichi Yasumoto:
+                <span class="title">“Ambient BLE Sensing and Shared Gamified Displays for Encouraging Outings and Social Interaction among Older Adults,”</span>
+                The 28th International Conference on Human-Computer Interaction (HCII '26), Vol.x, pp.x-x, 2026.</p>
+              <ul><li><a href="https://2026.hci.international/">Link</a></li>
+                  <li class="accepted"></li>
+                  <li class="lab naist"></li></ul>
+          </ol>
+        </div>
+      </section>
+      <section id="2025">
+        <h3><span>2025年度</span></h3>
+        <div id="2025-j">
+          <h4>論文誌・ジャーナル</h4>
+          <ol class="publication">
             <li class='ref-item'>
               <p>Kotaro Hayashi, Taito Yoshimura, Hiroyuki Kobayashi, Ryo Imamura, Mina Itou, Kiyohide Ushijima, Hirohiko Suwa, <span class="author">Yuki Matsuda</span>:
               <span class="title">“People Flow Estimation in Urban Environments Using BLE Advertising Packets,”</span>
@@ -160,6 +193,20 @@
         <div id="2025-i">
           <h4>国際会議</h4>
           <ol class="publication">
+            <li class="ref-item">
+              <p>Yohei Torigaki, <span class="author">Yuki Matsuda</span>:
+                <span class="title">“Emotion Recognition of Museum Visitors during Art Appreciation Based on Facial and Behavioral Features,”</span>
+                The 3rd Academy of Behavior Transformation by AIoT International Workshop (BTIW '26), pp.x-x, 2026.</p>
+              <ul><li><a href="https://www.sig-bti.jp/event/btiw2026.html">Link</a></li>
+                  <li class="accepted"></li>
+                  <li class="lab cocolab"></li></ul>
+            <li class="ref-item">
+              <p>Yutaka Arakawa, Yugo Nakamura, <span class="author">Yuki Matsuda</span>, Toru Takahashi, Teruo Higashino:
+                <span class="title">“Empirical Analysis of the Effect of Illustrated Maps Including Visual Guidance Elements on Tourist Behavior,”</span>
+                The 3rd Academy of Behavior Transformation by AIoT International Workshop (BTIW '26), pp.x-x, 2026.</p>
+              <ul><li><a href="https://www.sig-bti.jp/event/btiw2026.html">Link</a></li>
+                  <li class="accepted"></li>
+                  <li class="lab kyushu"></li></ul>
             <li class="ref-item">
               <p>Tsukasa Kojo, Wataru Sasaki, <span class="author">Yuki Matsuda</span>, Kota Tsubouchi, Keichi Yasumoto, Hirohiko Suwa:
                 <span class="title">“Toward a Participatory Trace-Sensing Framework Using Smartphone LiDAR for Wildlife Habitat Estimation,”</span>
