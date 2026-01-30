@@ -27,7 +27,7 @@
 }
 * {
   font-feature-settings: "palt";
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
   text-wrap: pretty;
 }
 h1 > span, h2 > span, h3 > span {
@@ -36,8 +36,15 @@ h1 > span, h2 > span, h3 > span {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-p {
-  text-align: justify;
+@media screen and (min-width: 640px) {
+  p {
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 639px) {
+  p {
+    text-align: left;
+  }
 }
 html, body {
   font-family: var(--font-family-sans);
@@ -845,6 +852,12 @@ main {
           text-align: justify;
           word-wrap: normal;
           word-break: normal;
+          @media screen and (min-width: 640px) {
+            text-align: justify;
+          }
+          @media screen and (max-width: 639px) {
+            text-align: left;
+          }
         }
         ul {
           padding: 0;
