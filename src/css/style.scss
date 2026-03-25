@@ -794,6 +794,7 @@ main {
         flex-wrap: wrap;
         padding: 0;
         width: 100%;
+        font-size: 1.0rem;
         li {
           flex-basis: 48%;
           @media screen and (min-width: 920px) {
@@ -815,16 +816,16 @@ main {
             top: 0;
             background: transparent;
             padding: 8px 0 5px;
-            font-size: 1.2rem;
+            font-size: 1.2em;
           }
           span {
             display: block;
-            font-size: 0.9rem;
+            font-size: 0.9em;
             letter-spacing: 0.05rem;
           }
           small {
             display: block;
-            font-size: 0.9rem;
+            font-size: 0.9em;
             letter-spacing: 0.05rem;
           }
           .ic-web {
@@ -833,8 +834,20 @@ main {
             margin: 0 -10px 0 0;
           }
         }
+        &.small {
+          font-size: 0.9rem;
+          li {
+            flex-basis: 31%;
+            @media screen and (min-width: 920px) {
+              flex-basis: 18%;
+            }
+            @media screen and (min-width: 480px) {
+              flex-basis: 23%;
+            }
+          }
+        }
       }
-      ul.alumni {
+      ul.thesis {
         li {
           span {
             display: block;
