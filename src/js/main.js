@@ -6,14 +6,15 @@ const $ = (id) => {
 }
 
 const SLIDE_ITEMS = [
+  {"img": "202605_MayConfAward", "url": "https://cocolabjp.tumblr.com/post/817543046213304320"},
   {"img": "202603_ABC2026", "url": "https://cocolabjp.tumblr.com/post/810986050940977152"},
   {"img": "202602_inno-vation", "url": "https://cocolabjp.tumblr.com/post/809692145400381440"},
   // {"img": "202603_newcomers", "url": "https://cocolabjp.tumblr.com/post/810107648615776256"},
   {"img": "202511_lab-pv", "url": "https://youtu.be/Sd9_H3f3yPA"},
-  {"img": "202509_ipsjKansai", "url": "https://cocolabjp.tumblr.com/post/796035693426196480"},
+  // {"img": "202509_ipsjKansai", "url": "https://cocolabjp.tumblr.com/post/796035693426196480"},
   {"img": "202509_ICMU2025", "url": "https://cocolabjp.tumblr.com/post/794487082880040960"},
-  {"img": "202509_Tornado", "url": "https://cocolabjp.tumblr.com/post/794894287377727488"},
-  {"img": "202505_ITS101", "url": "https://cocolabjp.tumblr.com/post/785216546183200768"},
+  // {"img": "202509_Tornado", "url": "https://cocolabjp.tumblr.com/post/794894287377727488"},
+  // {"img": "202505_ITS101", "url": "https://cocolabjp.tumblr.com/post/785216546183200768"},
   // {"img": "202504_kickoff", "url": "https://cocolabjp.tumblr.com/post/780186889493856256"},
   // {"img": "202504_move", "url": "https://cocolabjp.tumblr.com/post/779575363018850305"},
   // {"img": "202503_newcomers", "url": "https://cocolabjp.tumblr.com/post/778560442957250560"},
