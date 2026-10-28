@@ -7,47 +7,67 @@
     <nav class="clearfix">
       <ul>
         <li @click="scrollToH3('overview')">概要</li>
-        <li @click="scrollToH3('human-state-aiot')">人の状態を理解するAIoT</li>
-        <li @click="scrollToH3('human-ability-aiot')">人の能力を育てるAIoT</li>
-        <li @click="scrollToH3('urban-spatial-aiot')">都市・空間の状況を理解するAIoT</li>
-        <li @click="scrollToH3('social-implementation')">研究成果の社会実装</li>
+        <li class="category-nav" @click="scrollToH3('human-state-aiot')"><span lang="en">Understanding</span><br><span>人の状態を理解する</span></li>
+        <li class="category-nav" @click="scrollToH3('human-ability-aiot')"><span lang="en">Fostering</span><br><span>人の能力を育てる</span></li>
+        <li class="category-nav" @click="scrollToH3('urban-spatial-aiot')"><span lang="en">Observing</span><br><span>人を取り巻く環境を観測する</span></li>
+        <li class="category-nav" @click="scrollToH3('social-implementation')"><span lang="en">Bridging</span><br><span>研究と社会をつなぐ</span></li>
         <li @click="scrollToH3('collabo-proj')">共同研究・連携機関</li>
       </ul>
     </nav>
     <article>
       <section id="overview">
         <h3><span>概要</span></h3>
-        <div class="clearfix container-flex-right-img">
-          <img src="./img/project-1.png" alt="人の状態を理解するAIoTの研究例">
-          <h4 class="no-sticky">人の状態を理解するAIoT</h4>
-          <p>
-            ウェアラブルデバイスやカメラ、各種センサを用いて、健康状態、感情、満足度、不安感、食行動などを捉える研究です。人の内面や行動をAIで読み解き、一人ひとりの状況に合った支援や情報推薦につなげることで、安心して健やかに暮らせる社会を目指します。ベルト型IoTによる健康管理や運転時の不安感分析、食事センシング、観光客の感情推定など、多様な場面を対象としています。
-          </p>
+        <div class="project-overview">
+          <div class="overview-copy">
+            <div class="overview-heading">
+              <h4 class="no-sticky category-title"><strong lang="en">Understanding</strong><span>人の状態を理解する研究</span></h4>
+              <a class="overview-detail-button" href="#human-state-aiot" @click.prevent="scrollToH3('human-state-aiot')" aria-label="Understandingの個別事例を見る">詳しく見る</a>
+            </div>
+            <p>
+              人の身体や行動、心理を幅広く捉え、その状態を理解する技術の開発に取り組んでいます。身体動作や生体信号、視線、表情などのセンシングを通じて、健康状態や活動の様子を把握するとともに、感情や理解度、体感などを推定します。一人ひとりの特性や活動の文脈を踏まえ、その人の状況に合った支援や情報提供につなげることで、安心して自分らしく活動できる環境の実現を目指します。
+            </p>
+          </div>
+          <img src="./img/project-1.png" alt="人の状態を理解する研究の例">
         </div>
-        <div class="clearfix container-flex-right-img">
-          <img src="./img/project-2.png" alt="人の能力を育てるAIoTの研究例">
-          <h4 class="no-sticky">人の能力を育てるAIoT</h4>
-          <p class="clearfix">
-            珠算の計算過程、美術鑑賞時の対話、競歩やバランス運動などをセンシングし、学習や技能の向上を支える研究です。AIによる助言や対話、個人に合った情報提示を通して、誰もが楽しみながら主体的に学び、能力を伸ばせる体験の実現を目指します。学習者のつまずきや動作の特徴を捉え、ゲーム要素や対話型AI、ウェアラブル機器を通じて、継続的な挑戦と上達を後押しします。
-          </p>
+        <div class="project-overview">
+          <div class="overview-copy">
+            <div class="overview-heading">
+              <h4 class="no-sticky category-title"><strong lang="en">Fostering</strong><span>人の能力を育てる研究</span></h4>
+              <a class="overview-detail-button" href="#human-ability-aiot" @click.prevent="scrollToH3('human-ability-aiot')" aria-label="Fosteringの個別事例を見る">詳しく見る</a>
+            </div>
+            <p>
+              人が主体的に学び、経験を重ねながら能力を伸ばしていく過程を支える技術の開発に取り組んでいます。学習や練習中の行動をセンシングし、結果だけでなく、取り組み方やつまずき、上達の過程を捉えます。一人ひとりに合った課題やフィードバック、AIとの対話やゲーム要素を通じて、気づきと振り返りを促し、楽しみながら挑戦を続けられる学習環境の実現を目指します。
+            </p>
+          </div>
+          <img src="./img/project-2.png" alt="人の能力を育てる研究の例">
         </div>
-        <div class="clearfix container-flex-right-img">
-          <img src="./img/project-3.png" alt="都市・空間の状況を理解するAIoTの研究例">
-          <h4 class="no-sticky">都市・空間の状況を理解するAIoT</h4>
-          <p class="clearfix">
-            BLE電波、照度センサ、カメラなどを活用し、人流や混雑度、夜間道路の安全性、路面や街なかの状態を捉える研究です。プライバシーに配慮しながら都市・交通・生活空間を継続的に観測し、安全で快適なまちづくりに役立つ情報として可視化します。公共交通や駅、商業施設、道路などで収集したデータを分析し、混雑緩和、移動支援、設備点検や環境改善への活用を目指します。
-          </p>
+        <div class="project-overview">
+          <div class="overview-copy">
+            <div class="overview-heading">
+              <h4 class="no-sticky category-title"><strong lang="en">Observing</strong><span>人を取り巻く環境を観測する研究</span></h4>
+              <a class="overview-detail-button" href="#urban-spatial-aiot" @click.prevent="scrollToH3('urban-spatial-aiot')" aria-label="Observingの個別事例を見る">詳しく見る</a>
+            </div>
+            <p>
+              人が暮らし、移動し、活動する空間を対象に、その状態や変化を捉える技術の開発に取り組んでいます。環境に設置したセンサによる観測に加え、市民が持つ端末や日常の活動を通じて情報を集める参加型センシングを活用し、広い範囲に点在する情報を継続的に収集・分析します。プライバシーや情報収集にかかる負担に配慮しながら、人と環境の関わりを可視化し、安全で快適な生活空間の整備や地域の課題解決につなげることを目指します。
+            </p>
+          </div>
+          <img src="./img/project-3.png" alt="人を取り巻く環境を観測する研究の例">
         </div>
-        <div class="clearfix container-flex-right-img">
-          <img src="./img/project-4.png" alt="研究成果の社会実装例">
-          <h4 class="no-sticky">研究成果の社会実装</h4>
-          <p class="clearfix">
-            研究室で生まれた技術を、学校、地域、企業、文化施設などの現場で活用できる仕組みへ発展させます。地域の人々や連携機関と試行と改善を重ね、専門知識がなくても使いやすく、日々の活動の中で持続的に運用できるシステムやサービスを共につくります。小学校での地域学習、位置情報付き写真の収集、地域イベントの可視化、現場のトラブル支援などを通じて、研究成果を社会へ届けます。
-          </p>
+        <div class="project-overview">
+          <div class="overview-copy">
+            <div class="overview-heading">
+              <h4 class="no-sticky category-title"><strong lang="en">Bridging</strong><span>研究と社会をつなぐ研究</span></h4>
+              <a class="overview-detail-button" href="#social-implementation" @click.prevent="scrollToH3('social-implementation')" aria-label="Bridgingの個別事例を見る">詳しく見る</a>
+            </div>
+            <p>
+              研究で生まれた知見や技術と、社会の課題や人々の思いをつなぐ取り組みを進めています。地域や学校、企業、文化施設などとの対話を通じて現場の課題を共有し、システムやサービスの設計から実証、改善までを共に行います。実践から得た気づきを新たな研究へと還元しながら、日々の暮らしや活動の中で無理なく使い続けられる仕組みを育て、社会に新たな価値を生み出すことを目指します。
+            </p>
+          </div>
+          <img src="./img/project-4.png" alt="研究と社会をつなぐ取り組みの例">
         </div>
       </section>
       <section id="human-state-aiot">
-        <h3><span>人の状態を理解するAIoT</span></h3>
+        <h3 class="category-title"><strong lang="en">Understanding</strong><span>人の状態を理解する</span></h3>
         <div>
           <h4>マルチモーダルセンシングによる心理状態推定＆ナビゲーション</h4>
           <div class="project-card" id="emotour">
@@ -157,7 +177,7 @@
         </div>
       </section>
       <section id="human-ability-aiot">
-        <h3><span>人の能力を育てるAIoT</span></h3>
+        <h3 class="category-title"><strong lang="en">Fostering</strong><span>人の能力を育てる</span></h3>
         <div id="abacaas-series">
           <h4>珠算行動センシングに基づく珠算学習支援</h4>
           <div class="clearfix container-flex-right-img">
@@ -207,7 +227,7 @@
         </div>
       </section>
       <section id="urban-spatial-aiot">
-        <h3><span>都市・空間の状況を理解するAIoT</span></h3>
+        <h3 class="category-title"><strong lang="en">Observing</strong><span>人を取り巻く環境を観測する</span></h3>
         <div id="blece-breid">
           <h4>BLEを用いた都市・交通空間の人流・混雑度推定</h4>
           <div class="clearfix container-flex-right-img">
@@ -264,7 +284,7 @@
         </div>
       </section>
       <section id="social-implementation">
-        <h3><span>研究成果の社会実装</span></h3>
+        <h3 class="category-title"><strong lang="en">Bridging</strong><span>研究と社会をつなぐ</span></h3>
         <div>
           <h4>プラットフォーム</h4>
           <div class="project-card" id="tameshiba">
