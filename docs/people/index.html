@@ -70,11 +70,12 @@
       <ul>
         <li @click="scrollToH3('faculty')">教員</li>
         <li @click="scrollToH3('researcher')">研究員</li>
-        <li @click="scrollToH3('student-ou')">学生（岡山大学）</li>
-        <li @click="scrollToH3('internship')">インターンシップ生（岡山大学）</li>
+        <li @click="scrollToH3('student-ou')">学生</li>
+        <!-- <li @click="scrollToH3('internship')">インターンシップ生</li> -->
         <li @click="scrollToH3('student-naist')">学生（奈良先端大）</li>
         <li @click="scrollToH3('collaborator')">連携研究者</li>
         <li @click="scrollToH3('alumni')">卒業生</li>
+        <li @click="scrollToH3('internship-alumni')">インターンシップ修了生</li>
         <li @click="scrollToH3('thesis')">学位論文</li>
       </ul>
     </nav>
@@ -106,7 +107,7 @@
         </ul>
       </section>
       <section id="student-ou">
-        <h3><span>学生（岡山大学）</span></h3>
+        <h3><span>学生</span></h3>
         <ul class="people">
           <li>
             <img src="/static/img/people/student/torigaki.jpg">
@@ -154,8 +155,8 @@
             <span>B4</span>
         </ul>
       </section>
-      <section id="internship">
-        <h3><span>インターンシップ生（岡山大学）</span></h3>
+      <!-- <section id="internship">
+        <h3><span>インターンシップ生</span></h3>
         <ul class="people">
           <li>
             <img src="/static/img/people/0_default.png" alt="Phasit Ruangmak">
@@ -163,7 +164,7 @@
             <span>Kasetsart University</span>
             <span>2026.06.01〜</span>
         </ul>
-      </section>
+      </section> -->
       <section id="student-naist">
         <h3><span>学生（奈良先端科学技術大学院大学）</span></h3>
         <ul class="people">
@@ -229,6 +230,10 @@
             <h4>石丸 翔也<a class="ic ic-web" href="https://shoya.io/"></a></h4>
             <span>教授 / 大阪公立大学</span>
           <li>
+            <img src="/static/img/people/0_default.png">
+            <h4>早川 倫子</h4>
+            <span>教授 / 岡山大学</span>
+          <li>
             <img src="/static/img/people/collaborator/ouchi.jpg">
             <h4>大内 啓樹<a class="ic ic-web" href="https://hiroki13.github.io/"></a></h4>
             <span>准教授 / NAIST</span>
@@ -236,6 +241,14 @@
             <img src="/static/img/people/collaborator/mizumoto.jpg">
             <h4>水本 旭洋<a class="ic ic-web" href="https://sites.google.com/ubi-lab.com/teruhiromizumoto"></a></h4>
             <span>准教授 / 千葉工業大学</span>
+          <li>
+            <img src="/static/img/people/0_default.png">
+            <h4>鈴木 優<a class="ic ic-web" href="https://ulab.jp/suzuki/"></a></h4>
+            <span>准教授 / ノートルダム清心女子大学</span>
+          <li>
+            <img src="/static/img/people/0_default.png">
+            <h4>大西 鮎美<a class="ic ic-web" href="https://tt-lab.jp/ohnishi/"></a></h4>
+            <span>准教授 / 神戸大学</span>
           <li>
             <img src="/static/img/people/collaborator/matsui.png">
             <h4>松井 智一<a class="ic ic-web" href="https://sites.google.com/view/tomokazu-matsui/home"></a></h4>
@@ -252,6 +265,10 @@
             <img src="/static/img/people/collaborator/watanabe.jpg">
             <h4>渡邉 洸<a class="ic ic-web" href="https://ko-watanabe.github.io/"></a></h4>
             <span>リサーチャー / DFKI Kaiserslautern</span>
+          <li>
+            <img src="/static/img/people/0_default.png">
+            <h4>坪内 孝太<a class="ic ic-web" href="https://research.lycorp.co.jp/jp/people/82"></a></h4>
+            <span>上席研究員 / LINEヤフー研究所</span>
         </ul>
       </section>
       <section id="alumni">
@@ -266,6 +283,17 @@
             <h4>三宅 真由</h4>
             <span>2026年3月卒業</span>
         </ul>
+      </section>
+      <section id="internship-alumni">
+        <h3><span>インターンシップ修了生</span></h3>
+        <ul class="people small">
+          <li>
+            <img src="/static/img/people/0_default.png" alt="Phasit Ruangmak">
+            <h4>Phasit Ruangmak</h4>
+            <span>Kasetsart University</span>
+            <span>2026年6月〜8月</span>
+        </ul>
+      </section>
       </section>
       <section id="thesis">
         <h3><span>学位論文</span></h3>
