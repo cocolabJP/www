@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Noto+Serif+JP:wght@300;600&display=swap">
   </noscript>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20261022.150942">
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css?v=20261104.222907">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GQP71G9W0E"></script>
   <script>
@@ -70,12 +70,11 @@
       <ul>
         <li @click="scrollToH3('faculty')">教員</li>
         <li @click="scrollToH3('researcher')">研究員</li>
-        <li @click="scrollToH3('student-ou')">学生</li>
-        <!-- <li @click="scrollToH3('internship')">インターンシップ生</li> -->
+        <li @click="scrollToH3('student-ou')">学生（岡山大学）</li>
+        <li @click="scrollToH3('internship')">インターンシップ生（岡山大学）</li>
         <li @click="scrollToH3('student-naist')">学生（奈良先端大）</li>
         <li @click="scrollToH3('collaborator')">連携研究者</li>
         <li @click="scrollToH3('alumni')">卒業生</li>
-        <li @click="scrollToH3('internship-alumni')">インターンシップ修了生</li>
         <li @click="scrollToH3('thesis')">学位論文</li>
       </ul>
     </nav>
@@ -107,7 +106,7 @@
         </ul>
       </section>
       <section id="student-ou">
-        <h3><span>学生</span></h3>
+        <h3><span>学生（岡山大学）</span></h3>
         <ul class="people">
           <li>
             <img src="/static/img/people/student/torigaki.jpg">
@@ -155,8 +154,8 @@
             <span>B4</span>
         </ul>
       </section>
-      <!-- <section id="internship">
-        <h3><span>インターンシップ生</span></h3>
+      <section id="internship">
+        <h3><span>インターンシップ生（岡山大学）</span></h3>
         <ul class="people">
           <li>
             <img src="/static/img/people/0_default.png" alt="Phasit Ruangmak">
@@ -164,21 +163,13 @@
             <span>Kasetsart University</span>
             <span>2026.06.01〜</span>
         </ul>
-      </section> -->
+      </section>
       <section id="student-naist">
         <h3><span>学生（奈良先端科学技術大学院大学）</span></h3>
         <ul class="people">
           <li>
             <img src="/static/img/people/0_default.png">
-            <h4>Annalena Aicher</h4>
-            <span>D3</span>
-          <li>
-            <img src="/static/img/people/0_default.png">
             <h4>秋山 真哉</h4>
-            <span>D3</span>
-          <li>
-            <img src="/static/img/people/0_default.png">
-            <h4>Mario Carreon</h4>
             <span>D3</span>
           <li>
             <img src="/static/img/people/0_default.png">
@@ -190,15 +181,7 @@
             <span>D2</span>
           <li>
             <img src="/static/img/people/0_default.png">
-            <h4>Damiran Zolboo</h4>
-            <span>D2</span>
-          <li>
-            <img src="/static/img/people/0_default.png">
             <h4>Manyesela Yona Zakaria</h4>
-            <span>D2</span>
-          <li>
-            <img src="/static/img/people/0_default.png">
-            <h4>Muhammad Furqun Rasyid</h4>
             <span>D2</span>
         </ul>
       </section>
@@ -284,19 +267,20 @@
             <span>2026年3月卒業</span>
         </ul>
       </section>
-      <section id="internship-alumni">
-        <h3><span>インターンシップ修了生</span></h3>
-        <ul class="people small">
-          <li>
-            <img src="/static/img/people/0_default.png" alt="Phasit Ruangmak">
-            <h4>Phasit Ruangmak</h4>
-            <span>Kasetsart University</span>
-            <span>2026年6月〜8月</span>
-        </ul>
-      </section>
-      </section>
       <section id="thesis">
         <h3><span>学位論文</span></h3>
+        <h4>2026年度</h4>
+        <ul class="thesis">
+          <li>Annalena Aicher
+              <span>博士論文（奈良先端科学技術大学院大学／Ulm University）</span>
+              <span>Engaging Opinion Building in Argumentative Dialogue Systems</span>
+          <li>Muhammad Furqan Rasyid
+              <span>博士論文（奈良先端科学技術大学院大学）</span>
+              <span>A Framework for Context-Aware Blink Interventions to Mitigate Digital Eye Strain</span>
+          <li>Damiran Zolboo
+              <span>博士論文（奈良先端科学技術大学院大学）</span>
+              <span>Cross-Modal Contrastive Learning for Multimodal Yoga Pose Recognition</span>
+        </ul>
         <h4>2025年度</h4>
         <ul class="thesis">
           <li>續木 太翔
@@ -314,6 +298,9 @@
           <li>山﨑 南穂
               <span>学士論文（岡山大学）</span>
               <span>個人適応型観光推薦に向けた写真アルバムデータを用いた嗜好・性格推定手法の提案と評価</span>
+          <li>Mario Carreon
+              <span>博士論文（奈良先端科学技術大学院大学）</span>
+              <span>Student Programmer Emotion Detection Using Gaze, Code, and Face Data Collected via Off-the-shelf Equipment</span>
           <li>立花 巧樹
               <span>博士論文（奈良先端科学技術大学院大学）</span>
               <span><a href="https://library.naist.jp/opac/book/117238">ゴミ拾い行動を活用したポイ捨てゴミの種別・位置情報収集基盤の設計と評価</a></span>
@@ -407,6 +394,6 @@
     "axios": "https://unpkg.com/axios/dist/esm/axios.min.js"
   }
 }</script>
-<script src="/static/js/main.js?v=20261022.150942" type="module"></script>
+<script src="/static/js/main.js?v=20261104.222907" type="module"></script>
 </body>
 </html>
